@@ -55,19 +55,19 @@ export const A = styled.a`
     background-image: none;
     border-color: none;
     border-bottom-color: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
     box-shadow: none;
-    border: 1px solid #9AC43C;
     background: #9AC43C;
     padding: 4px 12px;
     border-radius: 2px;
+    &:hover {
+        background: #737373;
+        color: #fff;
+    }
 `;
 
 export const Arrow = styled(FontAwesomeIcon)`
     position: absolute; 
-    top: 50%; 
-    transform: 
+    top: 50%;
     translateY(-50%); 
     width: 30px; 
     height: 30px; 

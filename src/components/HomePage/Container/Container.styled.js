@@ -57,7 +57,7 @@ export const Svg = styled(FontAwesomeIcon)`
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
     &:hover {
-        background: #656565;
+        background: #1c1e1f;
     }
 `;
 

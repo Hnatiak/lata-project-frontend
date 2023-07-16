@@ -1,0 +1,47 @@
+import { Container, LeftSideBar, RightSideBar, ContainerH3, ContainerAButton, ContainerH5, ContainerDiv, News, ContainerA, ContainerTitle, ContainerP  } from './NewsContainer.styled'
+// import flexprint from '../../source/flexprint.jpg'
+
+const NewsContainer = () => {
+    return (
+        <Container>
+            <RightSideBar>
+                <ContainerDiv>
+                <News>Статті</News>
+                    <ContainerTitle>
+                        <ContainerA href="/news/Novivesil/">Коробка під піцу</ContainerA>
+                    </ContainerTitle>
+                        <ContainerP>Уявіть собі шматок ароматної італійської піци, приготованої щойно, буквально...</ContainerP>
+                    <ContainerTitle>
+                        <ContainerA href="/news/Novivesil/">Про етикету</ContainerA>
+                    </ContainerTitle>
+                        <ContainerP>Під етикеткою мається на увазі товарний ярлик, який за с...</ContainerP>
+                    <ContainerTitle>
+                        <ContainerA href="/news/Novivesil/">Картонна коробка та її виробництво</ContainerA>
+                    </ContainerTitle>
+                        <ContainerP>Картонна коробка - це досить універсальний пакувальний матеріал. Він...</ContainerP>
+                </ContainerDiv>
+            </RightSideBar>
+            <LeftSideBar>
+                <ContainerH3>Новини</ContainerH3>
+                <ContainerH5>Нанесення зображення флексо та офсетним способом друку</ContainerH5>
+                <div style={{ display: 'flex', marginBottom: '10px' }}>
+                    <img src='https://lata.net.ua/upload/iblock/7fb/7fb1eeda1b11653ea40bc63029bcb3ea.jpg' alt="flexprint" style={{margin: '0 15px 15px 0'}}/>
+                    <div>
+                        <p style={{ textAlign: 'justify', paddingBottom: '10px' }}><b>Флексодрук</b> є одним з видів високого друку, в якому замість жорстких друкованих пластин застосовуються еластичні флексоформи. Можливість флексографічної машини одночасно друкувати, лакувати, проводити висікання, істотно знижує...</p>
+                        <ContainerAButton to='services/Nanessenya_zobragennya/'>Читати далі</ContainerAButton>
+                    </div>
+                </div>
+                <ContainerH5>Підготовка до друку</ContainerH5>
+                <div style={{ display: 'flex' }}>
+                    <img src='https://lata.net.ua/upload/iblock/ebe/ebea54b65681af54d90553a87719dee5.jpg' alt="flexprint" style={{margin: '0 15px 15px 0'}} />
+                    <div>
+                        <p style={{ textAlign: 'justify', paddingBottom: '10px' }}>Для нас важливо, щоб наше пакування було вироблене за дотриманням всіх необхідних стандартів та вимог. Завдяки натуральній сировині наші вироби безпечні для здоров'я Ваших клієнтів.</p>
+                        <ContainerAButton to='services/Pidgotovka_do_dryky/'>Читати далі</ContainerAButton>
+                    </div>
+                </div>
+            </LeftSideBar>
+        </Container>
+      );
+};
+
+export default NewsContainer;

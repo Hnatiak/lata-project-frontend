@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-// import { Link } from 'react-router-dom';
 
-export const HomePageContainer = styled.div`
+export const AppContainer = styled.div`
   width: 1230px;
   overflow: hidden;
   margin: 0 auto;
