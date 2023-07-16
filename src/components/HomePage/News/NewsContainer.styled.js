@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
     display: flex;
-    margin: 0 20px 40px 20px;
+    margin: 0 20px 60px 20px;
     padding: 30px 0 0 0;
     background: #fff;
     border-top: 1px solid #e9e9e9;
@@ -60,9 +60,9 @@ export const ContainerA = styled.a`
 `;
 
 export const ContainerAButton = styled(NavLink)`
-font-size: 16px;
+font-size: 12px;
 text-transform: uppercase;
-padding: 8px 22px;
+padding: 4px 12px;
 box-shadow: 1px;
 background-color: #9AC43C;
 border-radius: 10px;
