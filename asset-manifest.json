@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/lata-project-frontend/static/css/main.b2a05768.css",
-    "main.js": "/lata-project-frontend/static/js/main.8a8c13d9.js",
+    "main.js": "/lata-project-frontend/static/js/main.c9146582.js",
     "static/media/slice1.jpg": "/lata-project-frontend/static/media/slice1.3fa3ddee5ed7624e498d.jpg",
     "static/media/slice2.jpg": "/lata-project-frontend/static/media/slice2.e0a8aef12f70c801a55b.jpg",
     "static/media/slice3.jpg": "/lata-project-frontend/static/media/slice3.46db02bf68317c01dd2b.jpg",
     "index.html": "/lata-project-frontend/index.html",
     "main.b2a05768.css.map": "/lata-project-frontend/static/css/main.b2a05768.css.map",
-    "main.8a8c13d9.js.map": "/lata-project-frontend/static/js/main.8a8c13d9.js.map"
+    "main.c9146582.js.map": "/lata-project-frontend/static/js/main.c9146582.js.map"
   },
   "entrypoints": [
     "static/css/main.b2a05768.css",
-    "static/js/main.8a8c13d9.js"
+    "static/js/main.c9146582.js"
   ]
 }
