@@ -3,7 +3,7 @@ import { Container  } from './Footer.styled' //LeftSideBar, RightSideBar, Contai
 const Footer = () => {
     return (
         <Container>
-            <div style={{ display: 'flex', padding: '50px 25px', justifyContent: 'space-between' }}>
+            <div style={{ display: 'flex', padding: '60px 25px', justifyContent: 'space-between' }}>
                 <div style={{ width: '270px' }}>
                     <h5 style={{ fontWeight: 300, marginBottom: '20px', color: '#eee', fontSize: '24px' }}>Корисні посилання</h5>
                     <ul>
