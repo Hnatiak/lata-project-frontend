@@ -39,7 +39,7 @@ const Footer = () => {
             <div style={{ background: '#0a0a0a', padding: '30px' }}>
                     <div class="copyright">
 						<span>©</span> 
-						<a href="/" target="_blank" title="Розробка сайту Proplat">Розробка сайту Proplat</a>	
+						<a href="https://github.com/Hnatiak/lata-project-frontend" target="_blank" title="Розробка сайту Proplat">Розробка сайту Hnatiak Roman</a>	
                     </div>
                     <div class="span6">
                         <ul class="social-network">
