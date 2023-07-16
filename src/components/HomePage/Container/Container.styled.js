@@ -9,7 +9,7 @@ export const GeneralContainer = styled.div`
 export const MiddleContainer = styled.div`
     display: flex;
     margin: 0 55px 0 45px;
-    gap: 15px;
+    gap: 18px;
 `;
 
 export const ContainerDiv = styled.div`
@@ -50,11 +50,12 @@ export const Svg = styled(FontAwesomeIcon)`
     width: 25px; 
     height: 25px; 
     padding: 20px; 
-    fontSize: 30px; 
+    font-size: 30px; 
     line-height: 40px; 
     background: #9AC43C; 
     color: white; 
     border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
     &:hover {
         background: #656565;
     }

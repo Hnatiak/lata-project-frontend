@@ -15,7 +15,7 @@ export const CollactionContainer = styled.div`
 `;
 
 export const CollactionСontents = styled.div`
-    padding: 0 20px 10px 20px;
+    padding: 10px 25px;
     position: relative;
     width: 1170px;
 `;
