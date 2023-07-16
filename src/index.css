@@ -1,7 +1,7 @@
 body {
   font: 14px/18px "PT Sans Caption", Arial, sans-serif;
   background: url(https://lata.net.ua/bitrix/templates/boxsol_business_green/img/bodybg/bg2.png) repeat left top;
-  font: 14px/18px "PT Sans Caption", Arial, sans-serif;
+  font-family: 14px/18px "PT Sans Caption", Arial, sans-serif;
   font-weight: 300;
   line-height: 1.6em;
   color: #656565;
@@ -9,12 +9,13 @@ body {
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-p {
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'PT Sans Caption', sans-serif;
+  color: #353535;
   margin: 0;
   padding: 0;
+  font-weight: 300;
+  margin: 0 0 10px;
 }
 
 ul,

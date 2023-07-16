@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { faCircleQuestion, faAngleDown  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ModalQuestion from './modal/ModalQuestion';
-import {HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, MenuLink, Ul, MenuLinkActive, GeneralHeader, Menu, A, AboutUl, AboutA} from './ComponentsHeader.styled'
+import {HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, MenuLink, Ul, MenuLinkActive, Menu, A, AboutUl, AboutA} from './ComponentsHeader.styled' 
+// GeneralHeader,
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -28,7 +29,6 @@ const Header = () => {
   };
 
     return (
-      <GeneralHeader>
         <HeaderWrapper>
           <Logo>
             <LogoImage src="https://lata.net.ua/upload/medialibrary/543/5436204c869274d18960335378c3010b.png" href='/' alt="Logo" />
@@ -73,7 +73,6 @@ const Header = () => {
           </Nav>
           </Menu>
         </HeaderWrapper>
-      </GeneralHeader>
     );
   };
   

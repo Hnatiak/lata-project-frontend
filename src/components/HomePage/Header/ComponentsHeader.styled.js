@@ -1,16 +1,16 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const GeneralHeader = styled.div`
-  width: 1230px;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 0;
-  background: #fff;
-  // -webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
-  // -moz-box-shadow: 0 0 10px rgba(0,0,0,.2);
-  box-shadow: 0 0 10px rgba(0,0,0,.2);
-`;
+// export const GeneralHeader = styled.div`
+//   width: 1230px;
+//   overflow: hidden;
+//   margin: 0 auto;
+//   padding: 0;
+//   background: #fff;
+//   // -webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+//   // -moz-box-shadow: 0 0 10px rgba(0,0,0,.2);
+//   box-shadow: 0 0 10px rgba(0,0,0,.2);
+// `;
 
 export const HeaderWrapper = styled.header`
   justify-content: space-around;
@@ -31,8 +31,8 @@ export const LogoImage = styled.img`
 `;
 
 export const LogoText = styled.b`
-  font-family: 'PT Sans Caption', sans-serif;
   font-size: 14px;
+  color: #000;
 `;
 
 export const Nav = styled.nav`

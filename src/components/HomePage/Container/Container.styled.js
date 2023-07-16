@@ -1,35 +1,26 @@
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { keyframes } from 'styled-components';
-
-// export const fadeInUp = keyframes`
-//   from {
-//     opacity: 0;
-//     transform: translateY(20px);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// `;
 
 export const GeneralContainer = styled.div`
-    width: 1230px;
-    margin: 0 auto;
-    padding: 0;
     background: #fff;
     padding: 20px 0 0 0;
 `;
 
 export const MiddleContainer = styled.div`
     display: flex;
-    margin: 0 15px 0 15px;
-    gap: 75px;
+    margin: 0 55px 0 45px;
+    gap: 15px;
 `;
 
-export const ContainerDiv = styled.a`
+export const ContainerDiv = styled.div`
     text-align: center;
     margin-bottom: 10px;
+`;
+
+export const ContainerH6 = styled.h6`
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 1.5em;
 `;
 
 export const ContainerP = styled.p`
