@@ -4,7 +4,6 @@ import Collaction from './Collaction/Collaction'
 import Container from './Container/Container'
 import Experience from './Experience/Experience'
 import NewsContainer from './News/NewsContainer'
-import Footer from './Footer/Footer'
 
 const HomePage = () => {
     return (
@@ -15,7 +14,6 @@ const HomePage = () => {
             <Container />
             <Experience />
             <NewsContainer />
-            <Footer />
         </div>
     )
 }

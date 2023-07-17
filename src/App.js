@@ -37,6 +37,7 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage'
 import Projects from './components/ProductsPage/Projects'
 import { AppContainer } from './App.styled'
+import Footer from './components/Footer/Footer';
 // import Header from './components/HomePage/Header/Header'
 
 const App = () => {
@@ -48,6 +49,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
+      <Footer />
     </Suspense>
     </AppContainer>
   );
