@@ -46,13 +46,13 @@ const Header = () => {
             {isModalOpen && <ModalQuestion closeModal={closeModal} />}
           <Nav>
             <Ul>
-              <MenuItem><MenuLinkActive to="/">Головна</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLink to="/">Головна</MenuLink></MenuItem>
               <MenuItem><MenuLink to="/projects">Продукція</MenuLink></MenuItem>
               <MenuItem><MenuLink to="/services">Послуги</MenuLink></MenuItem>
               <MenuItem><MenuLink to="/obl">Продаж обладнання</MenuLink></MenuItem>
               {/* <MenuItem><MenuLink href="/company">Про нас</MenuLink></MenuItem> */}
               <MenuItem>
-                <MenuLink to="/company"
+                <MenuLinkActive to="/company"
                   onMouseEnter={handleDropdownToggle}
                   onMouseLeave={handleDropdownClose}
                 >
@@ -61,7 +61,7 @@ const Header = () => {
                     icon={faAngleDown}
                     style={{ marginLeft: '5px' }}
                   />
-                </MenuLink>
+                </MenuLinkActive>
                 {isDropdownOpen && (
                   <AboutUl>
                     <AboutA to="/company/questions">Часті питання</AboutA>

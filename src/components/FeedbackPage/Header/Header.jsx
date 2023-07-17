@@ -46,7 +46,7 @@ const Header = () => {
             {isModalOpen && <ModalQuestion closeModal={closeModal} />}
           <Nav>
             <Ul>
-              <MenuItem><MenuLinkActive to="/">Головна</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLink to="/">Головна</MenuLink></MenuItem>
               <MenuItem><MenuLink to="/projects">Продукція</MenuLink></MenuItem>
               <MenuItem><MenuLink to="/services">Послуги</MenuLink></MenuItem>
               <MenuItem><MenuLink to="/obl">Продаж обладнання</MenuLink></MenuItem>
@@ -69,7 +69,7 @@ const Header = () => {
                   </AboutUl>
                 )}
               </MenuItem>
-              <MenuItem><MenuLink to="/reviews">Відгуки</MenuLink></MenuItem>
+              <MenuItem><MenuLinkActive to="/reviews">Відгуки</MenuLinkActive></MenuItem>
               <MenuItem><MenuLink to="/news">Новини</MenuLink></MenuItem>
               <MenuItem><MenuLink to="/articles">Статті</MenuLink></MenuItem>
               <MenuItem><MenuLink to="/contacts">Контакти</MenuLink></MenuItem>

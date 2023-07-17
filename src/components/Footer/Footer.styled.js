@@ -8,7 +8,7 @@ export const Container = styled.div`
     color: #bbb;
 `;
 
-export const LeftSideBar = styled.div`
+export const FirstBlock = styled.div`
     width: 270px;
 `;
 

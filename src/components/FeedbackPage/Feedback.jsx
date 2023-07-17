@@ -1,13 +1,13 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import Header from './Header/Header'
 
-const Company = () => {
+const Feedback = () => {
   return (
     <div>
-      <h1>Сторінка Продуктів</h1>
+      <Header />
       {/* Додайте вміст вашої сторінки Продуктів */}
     </div>
   );
 };
 
-export default Company;
+export default Feedback;

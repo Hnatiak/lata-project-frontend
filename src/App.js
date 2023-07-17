@@ -35,9 +35,18 @@ import React from 'react';
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage'
-import Projects from './components/ProductsPage/Projects'
-import { AppContainer } from './App.styled'
+import Projects from './components/ProjectsPage/Projects'
+import Services from './components/ServicePage/Services'
 import Footer from './components/Footer/Footer';
+import Equipment from './components/EquipmentPage/Equipment'
+import Company from './components/AboutPage/Сompany'
+import Question from './components/AboutPage/Menu/Question'
+import Vacancies from './components/AboutPage/Menu/Vacancies'
+import Feedback from './components/FeedbackPage/Feedback'
+import News from './components/NewsPage/News'
+import Articles from './components/ArticlesPage/Articles'
+import Contacts from './components/ContactsPage/Contacts'
+import { AppContainer } from './App.styled'
 // import Header from './components/HomePage/Header/Header'
 
 const App = () => {
@@ -48,6 +57,16 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/obl" element={<Equipment />} />
+        <Route path="/company" element={<Company />} >
+          <Route path="questions" element={<Question />} />
+          <Route path="vacancies" element={<Vacancies />} />
+        </Route>
+        <Route path="/reviews" element={<Feedback />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
       <Footer />
     </Suspense>

@@ -28,6 +28,10 @@ const Header = () => {
     setIsModalOpen(true);
   };
 
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
     return (
         <HeaderWrapper>
           <Logo>
@@ -35,17 +39,17 @@ const Header = () => {
             <LogoText>Лата - надійний партнер у поліграфічній галузі</LogoText>
           </Logo>
           <Menu>
-            <A href="/ask-question" title="Є запитання?" onClick={openModal}>
+            <A href="#" title="Є запитання?" onClick={openModal}>
               <FontAwesomeIcon icon={faCircleQuestion} style={{ height: '25px', position: 'relative', top: '3px', marginRight: 5}} />
               Задати питання
-              {isModalOpen && <ModalQuestion closeModal={() => setIsModalOpen(false)} />}
             </A>
+            {isModalOpen && <ModalQuestion closeModal={closeModal} />}
           <Nav>
             <Ul>
               <MenuItem><MenuLink to="/">Головна</MenuLink></MenuItem>
-              <MenuItem><MenuLinkActive to="/projects">Продукція</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLink to="/projects">Продукція</MenuLink></MenuItem>
               <MenuItem><MenuLink to="/services">Послуги</MenuLink></MenuItem>
-              <MenuItem><MenuLink to="/obl">Продаж обладнання</MenuLink></MenuItem>
+              <MenuItem><MenuLinkActive to="/obl">Продаж обладнання</MenuLinkActive></MenuItem>
               {/* <MenuItem><MenuLink href="/company">Про нас</MenuLink></MenuItem> */}
               <MenuItem>
                 <MenuLink to="/company"

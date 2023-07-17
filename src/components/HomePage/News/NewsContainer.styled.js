@@ -62,8 +62,7 @@ export const ContainerA = styled.a`
 export const ContainerAButton = styled(NavLink)`
 font-size: 12px;
 text-transform: uppercase;
-padding: 4px 12px;
-box-shadow: 1px;
+padding: 6px 12px;
 background-color: #9AC43C;
 border-radius: 10px;
 color: #000;

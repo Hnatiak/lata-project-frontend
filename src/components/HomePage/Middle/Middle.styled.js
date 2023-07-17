@@ -26,7 +26,7 @@ export const LeftDiv = styled.div`
     background: #000;
     color: #fff;
     width: 30%;
-    z-index: 8;
+    // z-index: 8;
     padding: 20px;
     opacity: 0.8;
     overflow: hidden;
