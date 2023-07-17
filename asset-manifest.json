@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/lata-project-frontend/static/css/main.b2a05768.css",
-    "main.js": "/lata-project-frontend/static/js/main.2c52686c.js",
+    "main.css": "/lata-project-frontend/static/css/main.2cb0a8dc.css",
+    "main.js": "/lata-project-frontend/static/js/main.2ff7932b.js",
     "static/media/slice1.jpg": "/lata-project-frontend/static/media/slice1.3fa3ddee5ed7624e498d.jpg",
     "static/media/slice2.jpg": "/lata-project-frontend/static/media/slice2.e0a8aef12f70c801a55b.jpg",
     "static/media/slice3.jpg": "/lata-project-frontend/static/media/slice3.46db02bf68317c01dd2b.jpg",
     "index.html": "/lata-project-frontend/index.html",
-    "main.b2a05768.css.map": "/lata-project-frontend/static/css/main.b2a05768.css.map",
-    "main.2c52686c.js.map": "/lata-project-frontend/static/js/main.2c52686c.js.map"
+    "main.2cb0a8dc.css.map": "/lata-project-frontend/static/css/main.2cb0a8dc.css.map",
+    "main.2ff7932b.js.map": "/lata-project-frontend/static/js/main.2ff7932b.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2a05768.css",
-    "static/js/main.2c52686c.js"
+    "static/css/main.2cb0a8dc.css",
+    "static/js/main.2ff7932b.js"
   ]
 }
