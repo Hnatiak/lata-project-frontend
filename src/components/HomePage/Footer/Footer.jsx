@@ -31,7 +31,7 @@ const Footer = () => {
                 <h5 style={{ fontWeight: 300, marginBottom: '20px', color: '#eee', fontSize: '24px' }}>Зв'яжіться з нами</h5>
                     <a href='tel:+380504301696' style={{ lineHeight: '1.6em' }}>+38 (050) 430-16-96</a>
                     <a href='tel:+380673231734' style={{ lineHeight: '1.6em' }}>+38 (067) 323-17-34</a>
-                    <a href='tel:+380322439143' style={{ lineHeight: '1.6em' }}>+38 (032) 243-91- 43</a>
+                    <a href='tel:+380673231736' style={{ lineHeight: '1.6em' }}>+38 (067) 323-17-36</a>
                     <a href='mailto:lata.net.ua@gmail.com'>lata.net.ua@gmail.com</a>
                 </div>
             </div>
@@ -39,10 +39,10 @@ const Footer = () => {
             <div style={{ background: '#0a0a0a', padding: '30px' }}>
                     <div class="copyright">
 						<span>©</span> 
-						<a href="https://github.com/Hnatiak/lata-project-frontend" target="_blank" title="Розробка сайту Proplat">Розробка сайту Hnatiak Roman</a>	
+						<a href="https://github.com/Hnatiak/lata-project-frontend" target="_blank" title="Розробка сайту Hnatiak Roman">Розробка сайту Hnatiak Roman</a>	
                     </div>
                     <div class="span6">
-                        <ul class="social-network">
+                        {/* <ul class="social-network">
                             <li>
 	                    		<a href="/" data-placement="bottom" title="" data-original-title="Facebook"><i class="icon-facebook icon-square"></i></a>
 	                    	</li>
@@ -58,7 +58,7 @@ const Footer = () => {
                             <li>
 	                    		<a href="/" data-placement="bottom" title="" data-original-title="Google plus"><i class="icon-google-plus icon-square"></i></a>
 	                    	</li>
-                        </ul>
+                        </ul> */}
                     </div>
                 </div>
             </div>
