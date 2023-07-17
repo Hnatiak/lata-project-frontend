@@ -28,4 +28,5 @@ ol {
 a, li {
   text-decoration: none;
   color: inherit;
+  line-height: 1.6em;
 }
