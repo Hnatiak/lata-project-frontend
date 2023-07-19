@@ -81,6 +81,7 @@ export const A = styled.a`
 export const MenuLinkActive = styled(Link)(({ selected }) => ({
   textTransform: 'uppercase',
   fontSize: '13px',
+  fontWeight: selected ? '700' : '400',
   color: selected ? '#9AC43C' : '#111',
   textDecoration: 'none',
   '&:hover': {
