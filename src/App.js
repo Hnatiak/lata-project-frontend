@@ -15,6 +15,7 @@ import Articles from './components/ArticlesPage/Articles'
 import Contacts from './components/ContactsPage/Contacts'
 import { AppContainer } from './App.styled'
 import Header from './components/Header/Header'
+import NotFound from './components/NotFound/NotFound';
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/news" element={<News />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Suspense>
