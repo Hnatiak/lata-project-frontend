@@ -1,12 +1,10 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import Header from './Header/Header'
 import ArticlesContainer from './Articles/ArticlesContainer'
 
 const Articles = () => {
   return (
     <div>
-      <Header />
       <ArticlesContainer />
       {/* Додайте вміст вашої сторінки Продуктів */}
     </div>

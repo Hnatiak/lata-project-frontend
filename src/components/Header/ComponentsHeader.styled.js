@@ -71,13 +71,22 @@ export const A = styled.a`
   border-bottom: 1px dotted #e6e6e6;
 `;
 
-export const MenuLinkActive = styled(Link)` // NavLink
-  text-transform: uppercase;
-  font-weight: 700;
-  // font-size: 13px;
-  color: #9AC43C;
-  text-decoration: none;
-`;
+// export const MenuLinkActive = styled(Link)` // NavLink
+//   text-transform: uppercase;
+//   font-weight: 700;
+//   // font-size: 13px;
+//   color: #9AC43C;
+//   text-decoration: none;
+// `;
+export const MenuLinkActive = styled(Link)(({ selected }) => ({
+  textTransform: 'uppercase',
+  fontSize: '13px',
+  color: selected ? '#9AC43C' : '#111',
+  textDecoration: 'none',
+  '&:hover': {
+    color: '#9AC43C',
+  },
+}));
 
 export const AboutUl = styled.ul`
   position: absolute;
@@ -102,12 +111,12 @@ export const AboutA = styled(Link)`
   }
 `;
 
-export const MenuLink = styled(Link)` // NavLink
-  text-transform: uppercase;
-  font-size: 13px;
-  color: #111;
-  text-decoration: none;
-  &:hover {
-    color: #9AC43C;
-  }
-`;
+// export const MenuLink = styled(Link)` // NavLink
+//   text-transform: uppercase;
+//   font-size: 13px;
+//   color: #111;
+//   text-decoration: none;
+//   &:hover {
+//     color: #9AC43C;
+//   }
+// `;

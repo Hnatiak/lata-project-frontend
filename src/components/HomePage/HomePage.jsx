@@ -1,4 +1,4 @@
-import Header from './Header/Header'
+// import Header from './Header/Header'
 import Middle from './Middle/Middle'
 import Collaction from './Collaction/Collaction'
 import Container from './Container/Container'
@@ -8,7 +8,6 @@ import NewsContainer from './News/NewsContainer'
 const HomePage = () => {
     return (
         <div>
-            <Header />
             <Middle />
             <Collaction />
             <Container />

@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { faCircleQuestion, faAngleDown  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ModalQuestion from './modal/ModalQuestion';
-import {HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, MenuLink, Ul, MenuLinkActive, Menu, A, AboutUl, AboutA} from './ComponentsHeader.styled' 
+import {HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, Ul, MenuLinkActive, Menu, A, AboutUl, AboutA} from './ComponentsHeader.styled' // MenuLink,
+import { useLocation } from 'react-router-dom';
 // GeneralHeader,
 
 const Header = () => {
+  const [selectedMenu, setSelectedMenu] = useState('/');
+  const location = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMouseInMenu, setIsMouseInMenu] = useState(false);
 
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  useEffect(() => {
+    setSelectedMenu(location.pathname);
+  }, [location]);
   
   const handleDropdownClose = () => {
         setIsMouseInMenu(false);
@@ -46,22 +53,17 @@ const Header = () => {
             {isModalOpen && <ModalQuestion closeModal={closeModal} />}
           <Nav>
             <Ul>
-              <MenuItem><MenuLink to="/">Головна</MenuLink></MenuItem>
-              <MenuItem><MenuLink to="/projects">Продукція</MenuLink></MenuItem>
-              <MenuItem><MenuLink to="/services">Послуги</MenuLink></MenuItem>
-              <MenuItem><MenuLinkActive to="/obl">Продаж обладнання</MenuLinkActive></MenuItem>
-              {/* <MenuItem><MenuLink href="/company">Про нас</MenuLink></MenuItem> */}
-              <MenuItem>
-                <MenuLink to="/company"
-                  onMouseEnter={handleDropdownToggle}
-                  onMouseLeave={handleDropdownClose}
-                >
+              <MenuItem><MenuLinkActive to="/" selected={selectedMenu === '/'}>Головна</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLinkActive to="/projects" selected={selectedMenu === '/projects'}>Продукція</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLinkActive to="/services" selected={selectedMenu === '/services'}>Послуги</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLinkActive to="/obl" selected={selectedMenu === '/obl'}>Продаж обладнання</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLinkActive to="/company" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownClose} selected={selectedMenu === '/company'}>
                   Про нас
                   <FontAwesomeIcon
                     icon={faAngleDown}
                     style={{ marginLeft: '5px' }}
                   />
-                </MenuLink>
+                </MenuLinkActive>
                 {isDropdownOpen && (
                   <AboutUl>
                     <AboutA to="/company/questions">Часті питання</AboutA>
@@ -69,10 +71,10 @@ const Header = () => {
                   </AboutUl>
                 )}
               </MenuItem>
-              <MenuItem><MenuLink to="/reviews">Відгуки</MenuLink></MenuItem>
-              <MenuItem><MenuLink to="/news">Новини</MenuLink></MenuItem>
-              <MenuItem><MenuLink to="/articles">Статті</MenuLink></MenuItem>
-              <MenuItem><MenuLink to="/contacts">Контакти</MenuLink></MenuItem>
+              <MenuItem><MenuLinkActive to="/reviews" selected={selectedMenu === '/reviews'}>Відгуки</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLinkActive to="/news" selected={selectedMenu === '/news'}>Новини</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLinkActive to="/articles" selected={selectedMenu === '/articles'}>Статті</MenuLinkActive></MenuItem>
+              <MenuItem><MenuLinkActive to="/contacts" selected={selectedMenu === '/contacts'}>Контакти</MenuLinkActive></MenuItem>
             </Ul>
           </Nav>
           </Menu>
