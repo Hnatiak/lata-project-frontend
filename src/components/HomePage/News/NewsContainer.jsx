@@ -12,7 +12,7 @@ const NewsContainer = () => {
                     </ContainerTitle>
                         <ContainerP>Уявіть собі шматок ароматної італійської піци, приготованої щойно, буквально...</ContainerP>
                     <ContainerTitle>
-                        <ContainerA href="/news/Novivesil/">Про етикету</ContainerA>
+                        <ContainerA href="/news/Novivesil/">Про етикетку</ContainerA>
                     </ContainerTitle>
                         <ContainerP>Під етикеткою мається на увазі товарний ярлик, який за с...</ContainerP>
                     <ContainerTitle>

@@ -56,7 +56,6 @@ export const Question = styled.div`
 
 export const MenuItem = styled.li`
   line-height: 1.6em;
-  list-style: none;
   color: #111;
 `;
 
@@ -88,7 +87,6 @@ export const AboutUl = styled.ul`
   min-width: 180px;
   padding: 0;
   margin-top: 2px;
-  list-style: none;
   background: #222;
   border: none;
   opacity: inherit;

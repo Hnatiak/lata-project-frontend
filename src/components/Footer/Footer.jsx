@@ -21,7 +21,7 @@ const Footer = () => {
                         <li style={{ padding: '2px 0 2px 0' }}>Доступно</li>
                         <li style={{ padding: '2px 0 2px 0' }}>Вчасно</li>
                         <li style={{ padding: '2px 0 2px 0' }}>Зручно</li>
-                        <li style={{ padding: '2px 0 2px 0' }}>Наійно</li>
+                        <li style={{ padding: '2px 0 2px 0' }}>Надійно</li>
                     </ul>
                 </div>
                 <div style={{ width: '270px' }}>

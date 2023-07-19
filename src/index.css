@@ -26,6 +26,7 @@ ol {
 }
 
 a, li {
+  list-style: none;
   text-decoration: none;
   color: inherit;
   line-height: 1.6em;

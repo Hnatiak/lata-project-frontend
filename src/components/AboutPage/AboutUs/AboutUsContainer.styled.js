@@ -10,7 +10,7 @@ export const Section = styled.section`
 `;
 
 export const Container = styled.div`
-    padding: 0 20px 20px 25px;
+    padding: 0 20px 20px 25px;;
     position: relative;
     width: 1170px;
     display: flex;

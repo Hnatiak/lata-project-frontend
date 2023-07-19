@@ -1,12 +1,13 @@
 import React from 'react';
 // import { Outlet } from 'react-router-dom';
 import Header from './Header/Header'
+import AboutUsContainer from './AboutUs/AboutUsContainer';
 
 const Company = () => {
   return (
     <div>
       <Header />
-      <h1>Про нас</h1>
+      <AboutUsContainer />
       {/* Додайте вміст вашої сторінки Продуктів */}
       {/* <Outlet /> */}
     </div>
