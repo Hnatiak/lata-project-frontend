@@ -79,6 +79,9 @@ export const ContainerNew = styled.div`
   display: flex;
   align-items: flex-start;
   margin-bottom: 10px;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    }
 `;
 
 export const Img = styled.img`
