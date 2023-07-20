@@ -31,3 +31,11 @@ a, li {
   color: inherit;
   line-height: 1.6em;
 }
+
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}

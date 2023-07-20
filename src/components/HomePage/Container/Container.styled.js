@@ -3,13 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const GeneralContainer = styled.div`
     background: #fff;
-    padding: 20px 0 0 0;
+    padding: 20px 0;
 `;
 
 export const MiddleContainer = styled.div`
     display: flex;
     margin: 0 55px 0 45px;
-    gap: 18px;
+    gap: 20px;
+    @media screen and (max-width: 780px) {
+        flex-direction: column;
+    }
 `;
 
 export const ContainerDiv = styled.div`

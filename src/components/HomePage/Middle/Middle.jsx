@@ -54,16 +54,10 @@ const Middle = ({ photos }) => {
   return (
     <MiddleContainer>
       {photoList.map((photo, index) => (
-        <Image
-          key={index}
-          src={photo.src}
-          alt={photo.alt}
+        <Image key={index} src={photo.src} alt={photo.alt}
           style={{
             opacity: index === currentPhotoIndex ? 1 : 0,
-            transition: 'opacity 0.5s ease-in-out',
-            position: 'absolute',
-          }}
-        />
+          }}/>
       ))}
       <LeftDiv>
         <Title>{currentPhoto.title}</Title>

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const CollactionContainer = styled.div`
     // height: 388px;
-    width: 1230px;
+    max-width: 1230px;
     // overflow: hidden;
     margin: 0 auto;
     padding: 0;
@@ -17,7 +17,7 @@ export const CollactionContainer = styled.div`
 export const CollactionСontents = styled.div`
     padding: 10px 25px;
     position: relative;
-    width: 1170px;
+    max-width: 1170px;
 `;
 
 export const Text = styled.h3`

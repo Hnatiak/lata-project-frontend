@@ -3,18 +3,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const MiddleContainer = styled.div`
     height: 388px;
-    width: 1230px;
+    max-width: 1230px;
     overflow: hidden;
     margin: 0 auto;
     padding: 0;
     background: #fff;
     position: relative;
+    @media screen and (max-width: 780px) {
+        max-height: 240px;
+    }
 `;
 
 export const Image = styled.img`
     display: inline;
-    width: 1230px;
+    max-width: 100%;
     height: auto;
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
 `;
 
 export const LeftDiv = styled.div`
@@ -25,13 +30,21 @@ export const LeftDiv = styled.div`
     bottom: 20px;
     background: #000;
     color: #fff;
-    width: 30%;
-    // z-index: 8;
+    max-width: 30%;
     padding: 20px;
     opacity: 0.8;
     overflow: hidden;
     filter: alpha(opacity=8);
     box-sizing: border-box;
+    @media screen and (max-width: 780px) {
+        max-width: 100%;
+        max-height: 100%;
+        left: 0px;
+        top: 0px;
+        bottom: 0;
+        right: 0;
+        // position: relative;
+    }
 `;
 
 export const Title = styled.h2`
