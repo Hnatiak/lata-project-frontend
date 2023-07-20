@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     display: flex;
-    margin: 0 20px 40px 20px;
+    // margin: 0 20px 40px 20px;
     justify-content: space-between;
-    padding: 0;
+    padding: 30px 20px;
     background: #fff;
     @media screen and (max-width: 780px) {
         flex-direction: column;
@@ -15,6 +15,9 @@ export const Container = styled.div`
 
 export const LeftSideBar = styled.div`
     max-width: 770px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
     @media screen and (max-width: 780px) {
         margin-bottom: 40px;
     }
@@ -29,12 +32,12 @@ export const RightSideBar = styled.div`
     }
 `;
 
-export const ContainerH3 = styled.h3`
-    margin-bottom: 20px;
-    font-size: 34px;
-    line-height: 1.5em;
-    margin-top: 0;
-`;
+// export const ContainerP = styled.p`
+//     margin-bottom: 20px;
+//     font-size: 34px;
+//     line-height: 1.5em;
+//     margin-top: 0;
+// `;
 
 export const ContainerH5 = styled.h5`
     margin-bottom: 20px;
@@ -73,5 +76,6 @@ export const ContainerA = styled(Link)`
 `;
 
 export const ContainerP = styled.p`
-    font-family: Arial, sans-serif;
+    text-align: justify;
+    font-weight: 300;
 `;

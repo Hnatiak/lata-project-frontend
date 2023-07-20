@@ -62,7 +62,7 @@ export const ContainerTitle = styled.div`
     margin-bottom: 10px;
 `;
 
-export const ContainerA = styled.a`
+export const ContainerA = styled(NavLink)`
   color: #9AC43C;
   margin-bottom: 10px;
   &:hover {

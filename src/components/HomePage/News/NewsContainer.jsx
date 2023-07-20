@@ -8,15 +8,15 @@ const NewsContainer = () => {
                 <ContainerDiv>
                 <News>Статті</News>
                     <ContainerTitle>
-                        <ContainerA href="/news/Novivesil/">Коробка під піцу</ContainerA>
+                        <ContainerA to="/articles/Korobkapidpitsu/">Коробка під піцу</ContainerA>
                     </ContainerTitle>
                         <ContainerP>Уявіть собі шматок ароматної італійської піци, приготованої щойно, буквально...</ContainerP>
                     <ContainerTitle>
-                        <ContainerA href="/news/Novivesil/">Про етикетку</ContainerA>
+                        <ContainerA to="/articles/Proetyketu/">Про етикетку</ContainerA>
                     </ContainerTitle>
                         <ContainerP>Під етикеткою мається на увазі товарний ярлик, який за с...</ContainerP>
                     <ContainerTitle>
-                        <ContainerA href="/news/Novivesil/">Картонна коробка та її виробництво</ContainerA>
+                        <ContainerA to="/articles/Kartonnakorobka/">Картонна коробка та її виробництво</ContainerA>
                     </ContainerTitle>
                         <ContainerP>Картонна коробка - це досить універсальний пакувальний матеріал. Він...</ContainerP>
                 </ContainerDiv>
