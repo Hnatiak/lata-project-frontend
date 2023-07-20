@@ -24,35 +24,6 @@ export const MenuItem = styled.li`
   color: #111;
 `;
 
-// export const MenuLink = styled(Link)` // NavLink
-//   font-size: 13px;
-//   color: #111;
-//   &:hover {
-//     color: #9AC43C;
-//   }
-// `;
-
-// export const Projects = styled.div`
-//   display: grid;
-//   grid-template-columns: repeat(4, 1fr);
-//   gap: 25px;
-//   margin: 25px;
-//   align-items: center;
-// `;
-
-// export const Project = styled.div` // NavLink
-//   border: 1px solid #e6e6e6;
-//   display: flex;
-//   justify-content: center; /* Центрування по горизонталі */
-//   align-items: center; /* Центрування по вертикалі */
-  
-//   img {
-//     max-width: 100%;
-//     max-height: 100%;
-//   }
-//     // width: 250px;
-// `;
-
 export const Projects = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Змінено ширину колонок на 250px */
@@ -68,8 +39,30 @@ export const Project = styled.div`
   align-items: center; /* Центрування по вертикалі */
   height: 250px;
 
+  // img {
+  //   max-width: 100%;
+  //   max-height: 100%;
+  // }
   img {
     max-width: 100%;
     max-height: 100%;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover img {
+    opacity: 0.8;
+  }
+
+  &:hover::before {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 280px;
+    height: 250px;
+    background-color: #9AC43C;
+    opacity: 0.8;
+    z-index: 1;
   }
 `;

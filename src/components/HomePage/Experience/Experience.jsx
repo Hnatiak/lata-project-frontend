@@ -14,11 +14,11 @@ const Experience = () => {
                 <ContainerDiv>
                 <News>Новини</News>
                     <ContainerTitle>
-                        <ContainerA href="/news/Novivesil/">Спішимо порадувати усіх наших клієнтів.</ContainerA>
+                        <ContainerA to="/news/Stakan4yky/">Спішимо порадувати усіх наших клієнтів.</ContainerA>
                     </ContainerTitle>
                         <ContainerP>Дорогі клієнти! Приватне підприємство "Лата" почало випуск нового виду...</ContainerP>
                     <ContainerTitle>
-                        <ContainerA href="/news/Novivesil/">Нові види подарункових "весільних" коробок з картону хром-ерзац.</ContainerA>
+                        <ContainerA to="/news/Novivesil/">Нові види подарункових "весільних" коробок з картону хром-ерзац.</ContainerA>
                     </ContainerTitle>
                         <ContainerP>ПП "Лата" розробило новий дизайн подарункових, так званих "весіль...</ContainerP>
                 </ContainerDiv>

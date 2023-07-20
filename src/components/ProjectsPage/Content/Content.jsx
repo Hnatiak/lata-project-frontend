@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer } from './Content.styled' // MenuLink 
+import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer, Img } from './Content.styled' // MenuLink 
 import boxesData from './boxs.json';
 
 const Content = () => {
