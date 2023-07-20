@@ -32,23 +32,44 @@ export const MenuItem = styled.li`
 //   }
 // `;
 
+// export const Projects = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   gap: 25px;
+//   margin: 25px;
+//   align-items: center;
+// `;
+
+// export const Project = styled.div` // NavLink
+//   border: 1px solid #e6e6e6;
+//   display: flex;
+//   justify-content: center; /* Центрування по горизонталі */
+//   align-items: center; /* Центрування по вертикалі */
+  
+//   img {
+//     max-width: 100%;
+//     max-height: 100%;
+//   }
+//     // width: 250px;
+// `;
+
 export const Projects = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Змінено ширину колонок на 250px */
   gap: 25px;
   margin: 25px;
   align-items: center;
 `;
 
-export const Project = styled.div` // NavLink
+export const Project = styled.div`
   border: 1px solid #e6e6e6;
   display: flex;
   justify-content: center; /* Центрування по горизонталі */
   align-items: center; /* Центрування по вертикалі */
-  
+  height: 250px;
+
   img {
     max-width: 100%;
     max-height: 100%;
   }
-    // width: 250px;
 `;
