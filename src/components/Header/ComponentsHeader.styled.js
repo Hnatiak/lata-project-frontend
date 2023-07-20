@@ -2,21 +2,30 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom'; // NavLink
 
 export const HeaderWrapper = styled.header`
-  justify-content: space-around;
-  margin-bottom: 10px;
-  margin-top: 7px;
+  justify-content: space-between;
+  padding: 7px 40px 10px 40px;
   display: flex;
+  gap: 30px;
+  @media screen and (max-width: 780px) {
+    padding: 7px 20px 10px 20px;
+  }
 `;
 
 export const Logo = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 780px) {
+    max-width: 228px
+  }
 `;
 
 export const LogoImage = styled.img`
   margin-bottom: 10px;
-  width: 219px;
-  height: 94px;
+  max-width: 219px;
+  max-height: 94px;
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+  }
 `;
 
 export const LogoText = styled.b`
@@ -31,14 +40,19 @@ export const Nav = styled.nav`
     color: #656565;
     display: flex;
     flex-direction: column-reverse;
+    @media screen and (max-width: 780px) {
+      max-width: 476px;
+    }
 `;
 
 export const Ul = styled.ul`
-  margin: 0 20px 25px 0;
+margin: 0 20px 25px 0;
+  padding: 0;
   display: flex;
   gap: 14px;
-  // gap: 10px;
-`
+  max-width: 870px;
+  flex-wrap: wrap;
+`;
 
 export const Menu = styled.div`
   display: flex;
@@ -69,15 +83,11 @@ export const A = styled.a`
   font-weight: 700;
   color: #9AC43C;
   border-bottom: 1px dotted #e6e6e6;
+  @media screen and (max-width: 780px) {
+    margin: 28px 0 10px 0;
+  }
 `;
 
-// export const MenuLinkActive = styled(Link)` // NavLink
-//   text-transform: uppercase;
-//   font-weight: 700;
-//   // font-size: 13px;
-//   color: #9AC43C;
-//   text-decoration: none;
-// `;
 export const MenuLinkActive = styled(Link)(({ selected }) => ({
   textTransform: 'uppercase',
   fontSize: '13px',
@@ -111,13 +121,3 @@ export const AboutA = styled(Link)`
     background: #9AC43C;
   }
 `;
-
-// export const MenuLink = styled(Link)` // NavLink
-//   text-transform: uppercase;
-//   font-size: 13px;
-//   color: #111;
-//   text-decoration: none;
-//   &:hover {
-//     color: #9AC43C;
-//   }
-// `;
