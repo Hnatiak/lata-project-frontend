@@ -10,6 +10,7 @@ export const Container = styled.div`
     background: #fff;
     @media screen and (max-width: 780px) {
         flex-direction: column;
+        padding: 20px 20px;
     }
 `;
 
@@ -79,4 +80,20 @@ export const ContainerA = styled(Link)`
 
 export const ContainerP = styled.p`
     text-align: justify;
+`;
+
+export const ContainerDivService = styled.div`
+    display: flex;
+    margin-bottom: 10px;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+`;
+
+export const ContainerImgService = styled.img`
+    margin: 0 15px 0 0;
+    @media screen and (max-width: 480px) {
+        margin: 0 0 15px 0;
+    }
 `;

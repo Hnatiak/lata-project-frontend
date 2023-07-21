@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, LeftSideBar, RightSideBar, ContainerH3, ContainerH5, ContainerDiv, News, ContainerA, ContainerTitle, ContainerP  } from './PrintingServices.styled'
+import { Container, LeftSideBar, RightSideBar, ContainerDivService, ContainerImgService, ContainerDiv, News, ContainerA, ContainerTitle, ContainerP  } from './PrintingServices.styled'
 import Services from './Services.json';
 
 const PrintingServices = () => {
@@ -29,23 +29,20 @@ const PrintingServices = () => {
         <Container>
             <LeftSideBar>
                 {Services.slice(startIndex, endIndex).map((service, index) => (
-                  <div key={index} style={{ display: 'flex', marginBottom: '10px' }}>
-                    <img src={service.path} alt={`Photo ${service.title}`} style={{ marginRight: '15px' }} />
+                  <ContainerDivService key={index}>
+                    <ContainerImgService src={service.path} alt={`Photo ${service.title}`} />
                     <div>
                       <div style={{ display: 'flex', gap: '10px', alignItems: 'baseline' }}>
-                        <ContainerH5>{service.date}</ContainerH5>
-                        <div>
-                          <ContainerA to={service.link}><b>{service.title}</b></ContainerA>
-                        </div>
+                        <div><ContainerA to={service.link}><b>{service.title}</b></ContainerA></div>
                       </div>
                       <ContainerP dangerouslySetInnerHTML={{ __html: formatDescription(service.description) }} />
                     </div>
-                  </div>
+                  </ContainerDivService>
                 ))}
                 <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-                  {currentPage > 1 && (<ContainerA onClick={goToPrevPage}>{'<'} Попередня сторінка</ContainerA>)}
+                  {currentPage > 1 && (<div><ContainerA onClick={goToPrevPage}>{'<'}</ContainerA></div>)}
                   <span style={{ margin: '0 10px' }}>Сторінка {currentPage}/{totalPages}</span>
-                  {currentPage < totalPages && (<ContainerA onClick={goToNextPage}> Наступна сторінка {'>'}</ContainerA>)}
+                  {currentPage < totalPages && (<div><ContainerA onClick={goToNextPage}>{'>'}</ContainerA></div>)}
                 </div>
             </LeftSideBar>
             <RightSideBar>
