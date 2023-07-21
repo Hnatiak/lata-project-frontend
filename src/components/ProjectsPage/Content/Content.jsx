@@ -1,17 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer, Img } from './Content.styled' // MenuLink 
 import boxesData from './boxs.json';
+import { FiChevronRight, FiChevronDown } from 'react-icons/fi';
 
 const Content = () => {
   const [selectedMenu, setSelectedMenu] = useState('all');
   const [photos, setPhotos] = useState([]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAllSelected, setIsAllSelected] = useState(false);
 
   useEffect(() => {
     setPhotos(boxesData);
   }, []);
 
-  const handleMenuChange = (category) => {
-    setSelectedMenu(category);
+  const handleMenuChange = (menu) => {
+    setSelectedMenu(menu);
+    setIsMenuOpen(false);
+    setIsAllSelected(false);
+  };
+
+  const handleAllClick = () => {
+    if (!isAllSelected) {
+      setIsMenuOpen(true);
+    } else {
+      setSelectedMenu('all');
+      setIsMenuOpen(false);
+    }
+    setIsAllSelected((prevIsAllSelected) => !prevIsAllSelected);
   };
 
   const filteredPhotos = selectedMenu === 'all' ? photos : photos.filter(photo => photo.category === selectedMenu);
@@ -19,15 +34,30 @@ const Content = () => {
   return (
     <div>
       <MenuContainer>
-        <MenuUl> 
+        <MenuUl>
           <MenuItem>
-            <MenuLinkActive onClick={() => handleMenuChange('all')} selected={selectedMenu === 'all'}>Всі</MenuLinkActive>
-          </MenuItem>
-            <MenuItem><MenuLinkActive onClick={() => handleMenuChange('CorrugatedCardboard')} selected={selectedMenu === 'CorrugatedCardboard'} href="#" title="">Гофро картон</MenuLinkActive>
-          </MenuItem>
-            <MenuItem><MenuLinkActive onClick={() => handleMenuChange('FullColorPackaging')} selected={selectedMenu === 'FullColorPackaging'} href="#" title="">Повноколірна упаковка</MenuLinkActive>
-          </MenuItem>
-            <MenuItem><MenuLinkActive onClick={() => handleMenuChange('PaperCups')} selected={selectedMenu === 'PaperCups'} href="#" title="">Паперові стаканчики</MenuLinkActive>
+            <MenuLinkActive onClick={handleAllClick} selected={selectedMenu === 'all'}>
+              Всі {isMenuOpen ? <FiChevronDown /> : <FiChevronRight />}
+            </MenuLinkActive>
+            {isMenuOpen && ( // Показуємо список варіантів, якщо isMenuOpen === true
+              <ul>
+                <li>
+                  <MenuLinkActive onClick={() => handleMenuChange('CorrugatedCardboard')} selected={selectedMenu === 'CorrugatedCardboard'}>
+                    Гофро картон
+                  </MenuLinkActive>
+                </li>
+                <li>
+                  <MenuLinkActive onClick={() => handleMenuChange('FullColorPackaging')} selected={selectedMenu === 'FullColorPackaging'}>
+                    Повноколірна упаковка
+                  </MenuLinkActive>
+                </li>
+                <li>
+                  <MenuLinkActive onClick={() => handleMenuChange('PaperCups')} selected={selectedMenu === 'PaperCups'}>
+                    Паперові стаканчики
+                  </MenuLinkActive>
+                </li>
+              </ul>
+            )}
           </MenuItem>
         </MenuUl>
       </MenuContainer>
