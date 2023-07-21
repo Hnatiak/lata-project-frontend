@@ -111,6 +111,7 @@ export const Background = styled.div`
   align-items: center;
   flex-direction: row-reverse; 
   padding: 10px 20px;
+  border-radius: 0px 0px 10px 10px;
 `;
 
 export const CartIcon = styled(FontAwesomeIcon)`
