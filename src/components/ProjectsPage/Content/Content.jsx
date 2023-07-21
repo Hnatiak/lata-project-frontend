@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer, Img } from './Content.styled' // MenuLink 
+import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer, Background, ButtonShop, CartIcon } from './Content.styled' // MenuLink 
 import boxesData from './boxs.json';
 import { FiChevronRight, FiChevronDown } from 'react-icons/fi';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const Content = () => {
   const [selectedMenu, setSelectedMenu] = useState('all');
@@ -36,36 +37,38 @@ const Content = () => {
       <MenuContainer>
         <MenuUl>
           <MenuItem>
-            <MenuLinkActive onClick={handleAllClick} selected={selectedMenu === 'all'}>
-              Всі {isMenuOpen ? <FiChevronDown /> : <FiChevronRight />}
-            </MenuLinkActive>
-            {isMenuOpen && ( // Показуємо список варіантів, якщо isMenuOpen === true
-              <ul>
-                <li>
-                  <MenuLinkActive onClick={() => handleMenuChange('CorrugatedCardboard')} selected={selectedMenu === 'CorrugatedCardboard'}>
-                    Гофро картон
-                  </MenuLinkActive>
-                </li>
-                <li>
-                  <MenuLinkActive onClick={() => handleMenuChange('FullColorPackaging')} selected={selectedMenu === 'FullColorPackaging'}>
-                    Повноколірна упаковка
-                  </MenuLinkActive>
-                </li>
-                <li>
-                  <MenuLinkActive onClick={() => handleMenuChange('PaperCups')} selected={selectedMenu === 'PaperCups'}>
-                    Паперові стаканчики
-                  </MenuLinkActive>
-                </li>
-              </ul>
+            <MenuLinkActive onClick={handleAllClick} selected={selectedMenu === 'all'}>Всі {isMenuOpen ? <FiChevronDown /> : <FiChevronRight />}</MenuLinkActive>
+            {isMenuOpen && (
+              <div style={{ position: 'relative' }}>
+                <ul style={{ zIndex: 1, position: 'absolute', background: 'white', padding: '10px', border: '1px solid #9AC43C', borderRadius: '10px', left: '-10px', width: '180px' }}>
+                  <li>
+                    <MenuLinkActive onClick={() => handleMenuChange('CorrugatedCardboard')} selected={selectedMenu === 'CorrugatedCardboard'}>Гофро картон</MenuLinkActive>
+                  </li>
+                  <li>
+                    <MenuLinkActive onClick={() => handleMenuChange('FullColorPackaging')} selected={selectedMenu === 'FullColorPackaging'}>Повноколірна упаковка</MenuLinkActive>
+                  </li>
+                  <li>
+                    <MenuLinkActive onClick={() => handleMenuChange('PaperCups')} selected={selectedMenu === 'PaperCups'}>Паперові стаканчики</MenuLinkActive>
+                  </li>
+                </ul>
+              </div>
             )}
           </MenuItem>
         </MenuUl>
       </MenuContainer>
       <Projects>
         {filteredPhotos.map(photo => (
-          <Project key={photo.id}>
-            <img src={photo.url} alt={`Photo ${photo.id}`} />
-          </Project>
+          // <Project key={photo.id}>
+          //   <img src={photo.url} alt={`Photo ${photo.id}`} />
+          // </Project>
+          <div key={photo.id}>
+            <Project to={photo.link}>
+              <img src={photo.url} alt={`Photo ${photo.id}`} />
+            </Project>
+            <Background>
+              <ButtonShop to={photo.link}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
+            </Background>
+          </div>
         ))}
       </Projects>
     </div>
