@@ -101,7 +101,7 @@ export const MenuLinkActive = styled(Link)(({ selected }) => ({
 
 export const AboutUl = styled.ul`
   position: absolute;
-  z-index: 1000;
+  z-index: 3;
   display: block;
   color: white;
   min-width: 180px;

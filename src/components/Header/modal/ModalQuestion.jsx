@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { ModalStyle, ModalContentStyle, CloseBtnStyle, Title, BtnSend, ModalTitle, Settings, Container, Form, FormDiv, Label, Input, Textarea} from './ModalQuestion.styled'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ModalStyle, ModalContentStyle, CloseBtnStyle, Svg, Title, BtnSend, ModalTitle, Settings, Container, Form, FormDiv, Label, Input, Textarea} from './ModalQuestion.styled'
 import { faCircleQuestion  } from '@fortawesome/free-solid-svg-icons';
 
 const ModalQuestion = ({ closeModal }) => {
@@ -22,31 +21,25 @@ const ModalQuestion = ({ closeModal }) => {
     <ModalStyle>
       <ModalContentStyle>
       <ModalTitle>
-        <CloseBtnStyle onClick={closeModal}>✖</CloseBtnStyle>
         <Settings>
-          <FontAwesomeIcon icon={faCircleQuestion} style={{ position: 'relative', marginRight: 15, color: 'white', fontSize: '4em' }} />
+          <Svg icon={faCircleQuestion} />
           <Title>Задати питання</Title>
         </Settings>
+        <CloseBtnStyle onClick={closeModal}>✖</CloseBtnStyle>
       </ModalTitle>
       <Container>
         <Form>
             <FormDiv>
-                <Label>Ім'я<span>*</span></Label>
-                <div>
-                    <Input type="text" name="user_name" id="inputEmail" placeholder="Іван Іванович" value=""/>
-                </div>
+              <Label>Ім'я<span>*</span></Label>
+              <Input type="text" name="user_name" id="inputEmail" placeholder="Іван Іванович" value=""/>
             </FormDiv>
             <FormDiv>
-                <Label>E-mail<span>*</span></Label>
-                <div>
-                    <Input type="text" id="inputSignupPassword" placeholder="example@mail.ua" name="user_email" value="" />
-                </div>
+              <Label>E-mail<span>*</span></Label>
+              <Input type="text" id="inputSignupPassword" placeholder="example@mail.ua" name="user_email" value="" />
             </FormDiv>
             <FormDiv>
-              <Label>Питання<span>*</span></Label>
-                <div>						
-                    <Textarea rows="5" name="MESSAGE" placeholder="Зміст питання"></Textarea>
-                </div>
+              <Label>Питання<span>*</span></Label>			
+              <Textarea rows="5" name="MESSAGE" placeholder="Зміст питання"></Textarea>
             </FormDiv>
           </Form>
           <BtnSend>Надіслати</BtnSend>
