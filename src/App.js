@@ -22,24 +22,24 @@ const App = () => {
     <AppContainer>
     <Suspense>
       <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/obl" element={<Equipment />} />
-        {/* <Route path="/company" element={<Company />} >
-          <Route path="questions" element={<Question />} />
-          <Route path="vacancies" element={<Vacancies />} />
-        </Route> */}
-        <Route path="/company" element={<Company />} />
-        <Route path="/company/questions" element={<Question />} />
-        <Route path="/company/vacancies" element={<Vacancies />} />
-        <Route path="/reviews" element={<Feedback />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/articles" element={<Articles />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/obl" element={<Equipment />} />
+          {/* <Route path="/company" element={<Company />} >
+            <Route path="questions" element={<Question />} />
+            <Route path="vacancies" element={<Vacancies />} />
+          </Route> */}
+          <Route path="/company" element={<Company />} />
+          <Route path="/company/questions" element={<Question />} />
+          <Route path="/company/vacancies" element={<Vacancies />} />
+          <Route path="/reviews" element={<Feedback />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       <Footer />
     </Suspense>
     </AppContainer>

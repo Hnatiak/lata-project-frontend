@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const ModalStyle = styled.div`
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 5;
     left: 0;
     width: 100%;
     height: 100%;
@@ -19,15 +20,17 @@ export const ModalTitle = styled.div`
     padding: 25px 15px; 
     border-bottom: 1px solid #eee;
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
     border-radius: 12px 12px 0 0;
+    @media screen and (max-width: 480px) {
+        padding: 15px 10px;
+    }
 `;
 
 export const Settings = styled.div`
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 `;
 
 
@@ -35,7 +38,10 @@ export const Title = styled.h4`
     background: #9AC43C;
     color: #fff;
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    @media screen and (max-width: 480px) {
+        font-size: 24px;
+    }
 `;
 
 export const Container = styled.div`
@@ -46,6 +52,9 @@ export const Container = styled.div`
     display: flex; 
     align-items: center;
     flex-direction: column;
+    @media screen and (max-width: 480px) {
+        padding: 15px 15px 25px 15px;
+    }
 `;
 
 export const Form = styled.form`
@@ -54,11 +63,19 @@ export const Form = styled.form`
     align-items: flex-end;
     gap: 20px;
     margin-bottom: 20px;
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        align-items: stretch;
+        gap: 10px
+    }
 `;
 
 export const FormDiv = styled.div`
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+    }
 `;
 
 export const Label = styled.label`
@@ -69,7 +86,7 @@ export const Label = styled.label`
 export const Input = styled.input`
     background-color: #ffffff;
     border: 1px solid #cccccc;
-    width: 220px;
+    max-width: 100%;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     transition: border linear 0.2s, box-shadow linear 0.2s;
     height: 20px;
@@ -79,6 +96,9 @@ export const Input = styled.input`
     color: #555555;
     vertical-align: middle;
     border-radius: 4px;
+    @media screen and (min-width: 481px) {
+        width: 220px;
+    }
 `;
 
 
@@ -91,12 +111,15 @@ export const Textarea = styled.textarea`
     padding: 4px 6px;
     font-size: 14px;
     user-select: text;
-    width: 220px;
+    max-width: 100%;
     line-height: 20px;
     color: #555555;
     vertical-align: middle;
     border-radius: 4px;
     resize: none;
+    @media screen and (min-width: 481px) {
+        width: 220px;
+    }
 `;
 
 export const ModalContentStyle = styled.div`
@@ -105,8 +128,17 @@ export const ModalContentStyle = styled.div`
     left: 50%;
     z-index: 1050;
     width: 560px;
-    margin-bottom: 600px;
     background-color: #ffffff;
+`;
+
+export const Svg = styled(FontAwesomeIcon)`
+    position: relative;
+    margin-right: 15px;
+    color: white;
+    font-size: 4em;
+    @media screen and (max-width: 480px) {
+        font-size: 3em;
+    }
 `;
 
 export const CloseBtnStyle = styled.button`
@@ -124,6 +156,10 @@ export const BtnSend = styled.button`
     box-shadow: none;
     background: #9AC43C;
     border-radius: 4px;
+    @media screen and (max-width: 480px) {
+        padding: 4px 18px;
+        font-size: 14px;
+    }
 `;
 
 
