@@ -31,11 +31,11 @@ const ModalQuestion = ({ closeModal }) => {
         <Form>
             <FormDiv>
               <Label>Ім'я<span>*</span></Label>
-              <Input type="text" name="user_name" id="inputEmail" placeholder="Іван Іванович" value=""/>
+              <Input type="name" name="user_name" placeholder="Іван Іванович" />
             </FormDiv>
             <FormDiv>
               <Label>E-mail<span>*</span></Label>
-              <Input type="text" id="inputSignupPassword" placeholder="example@mail.ua" name="user_email" value="" />
+              <Input type="email" placeholder="example@mail.ua" name="user_email" />
             </FormDiv>
             <FormDiv>
               <Label>Питання<span>*</span></Label>			
