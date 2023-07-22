@@ -12,11 +12,11 @@ const Reviews = () => {
         <Form>
           <InputWrapper>
             <Label>Ім'я:</Label>
-            <Input type="text" placeholder="Ім'я" />
+            <Input type="name" name="user_name" placeholder="Ім'я" />
           </InputWrapper>
           <InputWrapper>
-            <Label placeholder="Email">Емейл:</Label>
-            <Input type="email" placeholder="Емейл" />
+            <Label>Емейл:</Label>
+            <Input type="email" name="user_email" placeholder="Емейл" />
           </InputWrapper>
           <InputWrapper>
             <Label>Коментар:</Label>
