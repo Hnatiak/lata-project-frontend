@@ -1,5 +1,5 @@
 import React from 'react';
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage'
 import Projects from './components/ProjectsPage/Projects'
@@ -17,6 +17,8 @@ import { AppContainer } from './App.styled'
 import Header from './components/Header/Header'
 import NotFound from './components/NotFound/NotFound';
 
+const AuthPage = lazy(() => import('./pages/AuthPage'));
+
 const App = () => {
   return (
     <AppContainer>
@@ -31,6 +33,7 @@ const App = () => {
             <Route path="questions" element={<Question />} />
             <Route path="vacancies" element={<Vacancies />} />
           </Route> */}
+          <Route path="/auth/:id" element={<AuthPage />} />
           <Route path="/company" element={<Company />} />
           <Route path="/company/questions" element={<Question />} />
           <Route path="/company/vacancies" element={<Vacancies />} />
