@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom'; // NavLink
+import { Link, NavLink } from 'react-router-dom'; // NavLink
 
 export const HeaderWrapper = styled.header`
   justify-content: space-between;
@@ -73,7 +73,7 @@ export const MenuItem = styled.li`
   color: #111;
 `;
 
-export const A = styled.a`
+export const A = styled(NavLink)`
   font: 14px/18px "PT Sans Caption", Arial, sans-serif;
   padding-bottom: 10px;
   // margin: 24px;
@@ -83,6 +83,20 @@ export const A = styled.a`
   font-weight: 700;
   color: #9AC43C;
   border-bottom: 1px dotted #e6e6e6;
+  @media screen and (max-width: 780px) {
+    margin: 28px 0 10px 0;
+  }
+`;
+
+export const Ab = styled(NavLink)`
+  font: 14px/18px "PT Sans Caption", Arial, sans-serif;
+  padding-bottom: 10px;
+  // margin: 24px;
+  margin: 28px 5px 0 0;
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #9AC43C;
   @media screen and (max-width: 780px) {
     margin: 28px 0 10px 0;
   }

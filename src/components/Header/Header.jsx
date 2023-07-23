@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { faCircleQuestion, faAngleDown  } from '@fortawesome/free-solid-svg-icons';
+import { faCircleQuestion, faAngleDown, faUser  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ModalQuestion from './modal/ModalQuestion';
-import {HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, Ul, MenuLinkActive, Menu, A, AboutUl, AboutA} from './ComponentsHeader.styled' // MenuLink,
-import { useLocation } from 'react-router-dom';
+import {HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, Ul, MenuLinkActive, Menu, A, AboutUl, AboutA, Ab} from './ComponentsHeader.styled' // MenuLink,
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../redux/auth/authOperations';
 // GeneralHeader,
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [selectedMenu, setSelectedMenu] = useState('/');
   const location = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMouseInMenu, setIsMouseInMenu] = useState(false);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -31,8 +36,14 @@ const Header = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
+  const openModal = (event) => {
+    event.preventDefault();
     setIsModalOpen(true);
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate('/');
   };
 
   const closeModal = () => {
@@ -46,11 +57,15 @@ const Header = () => {
             <LogoText>Лата - надійний партнер у поліграфічній галузі</LogoText>
           </Logo>
           <Menu>
-            <A href="#" title="Є запитання?" onClick={openModal}>
-              <FontAwesomeIcon icon={faCircleQuestion} style={{ height: '25px', position: 'relative', top: '3px', marginRight: 5}} />
-              Задати питання
-            </A>
-            {isModalOpen && <ModalQuestion closeModal={closeModal} />}
+            <div style={{ display: 'flex', alignItems: 'flex-end', gap: '15px', color: "#9AC43C"}}>
+              <A href="?question" title="Є запитання?" onClick={openModal}>
+                <FontAwesomeIcon icon={faCircleQuestion} style={{ height: '25px', position: 'relative', top: '3px', marginRight: 5}} />
+                Задати питання
+              </A>
+              {isModalOpen && <ModalQuestion closeModal={closeModal} />}
+              <Ab to="/auth/register"><FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }}/></Ab>
+              {isAuthenticated && <button onClick={handleLogout}>Log out</button>}
+            </div>
           <Nav>
             <Ul>
               <MenuItem><MenuLinkActive to="/" selected={selectedMenu === '/'}>Головна</MenuLinkActive></MenuItem>
