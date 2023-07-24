@@ -133,9 +133,10 @@
 // `;
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from '@mui/material';
+// import { Link } from '@mui/material';
 import styled from '@emotion/styled';
 import { ErrorMessage } from 'formik';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div `
     display: flex;
@@ -162,7 +163,7 @@ export const Menu = styled.div`
     border-radius: 20px 20px 0 0;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(NavLink)`
   left: 160px;
   top: 40px;
   font-style: normal;
@@ -173,7 +174,7 @@ export const StyledLink = styled(Link)`
   color: white;
 `;
 
-export const StyledRegistrationLink = styled(Link)`
+export const StyledRegistrationLink = styled(NavLink)`
   margin-right: 14px;
   font-style: normal;
   font-size: 18px;
