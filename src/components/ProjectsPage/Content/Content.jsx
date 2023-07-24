@@ -9,6 +9,7 @@ const Content = () => {
   const [photos, setPhotos] = useState([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAllSelected, setIsAllSelected] = useState(false);
+  const [selectedBox, setSelectedBox] = useState(null);
 
   useEffect(() => {
     setPhotos(boxesData);
@@ -28,6 +29,10 @@ const Content = () => {
       setIsMenuOpen(false);
     }
     setIsAllSelected((prevIsAllSelected) => !prevIsAllSelected);
+  };
+
+  const handleBoxClick = (box) => {
+    setSelectedBox(box);
   };
 
   const filteredPhotos = selectedMenu === 'all' ? photos : photos.filter(photo => photo.category === selectedMenu);
@@ -56,7 +61,7 @@ const Content = () => {
           </MenuItem>
         </MenuUl>
       </MenuContainer>
-      <Projects>
+      {/* <Projects>
         {filteredPhotos.map(photo => (
           // <Project key={photo.id}>
           //   <img src={photo.url} alt={`Photo ${photo.id}`} />
@@ -67,6 +72,28 @@ const Content = () => {
             </Project>
             <Background>
               <ButtonShop to={photo.link}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
+              <div>
+              {selectedBox && (
+                  <p style={{ color: "#fff"}} >{photo.price} грн</p>
+              )}
+              </div>
+            </Background>
+          </div>
+        ))}
+      </Projects> */}
+       <Projects>
+        {filteredPhotos.map((photo) => (
+          <div key={photo.id}>
+            <Project to={photo.link}>
+              <img src={photo.url} alt={`Photo ${photo.id}`} />
+            </Project>
+            <Background>
+              <ButtonShop to={photo.link}>
+                <CartIcon icon={faCartShopping} />КУПИТИ
+              </ButtonShop>
+              <div onClick={() => handleBoxClick(photo)}>
+                <p style={{ color: "#fff" }}>{photo.price}</p>
+              </div>
             </Background>
           </div>
         ))}

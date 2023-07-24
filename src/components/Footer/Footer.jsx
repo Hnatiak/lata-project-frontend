@@ -1,5 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import { Container, FooterContainer, Menu, ContactsLi, Title, Contacts, LinkLi  } from './Footer.styled' //LeftSideBar, RightSideBar, ContainerH3, ContainerAButton, ContainerH5, ContainerDiv, News, ContainerA, ContainerTitle, ContainerP
+// import { faInstagram, faTwitter, faYoutube, faFacebook } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTwitter, faYoutube, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { Container, FooterContainer, Menu, ContactsLi, Title, Contacts, LinkLi, A, Icon, SideContainer  } from './Footer.styled' //LeftSideBar, RightSideBar, ContainerH3, ContainerAButton, ContainerH5, ContainerDiv, News, ContainerA, ContainerTitle, ContainerP
 
 const Footer = () => {
     return (
@@ -43,28 +47,17 @@ const Footer = () => {
                 </Contacts>
             </Container>
             <div>
-            <div style={{ background: '#0a0a0a', padding: '30px' }}>
-					<a href="https://github.com/Hnatiak" target="_blank" rel="noopener noreferrer" title="Розробка сайту Hnatiak Roman">© Розробка сайту Hnatiak Roman</a>	
-                    <div>
-                        {/* <ul class="social-network">
-                            <li>
-	                    		<a href="/" data-placement="bottom" title="" data-original-title="Facebook"><i class="icon-facebook icon-square"></i></a>
-	                    	</li>
-                            <li>
-	                    		<a href="/" data-placement="bottom" title="" data-original-title="Twitter"><i class="icon-twitter icon-square"></i></a>
-	                    	</li>
-                            <li>
-	                    		<a href="/" data-placement="bottom" title="" data-original-title="Linkedin"><i class="icon-linkedin icon-square"></i></a>
-	                    	</li>
-                            <li>
-	                    		<a href="/" data-placement="bottom" title="" data-original-title="Pinterest"><i class="icon-pinterest icon-square"></i></a>
-	                    	</li>
-                            <li>
-	                    		<a href="/" data-placement="bottom" title="" data-original-title="Google plus"><i class="icon-google-plus icon-square"></i></a>
-	                    	</li>
-                        </ul> */}
+                <SideContainer>
+					<A href="https://github.com/Hnatiak" target="_blank" rel="noopener noreferrer" title="Розробка сайту Hnatiak Roman">© Розробка сайту Hnatiak Roman</A>	
+                    <div style={{ gap: '20px', display: 'flex'}}>
+                        {/* <ul class="social-network"> */}
+                            <a href="https://www.instagram.com/goroscop76859/" target="_blank"><Icon icon={faInstagram} /></a>
+                            <a href="https://twitter.com/qJL98ThvtJKBzUN" target="_blank"><Icon icon={faTwitter} /></a>
+                            <a href="https://www.youtube.com/@egsfortgg8849" target="_blank"><Icon icon={faYoutube} /></a>
+                            <a href="https://www.facebook.com/romanhnatiak" target="_blank"><Icon icon={faFacebook} /></a>
+                        {/* </ul> */}
                     </div>
-                </div>
+                </SideContainer>
             </div>
         </FooterContainer>
     );

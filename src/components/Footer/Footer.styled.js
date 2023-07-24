@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { NavLink } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
@@ -73,3 +74,25 @@ export const LinkLi = styled.li`
         line-height: 1.5em;
     }
 `;
+
+export const A = styled.a`
+    &:hover{
+        color: #9AC43C;
+    }
+`;
+
+export const Icon = styled(FontAwesomeIcon)`
+    width: 20px;
+    height: 20px;
+    &:hover{
+        color: #9AC43C;
+    }
+`;
+
+export const SideContainer = styled.div`
+    background: #0a0a0a;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+`;
+
