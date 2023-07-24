@@ -6,6 +6,7 @@ import {HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, Ul, MenuLinkAct
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/auth/authOperations';
+// import { setName } from '../../redux/auth/authSelectors';
 // GeneralHeader,
 
 const Header = () => {
@@ -15,7 +16,8 @@ const Header = () => {
   const location = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMouseInMenu, setIsMouseInMenu] = useState(false);
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const isLoggedInUser = useSelector((state) => state.auth.isLoggedIn);
+  // const username = useSelector(setName);
 
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -41,9 +43,17 @@ const Header = () => {
     setIsModalOpen(true);
   };
 
+  // const handleLogout = () => {
+  //   dispatch(logout());
+  //   navigate('/projects');
+  // };
   const handleLogout = () => {
-    dispatch(logout());
-    navigate('/');
+    try {
+      dispatch(logout());
+      navigate('/');
+    } catch (error) {
+      console.log('Logout failed:', error);
+    }
   };
 
   const closeModal = () => {
@@ -64,7 +74,8 @@ const Header = () => {
               </A>
               {isModalOpen && <ModalQuestion closeModal={closeModal} />}
               <Ab to="/auth/register"><FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }}/></Ab>
-              {isAuthenticated && <button onClick={handleLogout}>Log out</button>}
+              {/* <p>{username}</p> */}
+              {isLoggedInUser && <button onClick={handleLogout}>Log out</button>}
             </div>
           <Nav>
             <Ul>

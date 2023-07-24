@@ -44,17 +44,17 @@ export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   }
 });
 
-export const updateTheme = createAsyncThunk(
-  'users/updateThemes',
-  async (theme, thunkAPI) => {
-    try {
-      const { data } = await axios.patch('/api/users/themes', { theme });
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
+// export const updateTheme = createAsyncThunk(
+//   'users/updateThemes',
+//   async (theme, thunkAPI) => {
+//     try {
+//       const { data } = await axios.patch('/api/users/themes', { theme });
+//       return data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );
 
 export const refreshUser = createAsyncThunk(
   'auth/refresh',
@@ -92,17 +92,17 @@ export const updateUserData = createAsyncThunk(
     }
   }
 );
-export const patchBoard = createAsyncThunk(
-  'auth/patchBoard',
-  async ({ boardId }, thunkAPI) => {
-    try {
-      const { data } = await axios.patch(`/api/users/board`, {
-        activeBoard: boardId,
-      });
+// export const patchBoard = createAsyncThunk(
+//   'auth/patchBoard',
+//   async ({ boardId }, thunkAPI) => {
+//     try {
+//       const { data } = await axios.patch(`/api/users/board`, {
+//         activeBoard: boardId,
+//       });
 
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
+//       return data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   }
+// );

@@ -5,12 +5,12 @@ import { login } from '../../redux/auth/authOperations';
 import { useDispatch } from 'react-redux';
 import {
   ErrorText,
-  PasswordToggle,
+  // PasswordToggle,
   Menu,
   Inputs,
   Container,
   PasswordInput,
-  PasswordIcon,
+  // PasswordIcon,
   Content,
 //   Svg,
   LoginBtn,
@@ -59,10 +59,7 @@ function LoginPage() {
   return (
     <Container>
       <form onSubmit={handleSubmit}>
-        <Formik
-          initialValues={{ email: '', password: '' }}
-          validationSchema={LoginSchema}
-        >
+        <Formik initialValues={{ email: '', password: '' }} validationSchema={LoginSchema} >
           <Content>
             <Menu>
                 <StyledRegistrationLink href="register" underline="none">
@@ -83,7 +80,7 @@ function LoginPage() {
                 />
                 <ErrorText name="password" component="div" />
 
-                <PasswordToggle
+                {/* <PasswordToggle
                   className={`${PasswordToggle} ${PasswordIcon}`}
                 //   onClick={togglePasswordVisibility}
                 >
@@ -97,8 +94,8 @@ function LoginPage() {
                         style={{ color: '#737373' }}
                       />
                     </Svg>
-                  )} */}
-                </PasswordToggle>
+                  )}
+                </PasswordToggle> */}
               </PasswordInput>
               <LoginBtn type="submit">Log In Now</LoginBtn>
             </Inputs>
