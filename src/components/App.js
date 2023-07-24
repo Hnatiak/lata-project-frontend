@@ -1,26 +1,26 @@
 import React, { useEffect } from 'react';
 import { Suspense, lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from './components/HomePage/HomePage'
-import Projects from './components/ProjectsPage/Projects'
-import Services from './components/ServicePage/Services'
-import Footer from './components/Footer/Footer';
-import Equipment from './components/EquipmentPage/Equipment'
-import Company from './components/AboutPage/Сompany'
-import Question from './components/AboutPage/AboutUsMenu/Question'
-import Vacancies from './components/AboutPage/AboutUsMenu/Vacancies'
-import Feedback from './components/FeedbackPage/Feedback'
-import News from './components/NewsPage/News'
-import Articles from './components/ArticlesPage/Articles'
-import Contacts from './components/ContactsPage/Contacts'
+import HomePage from './HomePage/HomePage'
+import Projects from './ProjectsPage/Projects'
+import Services from './ServicePage/Services'
+import Footer from './Footer/Footer';
+import Equipment from './EquipmentPage/Equipment'
+import Company from './AboutPage/Сompany'
+import Question from './AboutPage/AboutUsMenu/Question'
+import Vacancies from './AboutPage/AboutUsMenu/Vacancies'
+import Feedback from './FeedbackPage/Feedback'
+import News from './NewsPage/News'
+import Articles from './ArticlesPage/Articles'
+import Contacts from './ContactsPage/Contacts'
 import { AppContainer } from './App.styled'
-import Header from './components/Header/Header'
-import { refreshUser } from './redux/auth/authOperations.js';
-import { isRefreshing, isLoggedIn } from './redux/auth/authSelectors.js';
-import NotFound from './components/NotFound/NotFound';
+import Header from './Header/Header'
+import { refreshUser } from '../redux/auth/authOperations.js';
+import { isRefreshing, isLoggedIn } from '../redux/auth/authSelectors.js';
+import NotFound from './NotFound/NotFound';
 import { useDispatch, useSelector } from 'react-redux';
 
-const AuthPage = lazy(() => import('./pages/AuthPage'));
+const AuthPage = lazy(() => import('../pages/AuthPage'));
 
 export const App = () => {
 
