@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from '@mui/material';
 import styled from '@emotion/styled';
 import { ErrorMessage } from 'formik';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div `
     display: flex;
@@ -26,7 +26,7 @@ export const Menu = styled.div`
     border-radius: 20px 20px 0 0;
 `;
 
-export const StyledLink = styled(NavLink)`
+export const StyledLink = styled(Link)`
   left: 160px;
   top: 40px;
   font-style: normal;

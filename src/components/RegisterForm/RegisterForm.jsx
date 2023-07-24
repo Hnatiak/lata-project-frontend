@@ -59,10 +59,10 @@ function RegistrationPage() {
         <Formik initialValues={{ name: '', email: '', password: '' }} validationSchema={RegisterSchema}>
           <Content>
             <Menu>
-              <StyledRegistrationLink to="register" underline="none">
+              <StyledRegistrationLink href="/register" underline="none">
                 Registration
               </StyledRegistrationLink>
-              <StyledLink to="login" underline="none">
+              <StyledLink href="/login" underline="none">
                 Log In
               </StyledLink>
             </Menu>
