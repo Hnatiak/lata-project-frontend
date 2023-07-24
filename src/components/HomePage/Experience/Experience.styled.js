@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     display: flex;
-    margin: 0 20px 40px 20px;
+    padding: 0 20px 40px 20px;
     justify-content: space-between;
-    padding: 0;
     background: #fff;
     @media screen and (max-width: 780px) {
         flex-direction: column;

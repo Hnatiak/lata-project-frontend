@@ -33,7 +33,7 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    <AppContainer>
+    <>
       <Suspense fallback={<div>Loading...</div>}>
         <Header />
           <Routes>
@@ -57,7 +57,7 @@ export const App = () => {
           </Routes>
         <Footer />
       </Suspense>
-    </AppContainer>
+    </>
   );
 };
 

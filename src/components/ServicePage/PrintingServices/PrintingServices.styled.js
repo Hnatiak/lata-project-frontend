@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     display: flex;
-    // margin: 0 20px 40px 20px;
     justify-content: space-between;
     padding: 20px 40px;
     background: #fff;

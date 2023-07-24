@@ -6,6 +6,10 @@ export const HeaderWrapper = styled.header`
   padding: 7px 40px 10px 40px;
   display: flex;
   gap: 30px;
+  background: #fff;
+  top: 0;
+  position: sticky;
+  z-index: 3;
   @media screen and (max-width: 780px) {
     padding: 7px 20px 10px 20px;
   }
