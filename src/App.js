@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage'
 import Projects from './components/ProjectsPage/Projects'
 import Services from './components/ServicePage/Services'
@@ -15,14 +15,26 @@ import Articles from './components/ArticlesPage/Articles'
 import Contacts from './components/ContactsPage/Contacts'
 import { AppContainer } from './App.styled'
 import Header from './components/Header/Header'
+import { refreshUser } from './redux/auth/authOperations.js';
+import { isRefreshing, isLoggedIn } from './redux/auth/authSelectors.js';
 import NotFound from './components/NotFound/NotFound';
+import { useDispatch, useSelector } from 'react-redux';
 
 const AuthPage = lazy(() => import('./pages/AuthPage'));
 
 const App = () => {
+
+  const dispatch = useDispatch();
+  const refreshing = useSelector(isRefreshing);
+  const loggedUser = useSelector(isLoggedIn);
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
   return (
     <AppContainer>
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -15,18 +15,13 @@ import {
   StyledRegistrationLink,
   StyledLink,
 } from './RegisterForm.styled';
-import { getError } from '../../redux/auth/authSelectors';
+// import { getError } from '../../redux/auth/authSelectors';
 import { toast } from 'react-toastify';
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
-  email: Yup.string()
-    .min(6, 'Email must be at least 6 characters')
-    .email('Invalid email')
-    .required('Email is required'),
-  password: Yup.string()
-    .min(6, 'Password must be at least 6 characters')
-    .required('Password is required'),
+  email: Yup.string().min(6, 'Email must be at least 6 characters').email('Invalid email').required('Email is required'),
+  password: Yup.string().min(8, 'Password must be at least 6 characters').required('Password is required'),
 });
 
 function RegistrationPage() {
@@ -47,6 +42,7 @@ function RegistrationPage() {
       email: event.target.elements.email.value,
       password: event.target.elements.password.value,
     };
+    // console.log("New User Created >", newUser)
 
     const response = await dispatch(register(newUser));
 
@@ -60,10 +56,7 @@ function RegistrationPage() {
   return (
     <Container>
       <form onSubmit={handleSubmit}>
-        <Formik
-          initialValues={{ name: '', email: '', password: '' }}
-          validationSchema={RegisterSchema}
-        >
+        <Formik initialValues={{ name: '', email: '', password: '' }} validationSchema={RegisterSchema}>
           <Content>
             <Menu>
               <StyledRegistrationLink href="register" underline="none">
