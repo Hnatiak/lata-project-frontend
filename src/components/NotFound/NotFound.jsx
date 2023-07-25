@@ -1,13 +1,10 @@
 import React from 'react';
-import { Section, Container, Title } from './NotFound.styled'
+import TitleSection from '../TitleSection/TitleSection';
 
 const NotFound = () => {
   return (
-      <Section>
-        <Container>
-            <Title>Ой, здається це посилання поки що в розробці</Title>
-        </Container>
-      </Section>
+    // style={{ color: '#ff0000' }}
+      <TitleSection title="Ой, здається ця сторінка в розробці" />
     );
 };
 

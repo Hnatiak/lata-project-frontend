@@ -1,12 +1,12 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import ContactsContainer from './Contacts/ContactsContainer';
 import GoogleMaps from './GoogleMaps/GoogleMaps';
+import TitleSection from '../TitleSection/TitleSection';
 
 const Contacts = () => {
   return (
     <div>
-      <ContactsContainer />
+      <TitleSection title="Контакти" />
       <GoogleMaps />
       {/* Додайте вміст вашої сторінки Продуктів */}
     </div>

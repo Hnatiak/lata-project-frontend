@@ -31,7 +31,7 @@ export const StyledLink = styled(Link)`
   top: 40px;
   font-style: normal;
   font-weight: var(--fontWeight500);
-  font-size: var(--fontSize18);
+  font-size: 18px;
   line-height: 27px;
   letter-spacing: -0.02em;
   color: #111;

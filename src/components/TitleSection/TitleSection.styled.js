@@ -14,12 +14,13 @@ export const Container = styled.div`
     position: relative;
     display: flex;
     align-items: center;
-    display: flex;
-    justify-content: center;
 `;
 
 export const Title = styled.h2`
     color: #fff;
     margin: 32px 0 32px 0;
     font-size: 42px;
+    @media screen and (max-width: 480px) {
+        font-size: 24px;
+    }
 `;
