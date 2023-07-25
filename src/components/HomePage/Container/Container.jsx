@@ -6,7 +6,7 @@ const Container = () => {
         <GeneralContainer>
           <MiddleContainer>
             <ContainerDiv style={{ flex: 1 }}>
-                <Svg icon={faPrint} isHovered={true} />
+                <Svg icon={faPrint} />
               <ContainerH6><ContainerSpan>Повноколірний офсетний друк форматом B1</ContainerSpan></ContainerH6>
               <ContainerP>Технології  підприємства дозволяють друкувати форматом 720х1020 мм, що дає змогу робити пакування більшого розміру та економити кошти при виготовленні.</ContainerP>
               <ContainerA href="https://lata.net.ua/services/Povnokolir/">Детальніше</ContainerA>
