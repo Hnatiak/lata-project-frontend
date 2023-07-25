@@ -13,12 +13,12 @@ import Feedback from './FeedbackPage/Feedback'
 import News from './NewsPage/News'
 import Articles from './ArticlesPage/Articles'
 import Contacts from './ContactsPage/Contacts'
-import { AppContainer } from './App.styled'
+// import { AppContainer } from './App.styled'
 import Header from './Header/Header'
 import { refreshUser } from '../redux/auth/authOperations.js';
-import { isRefreshing, isLoggedIn } from '../redux/auth/authSelectors.js';
+// import { isRefreshing, isLoggedIn } from '../redux/auth/authSelectors.js';
 import NotFound from './NotFound/NotFound';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const AuthPage = lazy(() => import('../pages/AuthPage'));
 
