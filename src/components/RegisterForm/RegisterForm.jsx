@@ -16,7 +16,7 @@ import {
   StyledLink,
 } from './RegisterForm.styled';
 // import { getError } from '../../redux/auth/authSelectors';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
@@ -47,9 +47,11 @@ function RegistrationPage() {
     const response = await dispatch(register(newUser));
 
     if (response.error) {
-      toast();
+      // toast();
+      console.log("Щось пішло не так")
     } else {
       navigate('/');
+      console.log("Ви успішно зареєструвалися")
     }
   };
 

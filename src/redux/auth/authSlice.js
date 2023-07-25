@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 import {
   register,
@@ -7,7 +7,7 @@ import {
   logout,
   refreshUser,
 //   updateTheme,
-  updateUserData,
+  // updateUserData,
 } from './authOperations';
 export const authSlice = createSlice({
   name: 'auth',
@@ -62,23 +62,23 @@ export const authSlice = createSlice({
     //   .addCase(updateTheme.fulfilled, (state, { payload }) => {
     //     state.user.theme = payload.theme;
     //   })
-      .addCase(updateUserData.fulfilled, (state, { payload }) => {
-        state.user.name = payload.name;
-        state.user.email = payload.email;
-        state.user.theme = payload.theme;
-        state.user.avatarURL = payload.avatarURL;
-        state.isRefreshing = false;
-        state.error = null;
-        toast.success('Changes accepted!');
-      })
-      .addCase(updateUserData.pending, state => {
-        state.isRefreshing = true;
-      })
-      .addCase(updateUserData.rejected, (state, { payload }) => {
-        state.isRefreshing = false;
-        state.error = payload;
-        toast.error(payload);
-      })
+      // .addCase(updateUserData.fulfilled, (state, { payload }) => {
+      //   state.user.name = payload.name;
+      //   state.user.email = payload.email;
+      //   state.user.theme = payload.theme;
+      //   state.user.avatarURL = payload.avatarURL;
+      //   state.isRefreshing = false;
+      //   state.error = null;
+      //   toast.success('Changes accepted!');
+      // })
+      // .addCase(updateUserData.pending, state => {
+      //   state.isRefreshing = true;
+      // })
+      // .addCase(updateUserData.rejected, (state, { payload }) => {
+      //   state.isRefreshing = false;
+      //   state.error = payload;
+      //   toast.error(payload);
+      // })
 });
 
 export const authReducer = authSlice.reducer;
