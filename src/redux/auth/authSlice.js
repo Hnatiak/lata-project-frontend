@@ -87,6 +87,95 @@ export const authReducer = authSlice.reducer;
 
 
 
+
+
+
+
+
+
+
+
+
+
+// import { createSlice } from '@reduxjs/toolkit';
+
+// import {
+//   register,
+//   login,
+//   logout,
+//   refreshUser,
+// } from './authOperations';
+
+// export const authSlice = createSlice({
+//   name: 'auth',
+//   initialState: {
+//     user: {
+//       name: '',
+//       email: '',
+//     },
+//     token: '',
+//     isLoggedIn: false,
+//     isRefreshing: false,
+//     error: null,
+//   },
+//   extraReducers: builder =>
+//     builder
+//       .addCase(register.fulfilled, (state, { payload }) => {
+//         state.user.name = payload.auth.user.name;
+//         state.user.email = payload.auth.user.email;
+//         state.token = payload.auth.token;
+//         state.isLoggedIn = payload.auth.isLoggedIn;
+//         state.isRefreshing = payload.auth.isRefreshing;
+//         state.error = payload.auth.error;
+//       })
+//       .addCase(register.rejected, (state, { payload }) => {
+//         state.error = payload;
+//       })
+//       .addCase(login.fulfilled, (state, { payload }) => {
+//         state.user.name = payload.auth.user.name;
+//         state.user.email = payload.auth.user.email;
+//         state.token = payload.auth.token;
+//         state.isLoggedIn = payload.auth.isLoggedIn;
+//         state.isRefreshing = payload.auth.isRefreshing;
+//         state.error = payload.auth.error;
+//       })
+//       .addCase(logout.fulfilled, state => {
+//         state.user.name = '';
+//         state.user.email = '';
+//         state.token = '';
+//         state.isLoggedIn = false;
+//         state.isRefreshing = false;
+//         state.error = null;
+//       })
+//       .addCase(refreshUser.pending, state => {
+//         state.isRefreshing = true;
+//       })
+//       .addCase(refreshUser.fulfilled, (state, { payload }) => {
+//         state.user.name = payload.auth.user.name;
+//         state.user.email = payload.auth.user.email;
+//         state.token = payload.auth.token;
+//         state.isLoggedIn = payload.auth.isLoggedIn;
+//         state.isRefreshing = payload.auth.isRefreshing;
+//         state.error = payload.auth.error;
+//       })
+//       .addCase(refreshUser.rejected, state => {
+//         state.isRefreshing = false;
+//       })
+// });
+
+// export const authReducer = authSlice.reducer;
+
+
+
+
+
+
+
+
+
+
+
+
 // import { createSlice } from '@reduxjs/toolkit';
 // // import { toast } from 'react-toastify';
 // import { register, logout } from './authOperations'; // Import the logout async thunk
