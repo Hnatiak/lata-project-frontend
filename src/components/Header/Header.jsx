@@ -6,7 +6,8 @@ import {HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, Ul, MenuLinkAct
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/auth/authOperations';
-// import { setName } from '../../redux/auth/authSelectors';
+import { setName } from '../../redux/auth/authSelectors';
+// import { avatarURL, getTheme, setName } from 'redux/auth/authSelectors';
 // GeneralHeader,
 
 const Header = () => {
@@ -47,6 +48,8 @@ const Header = () => {
   //   dispatch(logout());
   //   navigate('/projects');
   // };
+  const username = useSelector(setName);
+
   const handleLogout = () => {
     try {
       dispatch(logout());
@@ -76,6 +79,7 @@ const Header = () => {
               <Ab to="/auth/register"><FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }}/></Ab>
               {/* <p>{username}</p> */}
               {isLoggedInUser && <button onClick={handleLogout}>Log out</button>}
+              {isLoggedInUser && <p>{username}</p>}
             </div>
           <Nav>
             <Ul>
