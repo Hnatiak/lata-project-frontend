@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
 import { Suspense, lazy } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import HomePage from './HomePage/HomePage'
-import Projects from './ProjectsPage/Projects'
-import Services from './ServicePage/Services'
+import { Routes, Route } from 'react-router-dom';
+import HomePage from '../pages/HomePage'
+import Projects from '../pages/ProjectsPage'
+import Services from '../pages/ServicesPage'
 import Footer from './Footer/Footer';
-import Equipment from './EquipmentPage/Equipment'
-import Company from './AboutPage/Сompany'
-import Question from './AboutPage/AboutUsMenu/Question'
-import Vacancies from './AboutPage/AboutUsMenu/Vacancies'
-import Feedback from './FeedbackPage/Feedback'
-import News from './NewsPage/News'
-import Articles from './ArticlesPage/Articles'
+import Equipment from '../pages/EquipmentPage'
+import AboutPage from '../pages/AboutPage'
+import Feedback from '../pages/FeedbackPage'
+
+import Question from '../components/About/AboutUsMenu/Question'
+import Vacancies from '../components/About/AboutUsMenu/Vacancies'
+
+import News from '../pages/NewsPage'
+import Articles from '../pages/ArticlesPage'
 import Contacts from './ContactsPage/Contacts'
 // import { AppContainer } from './App.styled'
 import Header from './Header/Header'
@@ -42,11 +44,11 @@ export const App = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/services" element={<Services />} />
             <Route path="/obl" element={<Equipment />} />
-            {/* <Route path="/company" element={<Company />} >
+            {/* <Route path="/company" element={<AboutPage />} >
               <Route path="questions" element={<Question />} />
               <Route path="vacancies" element={<Vacancies />} />
             </Route> */}
-            <Route path="/company" element={<Company />} />
+            <Route path="/company" element={<AboutPage />} />
             <Route path="/company/questions" element={<Question />} />
             <Route path="/company/vacancies" element={<Vacancies />} />
             <Route path="/reviews" element={<Feedback />} />

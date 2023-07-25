@@ -129,6 +129,12 @@ export const ModalContentStyle = styled.div`
     z-index: 1050;
     width: 560px;
     background-color: #ffffff;
+    @media screen and (max-width: 589px) {
+        width: 95%;
+    }
+    // @media screen and (max-width: 480px) {
+    //     width: 95%;
+    // }
 `;
 
 export const Svg = styled(FontAwesomeIcon)`
