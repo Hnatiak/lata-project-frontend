@@ -27,7 +27,7 @@ const LoginSchema = Yup.object().shape({
     .email('Емейл неправильний')
     .required('Емейл обов\'язковий'),
   password: Yup.string()
-    .min(6, 'Пароль мусить бути більше 8 букв')
+    .min(8, 'Пароль мусить бути більше 8 букв')
     .required('Пароль обов\'язковий'),
 });
 
@@ -73,7 +73,7 @@ function LoginPage() {
               <Field autoFocus name="email" type="email" placeholder="Email" />
               <ErrorText name="email" component="div" />
               <PasswordInput>
-                <Field
+                <Field type="password"
                   name="password"
                 //   type={showPassword ? 'text' : 'password'}
                   placeholder="Password"

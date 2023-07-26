@@ -19,9 +19,9 @@ import {
 // import { toast } from 'react-toastify';
 
 const RegisterSchema = Yup.object().shape({
-  name: Yup.string().required('Name is required'),
-  email: Yup.string().min(6, 'Email must be at least 6 characters').email('Invalid email').required('Email is required'),
-  password: Yup.string().min(8, 'Password must be at least 6 characters').required('Password is required'),
+  name: Yup.string().required('Ім\'я обов\'язкове'),
+  email: Yup.string().min(6, 'Емейл мусить бути більше 6-ти символів').email('Емейл неправильний').required('Емейл обов\'язковий'),
+  password: Yup.string().min(8, 'Пароль мусить бути більше 8-ми цифр').required('Пароль обов\'язковий'),
 });
 
 function RegistrationPage() {
@@ -74,12 +74,10 @@ function RegistrationPage() {
               <Field name="email" type="email" placeholder="Email" />
               <ErrorText name="email" component="div" />
               <PasswordInput>
-                <Field
-                  name="password"
-                //   type={showPassword ? 'text' : 'password'}
-                  placeholder="Password"
-                />
-                <ErrorText name="password" component="div" />
+              <Field name="password" type="password"
+                //   type={showPassword ? 'text' : 'password'} 
+                placeholder="Password" />
+              <ErrorText name="password" component="div" />
                 {/* <PasswordToggle
                   className={`${PasswordToggle} ${PasswordIcon}`}
                   onClick={togglePasswordVisibility}

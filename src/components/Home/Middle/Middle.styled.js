@@ -20,6 +20,10 @@ export const Image = styled.img`
     height: auto;
     position: absolute;
     transition: opacity 0.5s ease-in-out;
+    // @media screen and (max-width: 780px) {
+    //     width: 650px;
+    //     height: 230px;
+    // }
 `;
 
 export const LeftDiv = styled.div`

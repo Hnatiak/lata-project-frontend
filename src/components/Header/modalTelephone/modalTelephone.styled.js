@@ -1,46 +1,6 @@
 import styled from '@emotion/styled';
 import { Link, NavLink } from 'react-router-dom'; // NavLink
 
-export const HeaderWrapper = styled.header`
-  justify-content: space-between;
-  padding: 7px 40px 10px 40px;
-  display: flex;
-  gap: 30px;
-  background: #fff;
-  top: 0;
-  position: sticky;
-  z-index: 3;
-  @media screen and (max-width: 780px) {
-    padding: 7px 20px 10px 20px;
-    align-items: center;
-  }
-`;
-
-export const Logo = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: 780px) {
-    max-width: 228px
-  }
-`;
-
-export const LogoImage = styled.img`
-  margin-bottom: 10px;
-  max-width: 219px;
-  max-height: 94px;
-  @media screen and (max-width: 480px) {
-    max-width: 100%;
-  }
-`;
-
-export const LogoText = styled.b`
-  font-size: 14px;
-  color: #000;
-  @media screen and (max-width: 480px) {
-    display: none;
-  }
-`;
-
 export const Nav = styled.nav`
     font: 14px/18px "PT Sans Caption", Arial, sans-serif;
     font-weight: 300;
@@ -54,19 +14,16 @@ export const Nav = styled.nav`
 `;
 
 export const Ul = styled.ul`
-margin: 0 20px 25px 0;
   padding: 0;
-  display: flex;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-direction: column;
+  gap: 35px 12px;
   max-width: 870px;
-  flex-wrap: wrap;
 `;
 
 export const Menu = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
+  padding: 10px;
 `;
 
 export const Question = styled.div`
@@ -94,15 +51,6 @@ export const A = styled(NavLink)`
   @media screen and (max-width: 780px) {
     margin: 28px 0 10px 0;
   }
-  @media (max-width: 480px) {
-    .A span {
-      display: none; /* Hide the text */
-    }
-  
-    .A svg {
-      margin-right: 0; /* Remove right margin from the icon */
-    }
-  }
 `;
 
 export const Ab = styled(NavLink)`
@@ -119,9 +67,9 @@ export const Ab = styled(NavLink)`
   }
 `;
 
-export const MenuLinkActive = styled(Link)(({ selected }) => ({
+export const MenuLinkActive = styled(NavLink)(({ selected }) => ({
   textTransform: 'uppercase',
-  fontSize: '13px',
+  fontSize: '14px',
   fontWeight: selected ? '700' : '400',
   color: selected ? '#9AC43C' : '#111',
   textDecoration: 'none',
@@ -151,4 +99,10 @@ export const AboutA = styled(Link)`
     cursor: pointer;
     background: #9AC43C;
   }
+`;
+
+export const MenuTelephoneContainer = styled.div`
+  display: flex;
+  gap: 15px;
+  align-items: center;  
 `;
