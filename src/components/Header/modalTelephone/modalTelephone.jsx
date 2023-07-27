@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Nav, MenuItem, Ul, MenuLinkActive, Menu, A, AboutUl, AboutA, Ab, MenuTelephoneContainer } from './modalTelephone.styled';
+import { Nav, MenuItem, Ul, MenuLinkActive, Menu, Ab, MenuTelephoneContainer } from './modalTelephone.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { setName } from '../../../redux/auth/authSelectors';
 import { logout } from '../../../redux/auth/authOperations';
-import { faCircleQuestion, faAngleDown, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faCircleXmark, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ModalTelephone = ({ closeModalTelephone }) => {
@@ -13,33 +13,11 @@ const ModalTelephone = ({ closeModalTelephone }) => {
   const navigate = useNavigate();
   const [selectedMenu, setSelectedMenu] = useState('/');
   const location = useLocation();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMouseInMenu, setIsMouseInMenu] = useState(false);
   const isLoggedInUser = useSelector((state) => state.auth.isLoggedIn);
-  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     setSelectedMenu(location.pathname);
   }, [location]);
-
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const handleDropdownClose = () => {
-    setIsMouseInMenu(false);
-    setTimeout(() => {
-      if (!isMouseInMenu) {
-        setIsDropdownOpen(false);
-      }
-    }, 8000);
-  };
-
-  const openModal = (event) => {
-    event.preventDefault();
-    setIsModalOpen(true);
-  };
 
   const username = useSelector(setName);
 
@@ -60,18 +38,15 @@ const ModalTelephone = ({ closeModalTelephone }) => {
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', background: 'white' }}>
       <Menu>
-             <div style={{ display: 'flex', alignItems: 'flex-end', gap: '15px', color: "#9AC43C", justifyContent: 'space-between', marginBottom: '40px' }}>
-               <A href="?question" title="Є запитання?" onClick={openModal}>
-                 <FontAwesomeIcon icon={faCircleQuestion} style={{ height: '25px', position: 'relative', top: '3px', marginRight: 5}} />
-                 Задати питання
-               </A>
+             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', color: "#9AC43C", justifyContent: 'space-between', marginBottom: '40px' }}>
                <MenuTelephoneContainer>
-                <Ab to="/auth/register"><FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }}/></Ab>
-                <button onClick={closeModalTelephone}>Close</button>
+                <Ab to="/auth/register" onClick={handleMenuItemClick}>
+                  <FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }} />
+                  {isLoggedInUser && <p style={{ marginBottom: 0 }} >{username}</p>}
+                  </Ab>
                </MenuTelephoneContainer>
-               {/* <p>{username}</p> */}
-               {isLoggedInUser && <button onClick={handleLogout}>Log out</button>}
-               {isLoggedInUser && <p>{username}</p>}
+               {isLoggedInUser && <FontAwesomeIcon icon={faArrowRightFromBracket} onClick={() => { handleLogout(); handleMenuItemClick(); }} style={{ width: 20, height: 20 }} />}
+               <FontAwesomeIcon icon={faCircleXmark} style={{ width: 20, height: 20 }} onClick={closeModalTelephone} />
              </div>
            <Nav>
              <Ul>

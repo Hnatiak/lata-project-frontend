@@ -84,9 +84,7 @@ export const MenuItem = styled.li`
 export const A = styled(NavLink)`
   font: 14px/18px "PT Sans Caption", Arial, sans-serif;
   padding-bottom: 10px;
-  // margin: 24px;
   margin: 28px 5px 0 0;
-  padding-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
   color: #9AC43C;
@@ -95,13 +93,9 @@ export const A = styled(NavLink)`
     margin: 28px 0 10px 0;
   }
   @media (max-width: 480px) {
-    .A span {
-      display: none; /* Hide the text */
-    }
-  
-    .A svg {
-      margin-right: 0; /* Remove right margin from the icon */
-    }
+      border-bottom: none;
+      margin: 0;
+      padding-bottom: 0;
   }
 `;
 

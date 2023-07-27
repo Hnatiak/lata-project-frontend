@@ -42,12 +42,10 @@ function RegistrationPage() {
       email: event.target.elements.email.value,
       password: event.target.elements.password.value,
     };
-    // console.log("New User Created >", newUser)
 
     const response = await dispatch(register(newUser));
 
     if (response.error) {
-      // toast();
       console.log("Щось пішло не так")
     } else {
       navigate('/');

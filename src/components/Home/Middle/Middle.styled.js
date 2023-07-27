@@ -12,6 +12,11 @@ export const MiddleContainer = styled.div`
     @media screen and (max-width: 780px) {
         max-height: 240px;
     }
+    @media screen and (max-width: 480px) {
+        display: flex;
+        height: 140px;
+        align-items: center;
+    }
 `;
 
 export const Image = styled.img`
@@ -49,6 +54,9 @@ export const LeftDiv = styled.div`
         right: 0;
         // position: relative;
     }
+    @media screen and (max-width: 480px) {
+        padding: 20px 20px 20px 50px;
+    }
 `;
 
 export const Title = styled.h2`
@@ -62,6 +70,9 @@ export const P = styled.p`
    margin-bottom: 20px;
    line-height: 1.6em;
    color: #fff;
+   @media screen and (max-width: 480px) {
+    display: none;
+}
 `;
 
 export const A = styled.a`

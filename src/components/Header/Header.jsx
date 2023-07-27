@@ -1,147 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-// import { faCircleQuestion, faAngleDown, faUser  } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import ModalQuestion from './modal/ModalQuestion';
-// import ModalTelephone from './modalTelephone/modalTelephone';
-// import {HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, Ul, MenuLinkActive, Menu, A, AboutUl, AboutA, Ab} from './ComponentsHeader.styled' // MenuLink,
-// import { useLocation, useNavigate } from 'react-router-dom';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { logout } from '../../redux/auth/authOperations';
-// import { setName } from '../../redux/auth/authSelectors';
-// // import { avatarURL, getTheme, setName } from 'redux/auth/authSelectors';
-// // GeneralHeader,
-
-// const Header = () => {
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-//   const [selectedMenu, setSelectedMenu] = useState('/');
-//   const location = useLocation();
-//   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-//   const [isMouseInMenu, setIsMouseInMenu] = useState(false);
-//   const isLoggedInUser = useSelector((state) => state.auth.isLoggedIn);
-//   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-// // Update windowWidth when the window is resized
-// useEffect(() => {
-//   const handleResize = () => {
-//     setWindowWidth(window.innerWidth);
-//   };
-
-//   window.addEventListener('resize', handleResize);
-//   return () => window.removeEventListener('resize', handleResize);
-// }, []);
-
-//   const handleDropdownToggle = () => {
-//     setIsDropdownOpen(!isDropdownOpen);
-//   };
-
-//   useEffect(() => {
-//     setSelectedMenu(location.pathname);
-//   }, [location]);
-  
-//   const handleDropdownClose = () => {
-//         setIsMouseInMenu(false);
-//         setTimeout(() => {
-//           if (!isMouseInMenu) {
-//             setIsDropdownOpen(false);
-//           }
-//         }, 8000);
-//       };
-
-//   const [isModalOpen, setIsModalOpen] = useState(false);
-
-//   const openModal = (event) => {
-//     event.preventDefault();
-//     setIsModalOpen(true);
-//   };
-
-//   const username = useSelector(setName);
-
-//   const handleLogout = () => {
-//     try {
-//       dispatch(logout());
-//       navigate('/');
-//     } catch (error) {
-//       console.log('Logout failed:', error);
-//     }
-//   };
-
-//   const closeModal = () => {
-//     setIsModalOpen(false);
-//   };
-
-//     return (
-//         <HeaderWrapper>
-//           <Logo>
-//             <LogoImage src="https://lata.net.ua/upload/medialibrary/543/5436204c869274d18960335378c3010b.png" href='/' alt="Logo" />
-//             <LogoText>Лата - надійний партнер у поліграфічній галузі</LogoText>
-//           </Logo>
-//           <Menu>
-//             <div style={{ display: 'flex', alignItems: 'flex-end', gap: '15px', color: "#9AC43C"}}>
-//               <A href="?question" title="Є запитання?" onClick={openModal}>
-//                 <FontAwesomeIcon icon={faCircleQuestion} style={{ height: '25px', position: 'relative', top: '3px', marginRight: 5}} />
-//                 Задати питання
-//               </A>
-//               {isModalOpen && <ModalQuestion closeModal={closeModal} />}
-//               <Ab to="/auth/register"><FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }}/></Ab>
-//               {/* <p>{username}</p> */}
-//               {isLoggedInUser && <button onClick={handleLogout}>Log out</button>}
-//               {isLoggedInUser && <p>{username}</p>}
-//             </div>
-//           <Nav>
-//             <Ul>
-//               <MenuItem><MenuLinkActive to="/" selected={selectedMenu === '/'}>Головна</MenuLinkActive></MenuItem>
-//               <MenuItem><MenuLinkActive to="/projects" selected={selectedMenu === '/projects'}>Продукція</MenuLinkActive></MenuItem>
-//               <MenuItem><MenuLinkActive to="/services" selected={selectedMenu === '/services'}>Послуги</MenuLinkActive></MenuItem>
-//               <MenuItem><MenuLinkActive to="/obl" selected={selectedMenu === '/obl'}>Продаж обладнання</MenuLinkActive></MenuItem>
-//               <MenuItem><MenuLinkActive to="/company" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownClose} selected={selectedMenu === '/company'}>
-//                   Про нас
-//                   <FontAwesomeIcon
-//                     icon={faAngleDown}
-//                     style={{ marginLeft: '5px' }}
-//                   />
-//                 </MenuLinkActive>
-//                 {isDropdownOpen && (
-//                   <AboutUl>
-//                     <AboutA to="/company/questions">Часті питання</AboutA>
-//                     <AboutA to="/company/vacancies">Вакансії</AboutA>
-//                   </AboutUl>
-//                 )}
-//               </MenuItem>
-//               <MenuItem><MenuLinkActive to="/reviews" selected={selectedMenu === '/reviews'}>Відгуки</MenuLinkActive></MenuItem>
-//               <MenuItem><MenuLinkActive to="/news" selected={selectedMenu === '/news'}>Новини</MenuLinkActive></MenuItem>
-//               <MenuItem><MenuLinkActive to="/articles" selected={selectedMenu === '/articles'}>Статті</MenuLinkActive></MenuItem>
-//               <MenuItem><MenuLinkActive to="/contacts" selected={selectedMenu === '/contacts'}>Контакти</MenuLinkActive></MenuItem>
-//             </Ul>
-//           </Nav>
-//           </Menu>
-//         </HeaderWrapper>
-//     );
-//   };
-  
-// export default Header;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useEffect, useState } from 'react';
 import { faCircleQuestion, faAngleDown, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -159,6 +15,7 @@ const Header = () => {
   const [selectedMenu, setSelectedMenu] = useState('/');
   const location = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  // eslint-disable-next-line
   const [isMouseInMenu, setIsMouseInMenu] = useState(false);
   const isLoggedInUser = useSelector((state) => state.auth.isLoggedIn);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -173,7 +30,6 @@ const Header = () => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -181,14 +37,13 @@ const Header = () => {
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-
+  
   const handleDropdownClose = () => {
     setIsMouseInMenu(false);
-    setTimeout(() => {
-      if (!isMouseInMenu) {
-        setIsDropdownOpen(false);
-      }
-    }, 8000);
+  };
+  
+  const handleMenuOptionClick = () => {
+    setIsDropdownOpen(false);
   };
 
   const openModal = (event) => {
@@ -225,12 +80,13 @@ const Header = () => {
         <LogoImage src="https://lata.net.ua/upload/medialibrary/543/5436204c869274d18960335378c3010b.png" href='/' alt="Logo" />
         <LogoText>Лата - надійний партнер у поліграфічній галузі</LogoText>
       </Logo>
-        {/* <A href="?question" title="Є запитання?" onClick={openModal}>
-          <FontAwesomeIcon icon={faCircleQuestion} style={{ height: '25px', position: 'relative', top: '3px', marginRight: 5}} />
-          <span>Задати питання</span>
-        </A> */}
-      {windowWidth < 480 ? (
-        <FontAwesomeIcon icon={faBars} onClick={openModalTelephone} style={{ width: "25px", height: "25px" }}/>
+      {windowWidth < 481 ? (
+        <div style={{ display: 'flex', alignItems: 'center'}}>
+          <A href="?question" title="Є запитання?" onClick={openModal}>
+            <FontAwesomeIcon icon={faCircleQuestion} style={{ height: '35px', position: 'relative', marginRight: 15, borderBottom: "none"}} />
+          </A>
+          <FontAwesomeIcon icon={faBars} onClick={openModalTelephone} style={{ width: "25px", height: "25px" }}/>
+        </ div>
       ) : (
         <Menu>
           <div style={{ display: 'flex', alignItems: 'flex-end', gap: '15px', color: "#9AC43C"}}>
@@ -250,17 +106,15 @@ const Header = () => {
                <MenuItem><MenuLinkActive to="/projects" selected={selectedMenu === '/projects'}>Продукція</MenuLinkActive></MenuItem>
                <MenuItem><MenuLinkActive to="/services" selected={selectedMenu === '/services'}>Послуги</MenuLinkActive></MenuItem>
                <MenuItem><MenuLinkActive to="/obl" selected={selectedMenu === '/obl'}>Продаж обладнання</MenuLinkActive></MenuItem>
-               <MenuItem><MenuLinkActive to="/company" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownClose} selected={selectedMenu === '/company'}>
-                   Про нас
-                   <FontAwesomeIcon
-                    icon={faAngleDown}
-                    style={{ marginLeft: '5px' }}
-                  />
+              <MenuItem>
+                <MenuLinkActive to="/company" onMouseEnter={handleDropdownToggle} onClick={handleMenuOptionClick} onMouseLeave={handleDropdownClose} selected={selectedMenu === '/company'}>
+                  Про нас
+                  <FontAwesomeIcon icon={faAngleDown} style={{ marginLeft: '5px' }}/>
                 </MenuLinkActive>
                 {isDropdownOpen && (
-                  <AboutUl>
-                    <AboutA to="/company/questions">Часті питання</AboutA>
-                    <AboutA to="/company/vacancies">Вакансії</AboutA>
+                  <AboutUl onMouseEnter={() => setIsMouseInMenu(true)} onMouseLeave={() => setIsMouseInMenu(false)}>
+                    <AboutA to="/company/questions" onClick={handleMenuOptionClick}>Часті питання</AboutA>
+                    <AboutA to="/company/vacancies" onClick={handleMenuOptionClick}>Вакансії</AboutA>
                   </AboutUl>
                 )}
               </MenuItem>

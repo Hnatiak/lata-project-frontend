@@ -51,6 +51,9 @@ export const A = styled(NavLink)`
   @media screen and (max-width: 780px) {
     margin: 28px 0 10px 0;
   }
+  @media screen and (max-width: 480px) {
+    margin: 20px 0 10px 0;
+  }
 `;
 
 export const Ab = styled(NavLink)`
@@ -63,7 +66,12 @@ export const Ab = styled(NavLink)`
   font-weight: 700;
   color: #9AC43C;
   @media screen and (max-width: 780px) {
-    margin: 28px 0 10px 0;
+    margin: 28px 0px;
+  }
+  @media screen and (max-width: 480px) {
+    gap: 15px;
+    display: flex;
+    padding-bottom: 0px;
   }
 `;
 
@@ -104,5 +112,5 @@ export const AboutA = styled(Link)`
 export const MenuTelephoneContainer = styled.div`
   display: flex;
   gap: 15px;
-  align-items: center;  
+  align-items: center;
 `;
