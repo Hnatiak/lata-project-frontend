@@ -1,6 +1,7 @@
-[
+const boxs = [
     {
       "id": 1,
+      "title": "Boxs",
       "category": "",
       "link": "/box1",
       "price": "5 грн за 1 шт",
@@ -8,6 +9,7 @@
     },
     {
       "id": 2,
+      "title": "Boxs",
       "category": "",
       "link": "/box2",
       "price": "2 грн за 1 шт",
@@ -15,6 +17,7 @@
     },
     {
       "id": 3,
+      "title": "Boxs",
       "category": "CorrugatedCardboard",
       "link": "/example",
       "price": "10 грн за 1 шт",
@@ -23,6 +26,7 @@
     },
     {
       "id": 4,
+      "title": "Boxs",
       "category": "CorrugatedCardboard",
       "link": "/example",
       "price": "6 грн за 1 шт",
@@ -30,6 +34,7 @@
     },
     {
       "id": 5,
+      "title": "Boxs",
       "category": "FullColorPackaging",
       "link": "/example",
       "price": "1 грн за 1 шт",
@@ -37,6 +42,7 @@
     },
     {
       "id": 6,
+      "title": "Boxs",
       "category": "FullColorPackaging",
       "link": "/example",
       "price": "0.50 грн за 1 шт",
@@ -44,6 +50,7 @@
     },
     {
       "id": 7,
+      "title": "Boxs",
       "category": "FullColorPackaging",
       "link": "/example",
       "price": "10 грн за 1 шт",
@@ -51,6 +58,7 @@
     },
     {
       "id": 8,
+      "title": "Boxs",
       "category": "FullColorPackaging",
       "link": "/example",
       "price": "80 грн за 1 шт",
@@ -58,6 +66,7 @@
     },
     {
       "id": 9,
+      "title": "Boxs",
       "category": "FullColorPackaging",
       "link": "/example",
       "price": "2 грн за 1 шт",
@@ -65,6 +74,7 @@
     },
     {
       "id": 10,
+      "title": "Boxs",
       "category": "FullColorPackaging",
       "link": "/example",
       "price": "2 грн за 1 шт",
@@ -72,6 +82,7 @@
     },
     {
       "id": 11,
+      "title": "Boxs",
       "category": "FullColorPackaging",
       "link": "/example",
       "price": "2 грн за 1 шт",
@@ -79,6 +90,7 @@
     },
     {
       "id": 12,
+      "title": "Boxs",
       "category": "FullColorPackaging",
       "link": "/example",
       "price": "2 грн за 1 шт",
@@ -86,6 +98,7 @@
     },
     {
       "id": 13,
+      "title": "Boxs",
       "category": "FullColorPackaging",
       "link": "/example",
       "price": "3 грн за 1 шт",
@@ -93,16 +106,20 @@
     },
     {
       "id": 14,
+      "title": "Boxs",
       "category": "CorrugatedCardboard",
       "link": "/example",
       "price": "6 грн за 1 шт",
       "url": "https://lata.net.ua/upload/iblock/dcc/dcccc8748f6dab9d34006a5560a31d13.jpg"
     },
     {
-        "id": 15,
-        "category": "PaperCups",
-        "link": "/example",
-        "price": "80 грн за 1 шт",
-        "url": "https://lata.net.ua/upload/iblock/683/683a0f03f26554fb562ca3f099df53a6.jpg"
+      "id": 15,
+      "title": "Boxs",
+      "category": "PaperCups",
+      "link": "/example",
+      "price": "80 грн за 1 шт",
+      "url": "https://lata.net.ua/upload/iblock/683/683a0f03f26554fb562ca3f099df53a6.jpg"
     }
 ]
+
+export default boxs;

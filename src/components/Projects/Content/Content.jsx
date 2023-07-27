@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer, Background, ButtonShop, CartIcon } from './Content.styled' // MenuLink 
-import boxesData from './boxs.json';
+import boxesData from './boxs.js';
 import { FiChevronRight, FiChevronDown } from 'react-icons/fi';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,7 +9,7 @@ const Content = () => {
   const [photos, setPhotos] = useState([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAllSelected, setIsAllSelected] = useState(false);
-  const [selectedBox, setSelectedBox] = useState(null);
+  const [, setSelectedBox] = useState(null);
 
   useEffect(() => {
     setPhotos(boxesData);
@@ -61,36 +61,14 @@ const Content = () => {
           </MenuItem>
         </MenuUl>
       </MenuContainer>
-      {/* <Projects>
-        {filteredPhotos.map(photo => (
-          // <Project key={photo.id}>
-          //   <img src={photo.url} alt={`Photo ${photo.id}`} />
-          // </Project>
-          <div key={photo.id}>
-            <Project to={photo.link}>
-              <img src={photo.url} alt={`Photo ${photo.id}`} />
-            </Project>
-            <Background>
-              <ButtonShop to={photo.link}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
-              <div>
-              {selectedBox && (
-                  <p style={{ color: "#fff"}} >{photo.price} грн</p>
-              )}
-              </div>
-            </Background>
-          </div>
-        ))}
-      </Projects> */}
        <Projects>
         {filteredPhotos.map((photo) => (
           <div key={photo.id}>
-            <Project>
-              <img src={photo.url} alt={`Photo ${photo.id}`} />
+            <Project to={`/projects/${photo.id}`}>
+              <img src={photo.url} alt={`${photo.id}`} />
             </Project>
             <Background>
-              <ButtonShop to={photo.id}>
-                <CartIcon icon={faCartShopping} />КУПИТИ
-              </ButtonShop>
+              <ButtonShop to={`/projects/${photo.id}`}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
               <div onClick={() => handleBoxClick(photo)}>
                 <p style={{ color: "#fff" }}>{photo.price}</p>
               </div>

@@ -66,7 +66,7 @@ export const Projects = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Змінено ширину колонок на 250px */
   gap: 25px;
-  margin: 25px;
+  padding: 0px 25px 45px 25px;
   align-items: center;
   @media screen and (max-width: 780px) {
     grid-template-columns: repeat(2, 1fr);
@@ -85,21 +85,14 @@ export const Project = styled(Link)`
   justify-content: center; /* Центрування по горизонталі */
   align-items: center; /* Центрування по вертикалі */
   height: 250px;
-
-
-  &:hover img {
-    opacity: 0.8;
+  img{
+    transition: filter 0.2s ease;
   }
 
-  &:hover::before {
-    content: '';
-    cursor: pointer;
-    position: absolute;
-    width: 274px;
-    height: 250px;
-    background-color: #9AC43C;
-    opacity: 0.8;
-    z-index: 1;
+  &:hover {
+    img{
+      filter: brightness(110%);
+    }
   }
 `;
 

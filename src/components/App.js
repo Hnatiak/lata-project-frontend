@@ -21,6 +21,8 @@ import { refreshUser } from '../redux/auth/authOperations.js';
 // import { isRefreshing, isLoggedIn } from '../redux/auth/authSelectors.js';
 import NotFound from './NotFound/NotFound';
 import { useDispatch } from 'react-redux';
+import boxesData from './Projects/Content/boxs'
+import ProductDetailsPage from './Projects/ProductDetailsPage/ProductDetailsPage';
 
 const AuthPage = lazy(() => import('../pages/AuthPage'));
 
@@ -42,6 +44,8 @@ export const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/auth/:id" element={<AuthPage />} />
             <Route path="/projects" element={<Projects />} />
+            {/* <Route path="/projects/:photoId" component={ProductDetailsPage} /> */}
+            <Route path="/projects/:photoId" element={<ProductDetailsPage photos={boxesData} />} />
             <Route path="/services" element={<Services />} />
             <Route path="/obl" element={<Equipment />} />
             {/* <Route path="/company" element={<AboutPage />} >
