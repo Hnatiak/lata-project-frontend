@@ -1,18 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import { faCircleQuestion, faAngleDown, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ModalQuestion from './modal/ModalQuestion';
-import ModalTelephone from './modalTelephone/modalTelephone';
-import { HeaderWrapper, Logo, LogoImage, LogoText, Nav, MenuItem, Ul, MenuLinkActive, Menu, A, AboutUl, AboutA, Ab } from './ComponentsHeader.styled';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../redux/auth/authOperations';
-import { setName } from '../../redux/auth/authSelectors';
+import React, { useEffect, useState } from "react";
+import {
+  faCircleQuestion,
+  faAngleDown,
+  faUser,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ModalQuestion from "./Modal/ModalQuestion";
+import ModalTelephone from "./ModalTelephone/ModalTelephone";
+import {
+  HeaderWrapper,
+  Logo,
+  LogoImage,
+  LogoText,
+  Nav,
+  MenuItem,
+  Ul,
+  MenuLinkActive,
+  Menu,
+  A,
+  AboutUl,
+  AboutA,
+  Ab,
+} from "./ComponentsHeader.styled";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/auth/authOperations";
+import { setName } from "../../redux/auth/authSelectors";
 
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [selectedMenu, setSelectedMenu] = useState('/');
+  const [selectedMenu, setSelectedMenu] = useState("/");
   const location = useLocation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   // eslint-disable-next-line
@@ -30,18 +49,18 @@ const Header = () => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleDropdownToggle = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-  
+
   const handleDropdownClose = () => {
     setIsMouseInMenu(false);
   };
-  
+
   const handleMenuOptionClick = () => {
     setIsDropdownOpen(false);
   };
@@ -64,9 +83,9 @@ const Header = () => {
   const handleLogout = () => {
     try {
       dispatch(logout());
-      navigate('/');
+      navigate("/");
     } catch (error) {
-      console.log('Logout failed:', error);
+      console.log("Logout failed:", error);
     }
   };
 
@@ -77,57 +96,164 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Logo>
-        <LogoImage src="https://lata.net.ua/upload/medialibrary/543/5436204c869274d18960335378c3010b.png" href='/' alt="Logo" />
+        <LogoImage
+          src="https://lata.net.ua/upload/medialibrary/543/5436204c869274d18960335378c3010b.png"
+          href="/"
+          alt="Logo"
+        />
         <LogoText>Лата - надійний партнер у поліграфічній галузі</LogoText>
       </Logo>
       {windowWidth < 481 ? (
-        <div style={{ display: 'flex', alignItems: 'center'}}>
+        <div style={{ display: "flex", alignItems: "center" }}>
           <A href="?question" title="Є запитання?" onClick={openModal}>
-            <FontAwesomeIcon icon={faCircleQuestion} style={{ height: '35px', position: 'relative', marginRight: 15, borderBottom: "none"}} />
+            <FontAwesomeIcon
+              icon={faCircleQuestion}
+              style={{
+                height: "35px",
+                position: "relative",
+                marginRight: 15,
+                borderBottom: "none",
+              }}
+            />
           </A>
-          <FontAwesomeIcon icon={faBars} onClick={openModalTelephone} style={{ width: "25px", height: "25px" }}/>
-        </ div>
+          <FontAwesomeIcon
+            icon={faBars}
+            onClick={openModalTelephone}
+            style={{ width: "25px", height: "25px" }}
+          />
+        </div>
       ) : (
         <Menu>
-          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '15px', color: "#9AC43C"}}>
-               <A href="?question" title="Є запитання?" onClick={openModal}>
-                 <FontAwesomeIcon icon={faCircleQuestion} style={{ height: '25px', position: 'relative', top: '3px', marginRight: 5}} />
-                 Задати питання
-               </A>
-               {isModalOpen && <ModalQuestion closeModal={closeModal} />}
-               {isLoggedInUser && <p>{username}</p>}
-               <Ab to="/auth/register"><FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }}/></Ab>
-               {/* <p>{username}</p> */}
-               {isLoggedInUser && <button onClick={handleLogout}>Log out</button>}
-             </div>
-           <Nav>
-             <Ul>
-               <MenuItem><MenuLinkActive to="/" selected={selectedMenu === '/'}>Головна</MenuLinkActive></MenuItem>
-               <MenuItem><MenuLinkActive to="/projects" selected={selectedMenu === '/projects'}>Продукція</MenuLinkActive></MenuItem>
-               <MenuItem><MenuLinkActive to="/services" selected={selectedMenu === '/services'}>Послуги</MenuLinkActive></MenuItem>
-               <MenuItem><MenuLinkActive to="/obl" selected={selectedMenu === '/obl'}>Продаж обладнання</MenuLinkActive></MenuItem>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-end",
+              gap: "15px",
+              color: "#9AC43C",
+            }}
+          >
+            <A href="?question" title="Є запитання?" onClick={openModal}>
+              <FontAwesomeIcon
+                icon={faCircleQuestion}
+                style={{
+                  height: "25px",
+                  position: "relative",
+                  top: "3px",
+                  marginRight: 5,
+                }}
+              />
+              Задати питання
+            </A>
+            {isModalOpen && <ModalQuestion closeModal={closeModal} />}
+            {isLoggedInUser && <p>{username}</p>}
+            <Ab to="/auth/register">
+              <FontAwesomeIcon
+                icon={faUser}
+                style={{ width: 20, height: 20 }}
+              />
+            </Ab>
+            {/* <p>{username}</p> */}
+            {isLoggedInUser && <button onClick={handleLogout}>Log out</button>}
+          </div>
+          <Nav>
+            <Ul>
               <MenuItem>
-                <MenuLinkActive to="/company" onMouseEnter={handleDropdownToggle} onClick={handleMenuOptionClick} onMouseLeave={handleDropdownClose} selected={selectedMenu === '/company'}>
+                <MenuLinkActive to="/" selected={selectedMenu === "/"}>
+                  Головна
+                </MenuLinkActive>
+              </MenuItem>
+              <MenuItem>
+                <MenuLinkActive
+                  to="/projects"
+                  selected={selectedMenu === "/projects"}
+                >
+                  Продукція
+                </MenuLinkActive>
+              </MenuItem>
+              <MenuItem>
+                <MenuLinkActive
+                  to="/services"
+                  selected={selectedMenu === "/services"}
+                >
+                  Послуги
+                </MenuLinkActive>
+              </MenuItem>
+              <MenuItem>
+                <MenuLinkActive to="/obl" selected={selectedMenu === "/obl"}>
+                  Продаж обладнання
+                </MenuLinkActive>
+              </MenuItem>
+              <MenuItem>
+                <MenuLinkActive
+                  to="/company"
+                  onMouseEnter={handleDropdownToggle}
+                  onClick={handleMenuOptionClick}
+                  onMouseLeave={handleDropdownClose}
+                  selected={selectedMenu === "/company"}
+                >
                   Про нас
-                  <FontAwesomeIcon icon={faAngleDown} style={{ marginLeft: '5px' }}/>
+                  <FontAwesomeIcon
+                    icon={faAngleDown}
+                    style={{ marginLeft: "5px" }}
+                  />
                 </MenuLinkActive>
                 {isDropdownOpen && (
-                  <AboutUl onMouseEnter={() => setIsMouseInMenu(true)} onMouseLeave={() => setIsMouseInMenu(false)}>
-                    <AboutA to="/company/questions" onClick={handleMenuOptionClick}>Часті питання</AboutA>
-                    <AboutA to="/company/vacancies" onClick={handleMenuOptionClick}>Вакансії</AboutA>
+                  <AboutUl
+                    onMouseEnter={() => setIsMouseInMenu(true)}
+                    onMouseLeave={() => setIsMouseInMenu(false)}
+                  >
+                    <AboutA
+                      to="/company/questions"
+                      onClick={handleMenuOptionClick}
+                    >
+                      Часті питання
+                    </AboutA>
+                    <AboutA
+                      to="/company/vacancies"
+                      onClick={handleMenuOptionClick}
+                    >
+                      Вакансії
+                    </AboutA>
                   </AboutUl>
                 )}
               </MenuItem>
-              <MenuItem><MenuLinkActive to="/reviews" selected={selectedMenu === '/reviews'}>Відгуки</MenuLinkActive></MenuItem>
-              <MenuItem><MenuLinkActive to="/news" selected={selectedMenu === '/news'}>Новини</MenuLinkActive></MenuItem>
-              <MenuItem><MenuLinkActive to="/articles" selected={selectedMenu === '/articles'}>Статті</MenuLinkActive></MenuItem>
-              <MenuItem><MenuLinkActive to="/contacts" selected={selectedMenu === '/contacts'}>Контакти</MenuLinkActive></MenuItem>
+              <MenuItem>
+                <MenuLinkActive
+                  to="/reviews"
+                  selected={selectedMenu === "/reviews"}
+                >
+                  Відгуки
+                </MenuLinkActive>
+              </MenuItem>
+              <MenuItem>
+                <MenuLinkActive to="/news" selected={selectedMenu === "/news"}>
+                  Новини
+                </MenuLinkActive>
+              </MenuItem>
+              <MenuItem>
+                <MenuLinkActive
+                  to="/articles"
+                  selected={selectedMenu === "/articles"}
+                >
+                  Статті
+                </MenuLinkActive>
+              </MenuItem>
+              <MenuItem>
+                <MenuLinkActive
+                  to="/contacts"
+                  selected={selectedMenu === "/contacts"}
+                >
+                  Контакти
+                </MenuLinkActive>
+              </MenuItem>
             </Ul>
           </Nav>
         </Menu>
       )}
       {isModalOpen && <ModalQuestion closeModal={closeModal} />}
-      {isModalTelephoneOpen && <ModalTelephone closeModalTelephone={closeModalTelephone} />}
+      {isModalTelephoneOpen && (
+        <ModalTelephone closeModalTelephone={closeModalTelephone} />
+      )}
     </HeaderWrapper>
   );
 };
