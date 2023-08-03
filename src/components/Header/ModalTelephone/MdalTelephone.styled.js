@@ -2,15 +2,15 @@ import styled from '@emotion/styled';
 import { Link, NavLink } from 'react-router-dom'; // NavLink
 
 export const Nav = styled.nav`
-    font: 14px/18px "PT Sans Caption", Arial, sans-serif;
-    font-weight: 300;
-    line-height: 1.6em;
-    color: #656565;
-    display: flex;
-    flex-direction: column-reverse;
-    @media screen and (max-width: 780px) {
-      max-width: 476px;
-    }
+  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #656565;
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (max-width: 780px) {
+    max-width: 476px;
+  }
 `;
 
 export const Ul = styled.ul`
@@ -39,14 +39,14 @@ export const MenuItem = styled.li`
 `;
 
 export const A = styled(NavLink)`
-  font: 14px/18px "PT Sans Caption", Arial, sans-serif;
+  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
   padding-bottom: 10px;
   // margin: 24px;
   margin: 28px 5px 0 0;
   padding-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
-  color: #9AC43C;
+  color: #9ac43c;
   border-bottom: 1px dotted #e6e6e6;
   @media screen and (max-width: 780px) {
     margin: 28px 0 10px 0;
@@ -57,14 +57,14 @@ export const A = styled(NavLink)`
 `;
 
 export const Ab = styled(NavLink)`
-  font: 14px/18px "PT Sans Caption", Arial, sans-serif;
+  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
   padding-bottom: 10px;
   // margin: 24px;
   margin: 28px 5px 0 0;
   padding-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
-  color: #9AC43C;
+  color: #9ac43c;
   @media screen and (max-width: 780px) {
     margin: 28px 0px;
   }
@@ -105,7 +105,7 @@ export const AboutA = styled(Link)`
   display: block;
   &:hover {
     cursor: pointer;
-    background: #9AC43C;
+    background: #9ac43c;
   }
 `;
 
