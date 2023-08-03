@@ -16,45 +16,45 @@ export const HeaderWrapper = styled.header`
   }
 `;
 
-export const Logo = styled.div`
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: 780px) {
-    max-width: 228px
-  }
-`;
+// export const Logo = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   @media screen and (max-width: 780px) {
+//     max-width: 228px
+//   }
+// `;
 
-export const LogoImage = styled.img`
-  margin-bottom: 10px;
-  max-width: 219px;
-  max-height: 94px;
-  @media screen and (max-width: 480px) {
-    max-width: 100%;
-  }
-`;
+// export const LogoImage = styled.img`
+//   margin-bottom: 10px;
+//   max-width: 219px;
+//   max-height: 94px;
+//   @media screen and (max-width: 480px) {
+//     max-width: 100%;
+//   }
+// `;
 
-export const LogoText = styled.b`
-  font-size: 14px;
-  color: #000;
-  @media screen and (max-width: 480px) {
-    display: none;
-  }
-`;
+// export const LogoText = styled.b`
+//   font-size: 14px;
+//   color: #000;
+//   @media screen and (max-width: 480px) {
+//     display: none;
+//   }
+// `;
 
 export const Nav = styled.nav`
-    font: 14px/18px "PT Sans Caption", Arial, sans-serif;
-    font-weight: 300;
-    line-height: 1.6em;
-    color: #656565;
-    display: flex;
-    flex-direction: column-reverse;
-    @media screen and (max-width: 780px) {
-      max-width: 476px;
-    }
+  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6em;
+  color: #656565;
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (max-width: 780px) {
+    max-width: 476px;
+  }
 `;
 
 export const Ul = styled.ul`
-margin: 0 20px 25px 0;
+  margin: 0 20px 25px 0;
   padding: 0;
   display: flex;
   gap: 14px;
@@ -82,32 +82,32 @@ export const MenuItem = styled.li`
 `;
 
 export const A = styled(NavLink)`
-  font: 14px/18px "PT Sans Caption", Arial, sans-serif;
+  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
   padding-bottom: 10px;
   margin: 28px 5px 0 0;
   font-size: 14px;
   font-weight: 700;
-  color: #9AC43C;
+  color: #9ac43c;
   border-bottom: 1px dotted #e6e6e6;
   @media screen and (max-width: 780px) {
     margin: 28px 0 10px 0;
   }
   @media (max-width: 480px) {
-      border-bottom: none;
-      margin: 0;
-      padding-bottom: 0;
+    border-bottom: none;
+    margin: 0;
+    padding-bottom: 0;
   }
 `;
 
 export const Ab = styled(NavLink)`
-  font: 14px/18px "PT Sans Caption", Arial, sans-serif;
+  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
   padding-bottom: 10px;
   // margin: 24px;
   margin: 28px 5px 0 0;
   padding-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
-  color: #9AC43C;
+  color: #9ac43c;
   @media screen and (max-width: 780px) {
     margin: 28px 0 10px 0;
   }
@@ -143,6 +143,6 @@ export const AboutA = styled(Link)`
   display: block;
   &:hover {
     cursor: pointer;
-    background: #9AC43C;
+    background: #9ac43c;
   }
 `;
