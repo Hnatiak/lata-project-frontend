@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Nav, MenuItem, Ul, MenuLinkActive, Menu, Ab, MenuTelephoneContainer } from './ModalTelephone.styled';
+import { Nav, MenuItem, Ul, MenuLinkActive, Menu, Ab, MenuTelephoneContainer } from './MdalTelephone.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { setName } from '../../../redux/auth/authSelectors';
@@ -7,7 +7,7 @@ import { logout } from '../../../redux/auth/authOperations';
 import { faUser, faCircleXmark, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ModalTelephone = ({ closeModalTelephone }) => {
+const MdalTelephone = ({ closeModalTelephone }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [selectedMenu, setSelectedMenu] = useState('/');
@@ -127,4 +127,4 @@ const ModalTelephone = ({ closeModalTelephone }) => {
   );
 };
 
-export default ModalTelephone;
+export default MdalTelephone;

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { faCircleQuestion, faAngleDown, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ModalQuestion from './Modal/MdalQuestion';
-import ModalTelephone from './ModalTelephone/ModalTelephone';
+import ModalTelephone from './ModalTelephone/MdalTelephone';
 import {
   HeaderWrapper,
   // Logo,
