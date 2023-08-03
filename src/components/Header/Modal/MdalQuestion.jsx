@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import {
   ModalStyle,
   ModalContentStyle,
@@ -14,20 +14,20 @@ import {
   Label,
   Input,
   Textarea,
-} from "./ModalQuestion.styled";
-import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
+} from './MdalQuestion.styled';
+import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
 
-const ModalQuestion = ({ closeModal }) => {
-  const handleKeyDown = (e) => {
+const MdalQuestion = ({ closeModal }) => {
+  const handleKeyDown = e => {
     if (e.keyCode === 27) {
       closeModal();
     }
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown);
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   });
 
@@ -53,21 +53,13 @@ const ModalQuestion = ({ closeModal }) => {
               <Label>
                 E-mail<span>*</span>
               </Label>
-              <Input
-                type="email"
-                placeholder="example@mail.ua"
-                name="user_email"
-              />
+              <Input type="email" placeholder="example@mail.ua" name="user_email" />
             </FormDiv>
             <FormDiv>
               <Label>
                 Питання<span>*</span>
               </Label>
-              <Textarea
-                rows="5"
-                name="MESSAGE"
-                placeholder="Зміст питання"
-              ></Textarea>
+              <Textarea rows="5" name="MESSAGE" placeholder="Зміст питання"></Textarea>
             </FormDiv>
           </Form>
           <BtnSend>Надіслати</BtnSend>
@@ -77,4 +69,4 @@ const ModalQuestion = ({ closeModal }) => {
   );
 };
 
-export default ModalQuestion;
+export default MdalQuestion;
