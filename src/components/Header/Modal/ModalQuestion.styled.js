@@ -15,6 +15,13 @@ export const ModalStyle = styled.div`
   transition: opacity 0.3s linear, top 0.3s ease-out;
 `;
 
+export const ErrorText = styled(ErrorMessage)`
+  font-size: 12px;
+  color: var(--createBoardInputTextFocus);
+`;
+
+// Styles
+
 export const ModalTitle = styled.div`
   background-color: #9ac43c;
   padding: 25px 15px;
