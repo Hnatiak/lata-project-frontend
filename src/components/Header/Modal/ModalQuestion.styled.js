@@ -165,3 +165,21 @@ export const BtnSend = styled.button`
     font-size: 14px;
   }
 `;
+
+export const StyledField = styled(Field)`
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  max-width: 100%;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  height: 20px;
+  padding: 4px 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+  vertical-align: middle;
+  border-radius: 4px;
+  @media screen and (min-width: 481px) {
+    width: 220px;
+  }
+`;

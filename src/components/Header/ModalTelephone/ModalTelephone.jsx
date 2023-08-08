@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Nav, MenuItem, Ul, MenuLinkActive, Menu, Ab, MenuTelephoneContainer } from './MdalTelephone.styled';
+import { Nav, MenuItem, Ul, MenuLinkActive, Menu, Ab, MenuTelephoneContainer } from './ModalTelephone.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { setName } from '../../../redux/auth/authSelectors';
@@ -7,7 +7,7 @@ import { logout } from '../../../redux/auth/authOperations';
 import { faUser, faCircleXmark, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const MdalTelephone = ({ closeModalTelephone }) => {
+const ModalTelephone = ({ closeModalTelephone }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [selectedMenu, setSelectedMenu] = useState('/');
@@ -45,22 +45,14 @@ const MdalTelephone = ({ closeModalTelephone }) => {
       }}
     >
       <Menu>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '15px',
-            color: '#9AC43C',
-            justifyContent: 'space-between',
-            marginBottom: '40px',
-          }}
-        >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#9AC43C', justifyContent: 'space-between', marginBottom: '40px' }}>
           <MenuTelephoneContainer>
             <Ab to="/auth/register" onClick={handleMenuItemClick}>
               <FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }} />
               {isLoggedInUser && <p style={{ marginBottom: 0 }}>{username}</p>}
             </Ab>
           </MenuTelephoneContainer>
+          <div style={{ display: 'flex', gap: '25px' }}>
           {isLoggedInUser && (
             <FontAwesomeIcon
               icon={faArrowRightFromBracket}
@@ -72,6 +64,7 @@ const MdalTelephone = ({ closeModalTelephone }) => {
             />
           )}
           <FontAwesomeIcon icon={faCircleXmark} style={{ width: 20, height: 20 }} onClick={closeModalTelephone} />
+        </div>
         </div>
         <Nav>
           <Ul>
@@ -127,4 +120,4 @@ const MdalTelephone = ({ closeModalTelephone }) => {
   );
 };
 
-export default MdalTelephone;
+export default ModalTelephone;

@@ -20,6 +20,7 @@ export const Container = styled.div`
     @media screen and (max-width: 680px) {
         display: block;
         padding: 50px 20px;
+        gap: 10px;
     }
 `;
 
@@ -94,5 +95,17 @@ export const SideContainer = styled.div`
     padding: 30px;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 480px) {
+        padding: 30px 20px;
+    }
+`;
+
+export const SocialMedia = styled.div`
+    gap: 20px; 
+    display: flex;
+    @media screen and (max-width: 480px) {
+        gap: 10px;
+        align-items: center;
+    }
 `;
 

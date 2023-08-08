@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 export const GeneralContainer = styled.div`
     background: #fff;
@@ -30,7 +31,7 @@ export const ContainerP = styled.p`
     margin: 0 0 10px
 `;
 
-export const ContainerA = styled.a`
+export const ContainerA = styled(Link)`
     color: #9AC43C;
     &:hover {
         border-bottom: 1px solid #9AC43C;

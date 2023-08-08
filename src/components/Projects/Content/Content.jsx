@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer, Background, ButtonShop, CartIcon } from './Content.styled' // MenuLink 
-import boxesData from './boxs.js';
+import boxesData from './boxs';
 import { FiChevronRight, FiChevronDown } from 'react-icons/fi';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
@@ -70,7 +70,7 @@ const Content = () => {
             <Background>
               <ButtonShop to={`/projects/${photo.id}`}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
               <div onClick={() => handleBoxClick(photo)}>
-                <p style={{ color: "#fff" }}>{photo.price}</p>
+                <p style={{ color: "#fff" }}>{photo.price} грн</p>
               </div>
             </Background>
           </div>

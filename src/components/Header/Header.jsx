@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { faCircleQuestion, faAngleDown, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ModalQuestion from './Modal/MdalQuestion';
-import ModalTelephone from './ModalTelephone/MdalTelephone';
+import ModalQuestion from './Modal/ModalQuestion';
+import ModalTelephone from './ModalTelephone/ModalTelephone';
 import {
   HeaderWrapper,
   // Logo,
@@ -17,6 +17,7 @@ import {
   AboutUl,
   AboutA,
   Ab,
+  LogOut
 } from './ComponentsHeader.styled';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -101,7 +102,7 @@ const Header = () => {
       </Logo>
       {windowWidth < 481 ? (
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <A href="?question" title="Є запитання?" onClick={openModal}>
+          <A href="" title="Є запитання?" onClick={openModal}>
             <FontAwesomeIcon
               icon={faCircleQuestion}
               style={{
@@ -124,7 +125,7 @@ const Header = () => {
               color: '#9AC43C',
             }}
           >
-            <A href="?question" title="Є запитання?" onClick={openModal}>
+            <A href="" title="Є запитання?" onClick={openModal}>
               <FontAwesomeIcon
                 icon={faCircleQuestion}
                 style={{
@@ -136,13 +137,13 @@ const Header = () => {
               />
               Задати питання
             </A>
-            {isModalOpen && <ModalQuestion closeModal={closeModal} />}
+            {/* {isModalOpen && <ModalQuestion closeModal={closeModal} />} */}
             {isLoggedInUser && <p>{username}</p>}
             <Ab to="/auth/register">
               <FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }} />
             </Ab>
             {/* <p>{username}</p> */}
-            {isLoggedInUser && <button onClick={handleLogout}>Log out</button>}
+            {isLoggedInUser && <LogOut onClick={handleLogout}>Вийти</LogOut>}
           </div>
           <Nav>
             <Ul>
