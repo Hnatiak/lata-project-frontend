@@ -1,5 +1,8 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
+import {
+    Container,
+} from './ContactsThings.styled'
 
 const ContactsThings = () => {
 
@@ -12,7 +15,7 @@ const ContactsThings = () => {
             <a style={{fontSize: '18px'}} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`} target="_blank" rel="noopener noreferrer"
             title='Open Google Maps for this address'>вулиця Львівська, 2а/9, Давидів, Львівська область, Україна, 81151</a>
         </div>
-        <div style={{ display: 'flex' }}>
+        <Container>
             <div style={{ width: '550px' }}>
                 <h1>Телефони</h1>
                 <p style={{ fontSize: '18px' }}>Телефон:</p>
@@ -31,7 +34,7 @@ const ContactsThings = () => {
                     <li style={{ listStyle: 'circle' }}><a href="mailto:lata.net.ua@gmail.com">   lata.net.ua@gmail.com</a></li>
                 </ul>
             </div>
-        </div>
+        </Container>
     </div>
   );
 };
