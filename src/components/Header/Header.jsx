@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { faCircleQuestion, faAngleDown, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ModalQuestion from './Modal/MdalQuestion';
-import ModalTelephone from './ModalTelephone/MdalTelephone';
+import ModalQuestion from './Modal/ModalQuestion';
+import ModalTelephone from './ModalTelephone/ModalTelephone';
 import {
   HeaderWrapper,
   // Logo,
@@ -124,7 +124,7 @@ const Header = () => {
               color: '#9AC43C',
             }}
           >
-            <A href="?question" title="Є запитання?" onClick={openModal}>
+            <A href="" title="Є запитання?" onClick={openModal}>
               <FontAwesomeIcon
                 icon={faCircleQuestion}
                 style={{
@@ -136,7 +136,7 @@ const Header = () => {
               />
               Задати питання
             </A>
-            {isModalOpen && <ModalQuestion closeModal={closeModal} />}
+            {/* {isModalOpen && <ModalQuestion closeModal={closeModal} />} */}
             {isLoggedInUser && <p>{username}</p>}
             <Ab to="/auth/register">
               <FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }} />
