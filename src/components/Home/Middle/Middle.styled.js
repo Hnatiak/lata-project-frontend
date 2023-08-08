@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 export const MiddleContainer = styled.div`
     height: 388px;
@@ -75,7 +76,7 @@ export const P = styled.p`
 }
 `;
 
-export const A = styled.a`
+export const A = styled(Link)`
     font-size: 12px;
     text-transform: uppercase;
     color: #fff;
