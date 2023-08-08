@@ -21,6 +21,8 @@ export const ErrorText = styled(ErrorMessage)`
   color: var(--createBoardInputTextFocus);
 `;
 
+// Styles
+
 export const ModalTitle = styled.div`
   background-color: #9ac43c;
   padding: 25px 15px;
