@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Form, Field, ErrorMessage } from 'formik';
 
 export const ModalStyle = styled.div`
   position: fixed;
@@ -8,7 +9,7 @@ export const ModalStyle = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,19 +64,6 @@ export const Container = styled.div`
   }
 `;
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 20px;
-  margin-bottom: 20px;
-  @media screen and (max-width: 480px) {
-    width: 100%;
-    align-items: stretch;
-    gap: 10px;
-  }
-`;
-
 export const FormDiv = styled.div`
   display: flex;
   justify-content: space-between;
@@ -89,38 +77,18 @@ export const Label = styled.label`
   font-weight: bold;
 `;
 
-export const Input = styled.input`
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  max-width: 100%;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  transition: border linear 0.2s, box-shadow linear 0.2s;
-  height: 20px;
-  padding: 4px 6px;
-  font-size: 14px;
-  line-height: 20px;
-  color: #555555;
-  vertical-align: middle;
-  border-radius: 4px;
-  @media screen and (min-width: 481px) {
-    width: 220px;
-  }
-`;
-
 export const Textarea = styled.textarea`
   background-color: #ffffff;
+  border-radius: 4px;
   border: 1px solid #cccccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border linear 0.2s, box-shadow linear 0.2s;
-  height: auto;
+  height: 150px; // Ви можете змінити це на бажану висоту
   padding: 4px 6px;
   font-size: 14px;
-  user-select: text;
-  max-width: 100%;
-  line-height: 20px;
-  color: #555555;
-  vertical-align: middle;
-  border-radius: 4px;
+  resize: vertical; // Додано параметр resize для можливості вертикального зміщення
+  width: 100%; // Розтягуємо на всю ширину батьківського контейнера
+  margin-top: 8px;
   resize: none;
   @media screen and (min-width: 481px) {
     width: 220px;
@@ -167,9 +135,25 @@ export const BtnSend = styled.button`
   box-shadow: none;
   background: #9ac43c;
   border-radius: 4px;
+  cursor: pointer;
   @media screen and (max-width: 480px) {
     padding: 4px 18px;
     font-size: 14px;
+    margin-top: 20px;
+  }
+`;
+
+export const ErrorMessageText = styled.div`
+  color: var(--createBoardInputTextFocus);
+  margin-top: 10px;
+`;
+
+export const StyledForm = styled(Form)`
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  @media screen and (max-width: 480px) {
+    gap: 0px;
   }
 `;
 
@@ -181,7 +165,7 @@ export const StyledField = styled(Field)`
   transition: border linear 0.2s, box-shadow linear 0.2s;
   height: 20px;
   padding: 4px 6px;
-  font-size: 14px;
+  fontsize: 14px;
   line-height: 20px;
   color: #555555;
   vertical-align: middle;
