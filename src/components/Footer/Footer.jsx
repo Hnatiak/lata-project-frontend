@@ -14,6 +14,7 @@ import {
   A,
   Icon,
   SideContainer,
+  SocialMedia,
 } from './Footer.styled'; //LeftSideBar, RightSideBar, ContainerH3, ContainerAButton, ContainerH5, ContainerDiv, News, ContainerA, ContainerTitle, ContainerP
 
 const Footer = () => {
@@ -85,7 +86,7 @@ const Footer = () => {
           >
             © Розробка сайту Hnatiak Roman
           </A>
-          <div style={{ gap: '20px', display: 'flex' }}>
+          <SocialMedia>
             {/* <ul class="social-network"> */}
             <a href="https://www.instagram.com/goroscop76859/" target="_blank" rel="noopener noreferrer">
               <Icon icon={faInstagram} />
@@ -100,7 +101,7 @@ const Footer = () => {
               <Icon icon={faFacebook} />
             </a>
             {/* </ul> */}
-          </div>
+          </SocialMedia>
         </SideContainer>
       </div>
     </FooterContainer>
