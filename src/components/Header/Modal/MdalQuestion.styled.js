@@ -90,7 +90,7 @@ export const Input = styled.input`
   transition: border linear 0.2s, box-shadow linear 0.2s;
   height: 20px;
   padding: 4px 6px;
-  fontsize: 14px;
+  font-size: 14px;
   line-height: 20px;
   color: #555555;
   vertical-align: middle;
