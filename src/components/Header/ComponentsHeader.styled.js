@@ -16,6 +16,20 @@ export const HeaderWrapper = styled.header`
   }
 `;
 
+export const LogOut = styled.button`
+  background: red;
+  color: white;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 4px 20px;
+  border: none;
+  margin-bottom: 8px;
+  @media screen and (max-width: 780px) {
+    padding: 7px 20px 10px 20px;
+    align-items: center;
+  }
+`;
+
 // export const Logo = styled.div`
 //   display: flex;
 //   flex-direction: column;

@@ -45,22 +45,14 @@ const ModalTelephone = ({ closeModalTelephone }) => {
       }}
     >
       <Menu>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '15px',
-            color: '#9AC43C',
-            justifyContent: 'space-between',
-            marginBottom: '40px',
-          }}
-        >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#9AC43C', justifyContent: 'space-between', marginBottom: '40px' }}>
           <MenuTelephoneContainer>
             <Ab to="/auth/register" onClick={handleMenuItemClick}>
               <FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }} />
               {isLoggedInUser && <p style={{ marginBottom: 0 }}>{username}</p>}
             </Ab>
           </MenuTelephoneContainer>
+          <div style={{ display: 'flex', gap: '25px' }}>
           {isLoggedInUser && (
             <FontAwesomeIcon
               icon={faArrowRightFromBracket}
@@ -72,6 +64,7 @@ const ModalTelephone = ({ closeModalTelephone }) => {
             />
           )}
           <FontAwesomeIcon icon={faCircleXmark} style={{ width: 20, height: 20 }} onClick={closeModalTelephone} />
+        </div>
         </div>
         <Nav>
           <Ul>

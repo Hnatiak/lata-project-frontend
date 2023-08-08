@@ -17,6 +17,7 @@ import {
   AboutUl,
   AboutA,
   Ab,
+  LogOut
 } from './ComponentsHeader.styled';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -101,7 +102,7 @@ const Header = () => {
       </Logo>
       {windowWidth < 481 ? (
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <A href="?question" title="Є запитання?" onClick={openModal}>
+          <A href="" title="Є запитання?" onClick={openModal}>
             <FontAwesomeIcon
               icon={faCircleQuestion}
               style={{
@@ -142,7 +143,7 @@ const Header = () => {
               <FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }} />
             </Ab>
             {/* <p>{username}</p> */}
-            {isLoggedInUser && <button onClick={handleLogout}>Log out</button>}
+            {isLoggedInUser && <LogOut onClick={handleLogout}>Вийти</LogOut>}
           </div>
           <Nav>
             <Ul>

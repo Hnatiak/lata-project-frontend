@@ -47,7 +47,6 @@ const ProductDetailsPage = ({ photos }) => {
     <MenuContainer>
       <img src={selectedPhoto.url} alt={`${selectedPhoto.id}`} />
       <div>
-        <p>Ціна: {selectedPhoto.price}</p>
         <Quantity quantityLength={quantity.toString().length}>
           <div>
             <span onClick={decrement}>-</span>

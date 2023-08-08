@@ -75,7 +75,7 @@ export const Label = styled.label`
   font-weight: bold;
 `;
 
-export const Textarea = styled(Field)`
+export const Textarea = styled.textarea`
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #cccccc;
@@ -87,6 +87,7 @@ export const Textarea = styled(Field)`
   resize: vertical; // Додано параметр resize для можливості вертикального зміщення
   width: 100%; // Розтягуємо на всю ширину батьківського контейнера
   margin-top: 8px;
+  resize: none;
   @media screen and (min-width: 481px) {
     width: 220px;
   }

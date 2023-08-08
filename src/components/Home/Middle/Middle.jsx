@@ -13,7 +13,7 @@ const Middle = ({ photos }) => {
       title: 'Паперові стаканчики',
       description: 'Кава та інші напої смакуватимуть ще краще, якщо вони будуть налиті у наші стаканчики з паперу.',
       link: 'Читати далі',
-      href: 'https://lata.net.ua/projects/papirov_cups/',
+      to: '/projects/papirov_cups/',
     },
     {
       src: slice2,
@@ -21,7 +21,7 @@ const Middle = ({ photos }) => {
       title: 'Для взуття на всі сезони',
       description: 'Для виробників взуття ми пропонуємо найкращі рішення. Ваші клієнти будуть задоволені.',
       link: 'Читати далі',
-      href: 'https://lata.net.ua/projects/the_box_under_vzuttya/',
+      to: '/projects/the_box_under_vzuttya',
     },
     {
       src: slice3,
@@ -29,7 +29,7 @@ const Middle = ({ photos }) => {
       title: 'Пакування для печива',
       description: 'Для гарної весільної забави та інших урочистих подій, добре підійдуть коробки під печиво.',
       link: 'Читати далі',
-      href: 'https://lata.net.ua/projects/baskets_for_flowers/',
+      to: '/projects/baskets_for_flowers',
     },
   ];
 
@@ -62,7 +62,7 @@ const Middle = ({ photos }) => {
       <LeftDiv>
         <Title>{currentPhoto.title}</Title>
         <P>{currentPhoto.description}</P>
-        <A href={currentPhoto.href}>{currentPhoto.link}</A>
+        <A to={currentPhoto.to}>{currentPhoto.link}</A>
       </LeftDiv>
       <Arrow icon={faChevronRight} onClick={handleNextPhoto} direction="right" />
       <Arrow icon={faChevronLeft} onClick={handlePreviousPhoto} direction="left" />
