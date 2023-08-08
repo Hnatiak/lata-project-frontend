@@ -8,7 +8,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #656565;
   margin: 0 auto;
-  /* max-width: 1230px; */
+  max-width: 1230px;
   height: 100%;
   display: flex;
   flex-direction: column;
