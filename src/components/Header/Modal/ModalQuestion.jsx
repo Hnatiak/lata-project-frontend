@@ -83,7 +83,7 @@ const HelpModal = ({ closeModal }) => {
 
               <FormDiv>
                 <Label>Питання<span>*</span></Label>
-                <Textarea name="message" as={Textarea} placeholder="Зміст питання" />
+                <Textarea name="message" as="textarea" placeholder="Зміст питання" />
               </FormDiv>
               <ErrorText name="message" component="div" />
               <BtnSend type="submit" disabled={isSubmitting}>Надіслати</BtnSend>

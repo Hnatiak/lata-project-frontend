@@ -77,7 +77,7 @@ export const Label = styled.label`
   font-weight: bold;
 `;
 
-export const Textarea = styled.textarea`
+export const Textarea = styled(Field)`
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #cccccc;
@@ -133,6 +133,7 @@ export const BtnSend = styled.button`
   border: none;
   padding: 8px 22px;
   box-shadow: none;
+  margin-top: 20px;
   background: #9ac43c;
   border-radius: 4px;
   cursor: pointer;
@@ -151,7 +152,6 @@ export const ErrorMessageText = styled.div`
 export const StyledForm = styled(Form)`
   display: flex;
   flex-direction: column;
-  gap: 14px;
   @media screen and (max-width: 480px) {
     gap: 0px;
   }
@@ -163,7 +163,6 @@ export const StyledField = styled(Field)`
   max-width: 100%;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border linear 0.2s, box-shadow linear 0.2s;
-  height: 20px;
   padding: 4px 6px;
   fontsize: 14px;
   line-height: 20px;
