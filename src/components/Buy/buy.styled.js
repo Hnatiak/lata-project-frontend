@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Form, Field, ErrorMessage } from 'formik';
+import { Field, ErrorMessage } from 'formik';
 
 export const ModalStyle = styled.div`
   position: fixed;
@@ -38,7 +38,7 @@ export const ModalTitle = styled.div`
 
 export const Settings = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
 `;
 
 export const Title = styled.h4`
@@ -52,11 +52,10 @@ export const Title = styled.h4`
 `;
 
 export const Container = styled.div`
-  position: relative;
-  max-height: 400px;
   padding: 15px 15px 35px 15px;
   justify-content: space-around;
   display: flex;
+  gap: 45px;
   align-items: center;
   flex-direction: column;
   @media screen and (max-width: 480px) {
@@ -64,13 +63,7 @@ export const Container = styled.div`
   }
 `;
 
-export const FormDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media screen and (max-width: 480px) {
-    flex-direction: column;
-  }
-`;
+export const FormDiv = styled.div``;
 
 export const Label = styled.label`
   margin: 5px 15px 0 0;
@@ -88,11 +81,7 @@ export const Textarea = styled(Field)`
   font-size: 14px;
   resize: vertical; // Додано параметр resize для можливості вертикального зміщення
   width: 100%; // Розтягуємо на всю ширину батьківського контейнера
-  margin-top: 8px;
   resize: none;
-  @media screen and (min-width: 481px) {
-    width: 220px;
-  }
 `;
 
 export const ModalContentStyle = styled.div`
@@ -105,9 +94,6 @@ export const ModalContentStyle = styled.div`
   @media screen and (max-width: 589px) {
     width: 95%;
   }
-  // @media screen and (max-width: 480px) {
-  //     width: 95%;
-  // }
 `;
 
 export const Svg = styled(FontAwesomeIcon)`
@@ -128,17 +114,14 @@ export const CloseBtnStyle = styled.button`
 
 export const BtnSend = styled.button`
   font-size: 16px;
-  text-transform: uppercase;
-  text-shadow: none;
   border: none;
-  padding: 8px 22px;
+  padding: 12px 22px;
   box-shadow: none;
-  margin-top: 20px;
   background: #9ac43c;
   border-radius: 4px;
   cursor: pointer;
   @media screen and (max-width: 480px) {
-    padding: 4px 18px;
+    padding: 10px 18px;
     font-size: 14px;
     margin-top: 20px;
   }
@@ -149,18 +132,21 @@ export const ErrorMessageText = styled.div`
   margin-top: 10px;
 `;
 
-export const StyledForm = styled(Form)`
-  display: flex;
-  flex-direction: column;
+export const StyledFormDiv = styled.div`
+  gap: 10px;
+  display: grid;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(2, 1fr);
   @media screen and (max-width: 480px) {
-    gap: 0px;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
 export const StyledField = styled(Field)`
   background-color: #ffffff;
   border: 1px solid #cccccc;
-  max-width: 100%;
+  width: 100%;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border linear 0.2s, box-shadow linear 0.2s;
   padding: 4px 6px;
@@ -169,13 +155,4 @@ export const StyledField = styled(Field)`
   color: #555555;
   vertical-align: middle;
   border-radius: 4px;
-  @media screen and (min-width: 481px) {
-    width: 220px;
-  }
-`;
-
-export const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 `;

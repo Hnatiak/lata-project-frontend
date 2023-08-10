@@ -43,6 +43,7 @@ const News = lazy(() => import("../pages/NewsPage"));
 const Articles = lazy(() => import("../pages/ArticlesPage"));
 const Contacts = lazy(() => import("../pages/ContactsPage/Contacts"));
 const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
+const BuyPage = lazy(() => import("../pages/BuyPage"))
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -65,6 +66,7 @@ export const App = () => {
             path="/projects/:photoId"
             element={<ProductDetailsPage photos={boxesData} />}
           />
+          <Route path="/projects/:photoId/buy" element={<BuyPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/obl" element={<Equipment />} />
           {/* <Route path="/company" element={<AboutPage />} >
