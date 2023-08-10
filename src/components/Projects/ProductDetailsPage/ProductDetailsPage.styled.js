@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom'; // NavLink
+// import { Link } from 'react-router-dom'; // NavLink
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const MenuContainer = styled.div`
   padding: 35px 25px;
-  display: grid;
+  // display: grid;
 
   // gap: 105px 0px;
-  grid-template-columns: repeat(3, 1fr); // 2
+  // grid-template-columns: repeat(3, 1fr); // 2
   justify-content: flex-start;
 
   img {
@@ -27,7 +27,8 @@ export const Quantity = styled.div`
   align-items: center;
   user-select: none;
   margin-bottom: 25px;
-  span:nth-child(1) {
+
+  span:nth-of-type(1) {
     color: red;
     cursor: pointer;
     padding: 0 5px;
@@ -38,20 +39,20 @@ export const Quantity = styled.div`
     background: none;
     font-size: inherit;
     padding: 0;
-    appearance: none; /* Remove default styling in some browsers */
+    appearance: none;
     max-width: 10000px;
     width: ${(props) => (props.quantityLength + 1) * 15}px;
-    text-align: center; /* Center the text horizontally */
-    outline: none; /* Remove the outline when the input is focused */
+    text-align: center;
+    outline: none;
   }
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
-    -webkit-appearance: none; /* Remove spinner buttons in Chrome */
+    -webkit-appearance: none;
     margin: 0;
   }
 
-  span:nth-child(3) {
+  span:nth-of-type(2) {
     color: green;
     cursor: pointer;
     padding: 0 5px;
@@ -61,7 +62,7 @@ export const Quantity = styled.div`
 export const ContainerDiv = styled.div`
     border-left: 1px solid #e9e9e9;
     padding: 0 0 0 30px;
-    max-width: 370px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -81,18 +82,20 @@ export const News = styled.h5`
 export const ContainerP = styled.p`
     text-align: justify;
     color: #656565;
+    font-size: 16px;
 `;
 
 export const CartIcon = styled(FontAwesomeIcon)`
   margin-right: 8px; /* Відступ справа від тексту "КУПИТИ" */
 `;
 
-export const ButtonShop = styled(Link)`
+export const ButtonShop = styled.button`
   background: #9AC43C;
   color: #fff;
   padding: 5px 20px;
   font-size: 15px;
   border-radius: 20px;
+  cursor: pointer;
 
 &:hover {
   background: #8ac930;
@@ -112,4 +115,12 @@ export const ButtonShop = styled(Link)`
   font-size: 140%;
   width: 60px;
 }
+`;
+
+export const Settings = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 480px) {
+    display: block;
+  }
 `;

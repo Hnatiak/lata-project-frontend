@@ -17,6 +17,7 @@ import {
   Container,
   Label,
   FormDiv,
+  Div,
 } from './ModalQuestion.styled';
 
 import { Formik } from 'formik'; // Додано Field
@@ -40,7 +41,7 @@ const HelpModal = ({ closeModal }) => {
 
     try {
       await sendEmail(values); // Змінено параметр з value на values
-      toast.success('Email sent'); // Змінено "Email send" на "Email sent"
+      toast.success('Ваше питання надіслано успішно'); // Змінено "Email send" на "Email sent"
       closeModal();
     } catch (error) {
       setErrorMessage(error.response.data.message);
@@ -69,21 +70,23 @@ const HelpModal = ({ closeModal }) => {
         >
           {({ isSubmitting }) => (
             <StyledForm>
-              <FormDiv>
-                <Label>Ім'я<span>*</span></Label>
-                <StyledField autoFocus name="name" type="name" placeholder="Іван Іванович" />
-              </FormDiv>
-              <ErrorText name="name" component="div" />
+              <Div>
+                <FormDiv>
+                  <Label>Ім'я<span>*</span></Label>
+                  <StyledField autoFocus name="name" type="name" placeholder="Іван Іванович" />
+                </FormDiv>
+                <ErrorText name="name" component="div" />
 
-              <FormDiv>
-                <Label>E-mail<span>*</span></Label>
-                <StyledField autoFocus name="email" type="email" placeholder="Email address" />
-              </FormDiv>
-              <ErrorText name="email" component="div" />
+                <FormDiv>
+                  <Label>E-mail<span>*</span></Label>
+                  <StyledField autoFocus name="email" type="email" placeholder="Email address" />
+                </FormDiv>
+                <ErrorText name="email" component="div" />
+              </Div>
 
               <FormDiv>
                 <Label>Питання<span>*</span></Label>
-                <Textarea name="message" as={Textarea} placeholder="Зміст питання" />
+                <Textarea name="message" as="textarea" placeholder="Зміст питання" />
               </FormDiv>
               <ErrorText name="message" component="div" />
               <BtnSend type="submit" disabled={isSubmitting}>Надіслати</BtnSend>
