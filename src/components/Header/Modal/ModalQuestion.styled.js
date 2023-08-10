@@ -21,8 +21,6 @@ export const ErrorText = styled(ErrorMessage)`
   color: var(--createBoardInputTextFocus);
 `;
 
-// Styles
-
 export const ModalTitle = styled.div`
   background-color: #9ac43c;
   padding: 25px 15px;
@@ -105,9 +103,6 @@ export const ModalContentStyle = styled.div`
   @media screen and (max-width: 589px) {
     width: 95%;
   }
-  // @media screen and (max-width: 480px) {
-  //     width: 95%;
-  // }
 `;
 
 export const Svg = styled(FontAwesomeIcon)`
