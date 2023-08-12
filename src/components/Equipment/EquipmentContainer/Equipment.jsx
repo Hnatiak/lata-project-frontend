@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer, Background, ButtonShop, CartIcon } from './EquipmentContainer.styled' // MenuLink 
 import mechanicsData from './machenics';
-import { FiChevronRight, FiChevronDown } from 'react-icons/fi';
+// import { FiChevronRight, FiChevronDown } from 'react-icons/fi';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const EquipmentContainer = () => {
   const [selectedMenu, setSelectedMenu] = useState('all');
   const [photos, setPhotos] = useState([]);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [, setIsMenuOpen] = useState(false); // isMenuOpen
   const [isAllSelected, setIsAllSelected] = useState(false);
   const [, setSelectedBox] = useState(null);
 
@@ -15,11 +15,11 @@ const EquipmentContainer = () => {
     setPhotos(mechanicsData);
   }, []);
 
-  const handleMenuChange = (menu) => {
-    setSelectedMenu(menu);
-    setIsMenuOpen(false);
-    setIsAllSelected(false);
-  };
+  // const handleMenuChange = (menu) => {
+  //   setSelectedMenu(menu);
+  //   setIsMenuOpen(false);
+  //   setIsAllSelected(false);
+  // };
 
   const handleAllClick = () => {
     if (!isAllSelected) {
