@@ -4,11 +4,10 @@ import TitleSection from '../components/TitleSection/TitleSection';
 
 const Articles = () => {
   return (
-    <div>
+    <>
       <TitleSection title="Статті" />
-      
       {/* Додайте вміст вашої сторінки Продуктів */}
-    </div>
+    </>
   );
 };
 

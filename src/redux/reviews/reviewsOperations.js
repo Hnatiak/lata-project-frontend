@@ -20,6 +20,7 @@ export const addReview = createAsyncThunk(
   }
 );
 
+
 /*
  * GET @ /api/reviews
  */
@@ -31,6 +32,16 @@ export const fetchReviews = createAsyncThunk('reviews/fetchReviews', async (_, t
     return thunkAPI.rejectWithValue(error.message);
   }
 });
+
+// export const fetchReviews = async () => {
+//   try {
+//     const response = await axios.get('/api/reviews');
+//     return response.data;
+//   } catch (error) {
+//     console.error('Error fetching reviews:', error);
+//     throw error; // Rethrow the error to be caught by the caller
+//   }
+// };
 
 /*
  * PUT @ /api/reviews/:id

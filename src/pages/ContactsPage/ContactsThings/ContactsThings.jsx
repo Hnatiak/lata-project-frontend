@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import {
-    Container,
+    Container, ContainerDivInfo,
 } from './ContactsThings.styled'
 
 const ContactsThings = () => {
@@ -16,7 +16,7 @@ const ContactsThings = () => {
             title='Open Google Maps for this address'>вулиця Львівська, 2а/9, Давидів, Львівська область, Україна, 81151</a>
         </div>
         <Container>
-            <div style={{ width: '550px' }}>
+            <ContainerDivInfo>
                 <h1>Телефони</h1>
                 <p style={{ fontSize: '18px' }}>Телефон:</p>
                 <ul style={{ color: "#9AC43C", marginLeft: '40px', listStyle: 'circle', fontSize: '18px'}}>
@@ -27,13 +27,13 @@ const ContactsThings = () => {
                 <ul style={{ color: "#9AC43C", marginLeft: '40px', listStyle: 'circle', fontSize: '18px'}}>
                     <li style={{ listStyle: 'circle' }}><a href="tel:+380673231736">+38 (067) 323-17-36</a></li>
                 </ul>
-            </div>
-            <div style={{ width: '550px' }}>
+            </ContainerDivInfo>
+            <ContainerDivInfo>
                 <h1>Пошта:</h1>
                 <ul style={{ color: "#9AC43C", marginLeft: '40px', fontSize: '18px'}}>
                     <li style={{ listStyle: 'circle' }}><a href="mailto:lata.net.ua@gmail.com">   lata.net.ua@gmail.com</a></li>
                 </ul>
-            </div>
+            </ContainerDivInfo>
         </Container>
     </div>
   );

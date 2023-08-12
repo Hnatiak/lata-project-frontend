@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     display: flex;
+    padding: 20px;
     justify-content: space-between;
-    padding: 20px 40px;
     background: #fff;
     @media screen and (max-width: 780px) {
         flex-direction: column;
-        padding: 20px 20px;
     }
 `;
 
@@ -19,32 +18,14 @@ export const LeftSideBar = styled.div`
     }
 `;
 
+
 export const RightSideBar = styled.div`
     width: 370px;
     margin-left: 25px;
-    display: flex;
-    gap: 40px;
-    flex-direction: column;
     @media screen and (max-width: 780px) {
         width: 100%;
         margin-left: 0;
     }
-`;
-
-export const ContainerH3 = styled.h3`
-    margin-bottom: 20px;
-    font-size: 34px;
-    line-height: 1.5em;
-    margin-top: 0;
-`;
-
-export const ContainerH5 = styled.h5`
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 1.5em;
-    color: #486DAA;
-    font-weight: 300;
-    margin-top: 0;
 `;
 
 export const ContainerDiv = styled.div`
@@ -65,33 +46,70 @@ export const News = styled.h5`
 
 export const ContainerTitle = styled.div`
     margin-bottom: 10px;
-    color: #9AC43C;
 `;
 
 export const ContainerA = styled(Link)`
   color: #9AC43C;
-  margin-bottom: 10px;
   &:hover {
     border-bottom: 1px solid #9AC43C;
     }
 `;
 
-export const ContainerP = styled.p`
-    text-align: justify;
-`;
-
-export const ContainerDivService = styled.div`
-    display: flex;
-    margin-bottom: 10px;
-    @media screen and (max-width: 480px) {
-        flex-direction: column;
-        margin-bottom: 20px;
+export const Title = styled(Link)`
+    font-size: 34px;
+  &:hover {
+    color: #9AC43C;
     }
 `;
 
-export const ContainerImgService = styled.img`
-    margin: 0 15px 0 0;
-    @media screen and (max-width: 480px) {
-        margin: 0 0 15px 0;
+export const ContainerP = styled.p`
+    font-family: Arial, sans-serif;
+`;
+
+export const ContainerNew = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    }
+`;
+
+export const ContainerH5 = styled.h5`
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin-top: 0;
+`;
+
+export const Img = styled.img`
+  margin-right: 15px;
+  max-width: 100%;
+  height: auto;
+`;
+
+export const TextContainer = styled.div`
+  @media screen and (max-width: 780px) {
+    flex-basis: 50%;
+  }
+`;
+
+export const Text = styled.p`
+  @media screen and (max-width: 780px) {
+    flex-basis: 100%;
+    text-align: justify;
+  }
+`;
+
+export const ContainerAButton = styled.a`
+    text-decoration: none;
+    background-color: #9AC43C;
+    border-radius: 5px;
+    color: #000;
+    padding: 6px 12px;
+    &:hover {
+        background: #656565;
+        color: #fff;
     }
 `;

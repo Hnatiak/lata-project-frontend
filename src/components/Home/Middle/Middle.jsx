@@ -13,7 +13,7 @@ const Middle = ({ photos }) => {
       title: 'Паперові стаканчики',
       description: 'Кава та інші напої смакуватимуть ще краще, якщо вони будуть налиті у наші стаканчики з паперу.',
       link: 'Читати далі',
-      to: '/projects/papirov_cups/',
+      id: 15,
     },
     {
       src: slice2,
@@ -21,7 +21,7 @@ const Middle = ({ photos }) => {
       title: 'Для взуття на всі сезони',
       description: 'Для виробників взуття ми пропонуємо найкращі рішення. Ваші клієнти будуть задоволені.',
       link: 'Читати далі',
-      to: '/projects/the_box_under_vzuttya',
+      id: 11,
     },
     {
       src: slice3,
@@ -29,7 +29,7 @@ const Middle = ({ photos }) => {
       title: 'Пакування для печива',
       description: 'Для гарної весільної забави та інших урочистих подій, добре підійдуть коробки під печиво.',
       link: 'Читати далі',
-      to: '/projects/baskets_for_flowers',
+      id: 9,
     },
   ];
 
@@ -62,7 +62,7 @@ const Middle = ({ photos }) => {
       <LeftDiv>
         <Title>{currentPhoto.title}</Title>
         <P>{currentPhoto.description}</P>
-        <A to={currentPhoto.to}>{currentPhoto.link}</A>
+        <A to={`/projects/${currentPhoto.id}`}>{currentPhoto.link}</A>
       </LeftDiv>
       <Arrow icon={faChevronRight} onClick={handleNextPhoto} direction="right" />
       <Arrow icon={faChevronLeft} onClick={handlePreviousPhoto} direction="left" />

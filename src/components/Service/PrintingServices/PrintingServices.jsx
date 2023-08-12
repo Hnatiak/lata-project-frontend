@@ -1,18 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Container, LeftSideBar, RightSideBar, ContainerDivService, ContainerImgService, ContainerDiv, News, ContainerA, ContainerTitle, ContainerP  } from './PrintingServices.styled'
-import Services from './Services.json';
+import servicesData from './services';
 
 const PrintingServices = () => {
+  const [, setService] = useState([]);
+
     const formatDescription = (description) => {
         return description.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
     };
 
-      // Додамо стан, щоб відстежувати поточну сторінку
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 9; // Кількість елементів на сторінці
-    const totalPages = Math.ceil(Services.length / itemsPerPage);
+    useEffect(() => {
+      setService(servicesData);
+    }, []);
 
-    // Функції для переходу між сторінками
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 9;
+    const totalPages = Math.ceil(servicesData.length / itemsPerPage); // Updated the reference to the imported array
+
     const goToNextPage = () => {
       setCurrentPage((prevPage) => prevPage + 1);
     };
@@ -21,21 +25,20 @@ const PrintingServices = () => {
       setCurrentPage((prevPage) => prevPage - 1);
     };
 
-    // Обраховуємо індекс початку та кінця елементів для поточної сторінки
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
     return (
         <Container>
             <LeftSideBar>
-                {Services.slice(startIndex, endIndex).map((service, index) => (
-                  <ContainerDivService key={index}>
-                    <ContainerImgService src={service.path} alt={`Photo ${service.title}`} />
+                {servicesData.slice(startIndex, endIndex).map((services, index) => (
+                  <ContainerDivService key={services.id}>
+                    <ContainerImgService src={services.path} alt={`Photo ${services.title}`} />
                     <div>
                       <div style={{ display: 'flex', gap: '10px', alignItems: 'baseline' }}>
-                        <div><ContainerA to={service.link}><b>{service.title}</b></ContainerA></div>
+                        <div><ContainerA to={`/services/${services.url}`}><b>{services.title}</b></ContainerA></div>
                       </div>
-                      <ContainerP dangerouslySetInnerHTML={{ __html: formatDescription(service.description) }} />
+                      <ContainerP dangerouslySetInnerHTML={{ __html: formatDescription(services.description) }} />
                     </div>
                   </ContainerDivService>
                 ))}

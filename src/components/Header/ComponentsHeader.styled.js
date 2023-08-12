@@ -149,6 +149,11 @@ export const AboutUl = styled.ul`
   background: #222;
   border: none;
   opacity: inherit;
+  @media screen and (max-width: 780px) {
+    right: 0;
+    left: auto;
+    margin-right: 10px;
+  }
 `;
 
 export const AboutA = styled(Link)`
