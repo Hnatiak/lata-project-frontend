@@ -64,7 +64,7 @@ const ProductDetailsPage = ({ photos }) => {
             <input type="text" value={quantity} maxLength={10} onChange={handleQuantityChange} />
             <span onClick={increment}>+</span>
           </div>
-            <div>Загальна ціна: <span style={{fontWeight: 'bold', fontSize: '25px', color: 'black' }}>{finalAmount}</span></div>
+            <div>Загальна ціна: <span style={{fontWeight: 'bold', fontSize: '25px', color: 'black' }}>{finalAmount} грн</span></div>
           <div>
             <ButtonShop onClick={handleBuyClick}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
           </div>
