@@ -6,10 +6,11 @@ import { SharedLayout } from "./SharedLayout/SharedLayout";
 import { refreshUser } from "../redux/auth/authOperations.js";
 import boxesData from "./Projects/Content/boxs";
 import servicesData from "./Service/ServiceElements/services";
-import articlesData from "./Articles/articles";
+import articlesData from "./Articles/ArticlesContent/articles";
 import newsData from './News/NewsElements/newsElements'
+import machenicsData from './Equipment/EquipmentContainer/machenics'
 
-const ArticlesContent = lazy(() => import("./Articles/ArticlesContent"));
+const ArticlesContent = lazy(() => import("./Articles/ArticlesContent/ArticlesContent"));
 const HomePage = lazy(() => import("../pages/HomePage"));
 const AuthPage = lazy(() => import("../pages/AuthPage"));
 const Projects = lazy(() => import("../pages/ProjectsPage"));
@@ -17,6 +18,7 @@ const ProductDetailsPage = lazy(() => import("./Projects/ProductDetailsPage/Prod
 const Services = lazy(() => import("../pages/ServicesPage"));
 const ServiceElements = lazy(() => import("./Service/ServiceElements/ServiceElements"));
 const Equipment = lazy(() => import("../pages/EquipmentPage"));
+const EquipmentDetails = lazy(() => import("../components/Equipment/EquipmentDetails/EquipmentDetails"));
 const AboutPage = lazy(() => import("../pages/AboutPage"));
 const Question = lazy(() => import("./About/AboutUsMenu/Question"));
 const Vacancies = lazy(() => import("./About/AboutUsMenu/Vacancies"));
@@ -49,6 +51,7 @@ export const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/services/:link" element={<ServiceElements services={servicesData} />} />
           <Route path="/obl" element={<Equipment />} />
+          <Route path="/obl/:photoId" element={<EquipmentDetails machenics={machenicsData} />} />
           <Route path="/company" element={<AboutPage />} />
           <Route path="/company/questions" element={<Question />} />
           <Route path="/company/vacancies" element={<Vacancies />} />
