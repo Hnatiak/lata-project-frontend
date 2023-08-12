@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { RightSideBar, ContainerDiv, News, ContainerTitle, ContainerA, ContainerP, Container, LeftSideBar, Title, ContainerNew, Img, TextContainer, Text, ContainerH5 } from './NewsContainer.styled';
 import newsData from './newsContent';
-import { Link } from 'react-router-dom';
 
 const NewsContainer = () => {
     const [, setService] = useState([]);
