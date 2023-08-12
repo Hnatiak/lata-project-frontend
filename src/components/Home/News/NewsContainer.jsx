@@ -35,7 +35,7 @@ const NewsContainer = () => {
                 <ContainerNew>
                     <Img src='https://lata.net.ua/upload/iblock/ebe/ebea54b65681af54d90553a87719dee5.jpg' alt="flexprint" />
                     <TextContainer>
-                        <Text style={{ textAlign: 'justify', paddingBottom: '10px' }}>Для нас важливо, щоб наше пакування було вироблене за дотриманням всіх необхідних стандартів та вимог. Завдяки натуральній сировині наші вироби безпечні для здоров'я Ваших клієнтів.</Text>
+                        <Text>Для нас важливо, щоб наше пакування було вироблене за дотриманням всіх необхідних стандартів та вимог. Завдяки натуральній сировині наші вироби безпечні для здоров'я Ваших клієнтів.</Text>
                         <ContainerAButton to='services/Pidgotovka_do_dryky/'>Читати далі</ContainerAButton>
                     </TextContainer>
                 </ContainerNew>

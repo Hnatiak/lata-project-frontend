@@ -1,16 +1,9 @@
-import styled from 'styled-components';
-
-export const Section = styled.section`
-    position: relative;
-    margin: 0;
-    padding: 0;
-    display: block;
-`;
+import styled from '@emotion/styled';
+import { ErrorMessage } from 'formik';
 
 export const Container = styled.div`
     padding: 0 20px 20px 25px;
     position: relative;
-    max-width: 1170px;
     align-items: center;
 `;
 
@@ -29,9 +22,9 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-  @media screen and (max-width: 480px) {
-    align-items: stretch;
-  }
+  // @media screen and (max-width: 480px) {
+  //   align-items: stretch;
+  // }
 `;
 
 export const InputWrapper = styled.div`
@@ -39,6 +32,8 @@ export const InputWrapper = styled.div`
   margin-bottom: 20px;
   @media screen and (max-width: 480px) {
     flex-direction: column;
+    width: 100%;
+    justify-content: center;
   }
 `;
 
@@ -56,6 +51,16 @@ export const Input = styled.input`
     width: 300px;
   }
 `;
+
+// export const StyledField = styled(Field)`
+//   max-width: 300px;
+//   padding: 8px;
+//   border-radius: 4px;
+//   border: 1px solid #cccccc;
+//   @media screen and (min-width: 481px) {
+//     width: 300px;
+//   }
+// `;
 
 export const Textarea = styled.textarea`
     max-width: 300px;
@@ -77,5 +82,40 @@ export const SubmitButton = styled.button`
   color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+`;
+
+export const Review = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 360px;
+  border: 1px solid #cccccc;
+  border-radius: 40px;
+  padding: 20px 30px;
+  word-wrap: break-word;
+`;
+
+export const Style = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  @media screen and (max-width: 780px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+export const ErrorText = styled(ErrorMessage)`
+  font-size: 12px;
+  color: var(--createBoardInputTextFocus);
+`;
+
+export const BtnSend = styled.button`
+    padding: 10px;
+    background: red;
+    border-radius: 50px;
+    color: white;
 `;

@@ -34,6 +34,9 @@ const reviewsSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     },
+    setCurrentUserId(state, action) {
+      state.currentUserId = action.payload;
+    },
   },
 });
 
@@ -44,6 +47,7 @@ export const {
   fetchReviewsStart,
   fetchReviewsSuccess,
   fetchReviewsFailure,
+  setCurrentUserId,
 } = reviewsSlice.actions;
 
 export default reviewsSlice.reducer;

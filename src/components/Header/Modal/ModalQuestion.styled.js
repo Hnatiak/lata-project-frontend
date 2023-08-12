@@ -118,7 +118,6 @@ export const Svg = styled(FontAwesomeIcon)`
 export const CloseBtnStyle = styled.button`
   background: transparent;
   border: 0;
-  cursor: pointer;
 `;
 
 export const BtnSend = styled.button`
@@ -131,7 +130,6 @@ export const BtnSend = styled.button`
   margin-top: 20px;
   background: #9ac43c;
   border-radius: 4px;
-  cursor: pointer;
   @media screen and (max-width: 480px) {
     padding: 4px 18px;
     font-size: 14px;

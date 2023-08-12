@@ -95,7 +95,6 @@ export const ButtonShop = styled.button`
   padding: 5px 20px;
   font-size: 15px;
   border-radius: 20px;
-  cursor: pointer;
 
 &:hover {
   background: #8ac930;

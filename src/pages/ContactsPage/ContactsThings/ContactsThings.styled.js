@@ -7,3 +7,10 @@ export const Container = styled.div`
         gap: 35px;
     }
 `;
+
+export const ContainerDivInfo = styled.div`
+    max-width: 550px;
+    @media screen and (min-width: 481px) {
+        width: 550px;
+    }
+`;
