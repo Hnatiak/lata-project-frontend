@@ -27,7 +27,6 @@ export const LeftSideBar = styled.div`
     }
 `;
 
-
 export const RightSideBar = styled.div`
     width: 370px;
     margin-left: 25px;

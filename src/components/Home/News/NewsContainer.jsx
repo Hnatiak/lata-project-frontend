@@ -1,5 +1,4 @@
 import { Container, LeftSideBar, RightSideBar, ContainerH3, ContainerAButton, ContainerH5, ContainerDiv, News, ContainerA, ContainerTitle, ContainerP, Img, ContainerNew, TextContainer, Text  } from './NewsContainer.styled'
-// import flexprint from '../../source/flexprint.jpg'
 
 const NewsContainer = () => {
     return (

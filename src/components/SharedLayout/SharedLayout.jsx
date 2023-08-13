@@ -5,7 +5,6 @@ import { Suspense, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Container } from "./SharedLayout.styled";
 import { ToastContainer } from 'react-toastify';
-
 import 'react-toastify/dist/ReactToastify.css';
 
 export const SharedLayout = () => {

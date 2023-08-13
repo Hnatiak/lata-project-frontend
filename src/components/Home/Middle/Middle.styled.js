@@ -26,10 +26,6 @@ export const Image = styled.img`
     height: auto;
     position: absolute;
     transition: opacity 0.5s ease-in-out;
-    // @media screen and (max-width: 780px) {
-    //     width: 650px;
-    //     height: 230px;
-    // }
 `;
 
 export const LeftDiv = styled.div`
@@ -53,7 +49,6 @@ export const LeftDiv = styled.div`
         top: 0px;
         bottom: 0;
         right: 0;
-        // position: relative;
     }
     @media screen and (max-width: 480px) {
         padding: 20px 20px 20px 50px;

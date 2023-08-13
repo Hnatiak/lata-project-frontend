@@ -1,18 +1,14 @@
-import React from 'react'; // , { useState }
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// import sprite from '../../sourse/sprite.svg';
 import { login } from '../../redux/auth/authOperations';
 import { useDispatch } from 'react-redux';
 import {
   ErrorText,
-  // PasswordToggle,
   Menu,
   Inputs,
   Container,
   PasswordInput,
-  // PasswordIcon,
   Content,
-//   Svg,
   LoginBtn,
   StyledRegistrationLink,
   StyledLink,
@@ -23,22 +19,13 @@ import * as Yup from 'yup';
 import { toast } from 'react-toastify';
 
 const LoginSchema = Yup.object().shape({
-  email: Yup.string()
-    .email('Емейл неправильний')
-    .required('Емейл обов\'язковий'),
-  password: Yup.string()
-    .min(8, 'Пароль мусить бути більше 8 букв')
-    .required('Пароль обов\'язковий'),
+  email: Yup.string().email('Емейл неправильний').required('Емейл обов\'язковий'),
+  password: Yup.string().min(8, 'Пароль мусить бути більше 8 букв').required('Пароль обов\'язковий'),
 });
 
 function LoginPage() {
   const navigate = useNavigate();
-//   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
-
-//   const togglePasswordVisibility = () => {
-//     setShowPassword(!showPassword);
-//   };
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -99,7 +86,6 @@ function LoginPage() {
               </PasswordInput>
               <LoginBtn type="submit">Log In Now</LoginBtn>
             </Inputs>
-            {/* <LoginBtn>Log In Now</LoginBtn> */}
           </Content>
         </Formik>
       </form>

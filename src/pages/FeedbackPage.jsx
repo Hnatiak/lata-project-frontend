@@ -1,5 +1,5 @@
 import React from 'react';
-import Rewiews from '../components/FeedbackPage/Rewiews/Rewiews'
+import Rewiews from '../components/FeedbackPage/Rewiews'
 import TitleSection from '../components/TitleSection/TitleSection';
 
 const Feedback = () => {

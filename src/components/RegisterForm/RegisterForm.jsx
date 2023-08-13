@@ -1,8 +1,8 @@
-import React from 'react'; // { useState }
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../../redux/auth/authOperations';
 import { Formik, Field } from 'formik';
-import { useDispatch } from 'react-redux'; // useSelector
+import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import {
   ErrorText,
@@ -15,8 +15,6 @@ import {
   StyledRegistrationLink,
   StyledLink,
 } from './RegisterForm.styled';
-// import { getError } from '../../redux/auth/authSelectors';
-// import { toast } from 'react-toastify';
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().required('Ім\'я обов\'язкове'),
@@ -26,14 +24,7 @@ const RegisterSchema = Yup.object().shape({
 
 function RegistrationPage() {
   const navigate = useNavigate();
-  // const errorMessage = useSelector(getError);
   const dispatch = useDispatch();
-
-//   const [showPassword, setShowPassword] = useState(false);
-
-//   const togglePasswordVisibility = () => {
-//     setShowPassword(!showPassword);
-//   };
 
   const handleSubmit = async event => {
     event.preventDefault();

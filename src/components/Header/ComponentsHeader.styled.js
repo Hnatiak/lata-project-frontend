@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Link, NavLink } from 'react-router-dom'; // NavLink
+import { Link, NavLink } from 'react-router-dom';
 
 export const HeaderWrapper = styled.header`
   justify-content: space-between;
@@ -117,7 +117,4 @@ export const MenuDiv = styled.div`
   margin-top: 30px;
   color: #9AC43C;
   align-items: center;
-  // @media screen and (max-width: 780px) {
-  //   margin-top: 0px;
-  // }
 `;

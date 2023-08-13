@@ -10,11 +10,9 @@ const ArticlesContent = ({ articles }) => {
   if (!article) {
     return <div>Error</div>;
   }
-
-//   const formattedDescription = article.description.replace(/\n/g, '<br />');
     const formattedDescription = article.description
-  .replace(/\t/g, '&emsp;') // Заміна табуляцій на &emsp;
-  .replace(/\n/g, '<br />'); // Заміна нових рядків на <br />
+  .replace(/\t/g, '&emsp;')
+  .replace(/\n/g, '<br />');
 
   return (
     <>

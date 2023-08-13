@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import {
-  // StyledForm,
   Textarea,
   ErrorText,
   ErrorMessageText,
@@ -11,7 +10,6 @@ import {
   FormDiv,
   StyledFormDiv,
 } from './buy.styled';
-
 import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { sendBuy } from '../../service/help-services';
@@ -20,7 +18,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const CommentSchema = Yup.object().shape({
   name: Yup.string().required('Ім\'я обов\'язкове'),
-  // surname: Yup.string().required('Прізвище обов\'язкове'),
   email: Yup.string().email('Емейл неправильний').required('Емейл обов\'язковий'),
   phone: Yup.string().required('Номер телефону обов\'язковий'),
   address: Yup.string().required('Адреса обов\'язкова'),
@@ -40,12 +37,10 @@ const BuyBoxs = () => {
     try {
       const buyData = {
         ...values,
-        // photoItemBox: photoItem,
-        nameOfBox: productName, // Передача назви коробки
-        sum: finalAmount, // Передача суми
-        quantity, // Передача кількості
+        nameOfBox: productName,
+        sum: finalAmount,
+        quantity,
       };
-  
       await sendBuy(buyData);
       toast.success('Ваша покупка пройшла успішно');
       navigate('/');
@@ -61,7 +56,6 @@ const BuyBoxs = () => {
       <Formik
         initialValues={{
           name: '',
-          // surname: '',
           email: '',
           phone: '',
           address: '',
@@ -69,8 +63,7 @@ const BuyBoxs = () => {
           message: '',
         }}
         validationSchema={CommentSchema}
-        onSubmit={handleSubmit}
-      >
+        onSubmit={handleSubmit}>
         {({ isSubmitting }) => (
           <Form>
             <StyledFormDiv>
@@ -78,18 +71,14 @@ const BuyBoxs = () => {
                  <StyledField autoFocus name="name" type="text" placeholder="Ім'я і прізвище" />
                  <ErrorText name="name" component="div" />
                </FormDiv>
-
                <FormDiv>
                  <StyledField name="email" type="email" placeholder="Емейл" />
                  <ErrorText name="email" component="div" />
                </FormDiv>
-
                <FormDiv>
                  <StyledField name="phone" type="tel" placeholder="Номер телефону" />
                  <ErrorText name="phone" component="div" />
                </FormDiv>
-
-
                <FormDiv>
                  <StyledField name="address" type="text" placeholder="Адреса" />
                  <ErrorText name="address" component="div" />
@@ -99,7 +88,6 @@ const BuyBoxs = () => {
                 <Textarea name="message" as="textarea" placeholder="Добавте свої деталі" />
                 <ErrorText name="message" component="div" />
               </FormDiv>
-
               <FormDiv>
                 <StyledField name="paymentMethod" as="select" placeholder="Метод розрахунку">
                   <option value="" disabled>Виберіть метод розрахунку</option>
@@ -110,15 +98,10 @@ const BuyBoxs = () => {
               </FormDiv>
             </StyledFormDiv>
             <Settings>
-
               <FormDiv><p>Назва товару: {productName}</p></FormDiv>
-          
               <FormDiv><p>Кількість: {quantity}</p></FormDiv>
-          
               <FormDiv><p>Загальна сума: {finalAmount}</p></FormDiv>
-          
               <BtnSend type="submit" disabled={isSubmitting}>Надіслати</BtnSend>
-          
               {errorMessage && (
                 <ErrorMessageText>{errorMessage}</ErrorMessageText>
               )}

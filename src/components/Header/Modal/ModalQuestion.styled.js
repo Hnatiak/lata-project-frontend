@@ -81,11 +81,11 @@ export const Textarea = styled(Field)`
   border: 1px solid #cccccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border linear 0.2s, box-shadow linear 0.2s;
-  height: 150px; // Ви можете змінити це на бажану висоту
+  height: 150px;
   padding: 4px 6px;
   font-size: 14px;
-  resize: vertical; // Додано параметр resize для можливості вертикального зміщення
-  width: 100%; // Розтягуємо на всю ширину батьківського контейнера
+  resize: vertical;
+  width: 100%;
   margin-top: 8px;
   resize: none;
   @media screen and (min-width: 481px) {

@@ -44,9 +44,9 @@ const ProductDetailsPage = ({ photos }) => {
     navigate(`/projects/${photoId}/buy`, {
       state: {
         photoItem: selectedPhoto.url,
-        productName: selectedPhoto.title, // Передача назви коробки
-        quantity, // Передача кількості
-        finalAmount, // Передача ціни
+        productName: selectedPhoto.title,
+        quantity,
+        finalAmount,
       },
     });
   }

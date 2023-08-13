@@ -9,10 +9,6 @@ const NewsContainer = () => {
         setService(newsData);
       }, []);
 
-//   if (!newsContent) {
-//     return <div>Error</div>;
-//   }
-
   return (
     <>
       <Container>

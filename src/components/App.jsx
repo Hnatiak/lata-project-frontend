@@ -32,8 +32,6 @@ const BuyPage = lazy(() => import("../pages/BuyPage"))
 
 export const App = () => {
   const dispatch = useDispatch();
-  // const refreshing = useSelector(isRefreshing);
-  // const loggedUser = useSelector(isLoggedIn);
 
   useEffect(() => {
     dispatch(refreshUser());
