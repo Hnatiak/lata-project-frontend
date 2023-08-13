@@ -88,33 +88,39 @@ const Reviews = () => {
         <Formik initialValues={{ name: '', email: '', message: '' }} validationSchema={ReviewSchema} onSubmit={handleSubmit}>
           {({  handleSubmit, isSubmitting }) => (
             <Form onSubmit={handleSubmit}>
-              <InputWrapper>
-                <Label>Ім'я:</Label>
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder="Ім'я"
-                />
+              <div>
+                <InputWrapper>
+                  <Label>Ім'я:</Label>
+                  <Input
+                    type="text"
+                    name="name"
+                    placeholder="Ім'я"
+                  />
+                </InputWrapper>
                 <ErrorText name="name" component="div" className="error-message" />
-              </InputWrapper>
-              <InputWrapper>
-                <Label>Емейл:</Label>
-                <Input
-                  type="email"
-                  name="email"
-                  placeholder="Емейл"
-                />
+              </div>
+              <div>
+                <InputWrapper>
+                  <Label>Емейл:</Label>
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Емейл"
+                  />
+                </InputWrapper>
                 <ErrorText name="email" component="div" className="error-message" />
-              </InputWrapper>
-              <InputWrapper>
-                <Label>Коментар:</Label>
-                <Textarea
-                  name="message"
-                  placeholder="Залиште свій коментар"
-                  as="textarea"
-                />
+              </div>
+              <div>
+                <InputWrapper>
+                  <Label>Коментар:</Label>
+                  <Textarea
+                    name="message"
+                    placeholder="Залиште свій коментар"
+                    as="textarea"
+                  />
+                </InputWrapper>
                 <ErrorText name="message" component="div" className="error-message" />
-              </InputWrapper>
+              </div>
               <SubmitButton type="submit" onClick={handleRegisterRedirect} disabled={isSubmitting}>Надіслати</SubmitButton>
             </Form>
           )}
@@ -141,144 +147,3 @@ const Reviews = () => {
 };
 
 export default Reviews;
-
-
-
-
-
-
-
-
-
-// import React, { useState } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { toast } from 'react-toastify';
-// import { addReview, fetchReviews } from '../../../redux/reviews/reviewsOperations';
-// import { useNavigate } from 'react-router-dom';
-// // import {
-// //   selectReviewsError,
-// // } from '../../../redux/reviews/reviewsSelectors';
-
-// const Reviews = () => {
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-//   // const error = useSelector(selectReviewsError);
-//   const [lastComment, setLastComment] = useState(null);
-
-//   const [name, setName] = useState('');
-//   const [email, setEmail] = useState('');
-//   const [comment, setComment] = useState('');
-
-//   const isLoggedInUser = false; // Replace this with your login check logic
-
-//   const handleRegisterRedirect = () => {
-//     if (!isLoggedInUser) {
-//       // Redirect logic here
-//       navigate('/auth/register');
-//       toast.error('Ви не можете залишити відгук поки не зареєструєтесь або не залогінетесь');
-//     } else {
-//       // Call the method to fetch reviews
-//       dispatch(fetchReviews());
-//     }
-//   };
-
-//   // const handleSubmitReview = async (e) => {
-//   //   e.preventDefault();
-
-//   //   if (!name || !email || !comment) {
-//   //     toast.error('Будь ласка, заповніть всі обов\'язкові поля');
-//   //     return;
-//   //   }
-
-//   //   try {
-//   //     // Call the method to add a review
-//   //     await dispatch(addReview({ name, email, comment }));
-
-//   //     // Clear the input fields after successful submission
-//   //     setName('');
-//   //     setEmail('');
-//   //     setComment('');
-
-//   //     // Call the method to fetch updated reviews
-//   //     dispatch(fetchReviews());
-
-//   //     toast.success('Ваш відгук був успішно доданий');
-//   //   } catch (error) {
-//   //     toast.error('Під час додавання відгука сталася помилка');
-//   //   }
-//   // };
-//   const handleSubmitReview = async (e) => {
-//     e.preventDefault();
-
-//     if (!name || !email || !comment) {
-//       toast.error('Будь ласка, заповніть всі обов\'язкові поля');
-//       return;
-//     }
-
-//     try {
-//       // Call the method to add a review
-//       await dispatch(addReview({ name, email, comment }));
-
-//       // Clear the input fields after successful submission
-//       setName('');
-//       setEmail('');
-//       setComment('');
-
-//       // Set the last comment for display
-//       setLastComment({ name, comment });
-
-//       // Call the method to fetch updated reviews
-//       dispatch(fetchReviews());
-
-//       toast.success('Ваш відгук був успішно доданий');
-//     } catch (error) {
-//       toast.error('Під час додавання відгука сталася помилка');
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h3>Залишити відгук</h3>
-//       <form onSubmit={handleSubmitReview}>
-//         <div>
-//           <label>
-//             Ім'я:
-//             <input
-//               type="text"
-//               value={name}
-//               onChange={(e) => setName(e.target.value)}
-//             />
-//           </label>
-//         </div>
-//         <div>
-//           <label>
-//             Email:
-//             <input
-//               type="email"
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//             />
-//           </label>
-//         </div>
-//         <div>
-//           <label>
-//             Відгук:
-//             <textarea
-//               value={comment}
-//               onChange={(e) => setComment(e.target.value)}
-//             />
-//           </label>
-//         </div>
-//         <button type="submit" onClick={handleRegisterRedirect}>Додати відгук</button>
-//       </form>
-//       {lastComment && (
-//         <div>
-//           <p>Ім'я: {lastComment.name}</p>
-//           <p>Коментар: {lastComment.comment}</p>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default Reviews;
