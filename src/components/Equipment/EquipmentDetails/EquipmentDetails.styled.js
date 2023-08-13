@@ -1,13 +1,8 @@
 import styled from '@emotion/styled';
-// import { Link } from 'react-router-dom'; // NavLink
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const MenuContainer = styled.div`
   padding: 35px 25px;
-  // display: grid;
-
-  // gap: 105px 0px;
-  // grid-template-columns: repeat(3, 1fr); // 2
   justify-content: flex-start;
 
   img {

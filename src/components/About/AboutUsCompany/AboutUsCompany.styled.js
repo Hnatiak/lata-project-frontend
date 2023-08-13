@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     display: flex;
@@ -30,13 +29,6 @@ export const RightSideBar = styled.div`
         margin-left: 0;
     }
 `;
-
-// export const ContainerP = styled.p`
-//     margin-bottom: 20px;
-//     font-size: 34px;
-//     line-height: 1.5em;
-//     margin-top: 0;
-// `;
 
 export const ContainerH5 = styled.h5`
     margin-bottom: 20px;

@@ -44,9 +44,9 @@ const ProductDetailsPage = ({ machenics }) => {
     navigate(`/projects/${photoId}/buy`, {
       state: {
         photoItem: selectedMachenic.url,
-        productName: selectedMachenic.title, // Передача назви коробки
-        quantity, // Передача кількості
-        finalAmount, // Передача ціни
+        productName: selectedMachenic.title,
+        quantity,
+        finalAmount,
       },
     });
   }

@@ -27,7 +27,6 @@ export const Form = styled.form`
 
 export const InputWrapper = styled.div`
   display: flex;
-  // margin-bottom: 20px;
   @media screen and (max-width: 480px) {
     flex-direction: column;
     width: 100%;

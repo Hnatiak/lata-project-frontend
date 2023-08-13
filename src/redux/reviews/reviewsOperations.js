@@ -1,13 +1,8 @@
-// reviewsOperations.js
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://lata-project-backend.onrender.com';
 
-/*
- * POST @ /api/reviews
- * body: { name, email, comment }
- */
 export const addReview = createAsyncThunk(
   'reviews/addReview',
   async (reviewData, thunkAPI) => {
@@ -20,10 +15,6 @@ export const addReview = createAsyncThunk(
   }
 );
 
-
-/*
- * GET @ /api/reviews
- */
 export const fetchReviews = createAsyncThunk('reviews/fetchReviews', async (_, thunkAPI) => {
   try {
     const res = await axios.get('/api/reviews');
@@ -33,35 +24,6 @@ export const fetchReviews = createAsyncThunk('reviews/fetchReviews', async (_, t
   }
 });
 
-// export const fetchReviews = async () => {
-//   try {
-//     const response = await axios.get('/api/reviews');
-//     return response.data;
-//   } catch (error) {
-//     console.error('Error fetching reviews:', error);
-//     throw error; // Rethrow the error to be caught by the caller
-//   }
-// };
-
-/*
- * PUT @ /api/reviews/:id
- * body: { name, email, comment }
- */
-export const editReview = createAsyncThunk(
-  'reviews/editReview',
-  async ({ id, name, email, comment }, thunkAPI) => {
-    try {
-      const res = await axios.put(`/api/reviews/${id}`, { name, email, comment });
-      return res.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
-
-/*
- * DELETE @ /api/reviews/:id
- */
 export const deleteReview = createAsyncThunk('reviews/deleteReview', async (id, thunkAPI) => {
   try {
     await axios.delete(`/api/reviews/${id}`);

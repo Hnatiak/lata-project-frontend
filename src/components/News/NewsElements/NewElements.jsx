@@ -10,11 +10,9 @@ const NewElements = ({ news }) => {
   if (!newSelector) {
     return <div>Error</div>;
   }
-
-//   const formattedDescription = article.description.replace(/\n/g, '<br />');
     const formattedDescription = newSelector.description
-  .replace(/\t/g, '&emsp;') // Заміна табуляцій на &emsp;
-  .replace(/\n/g, '<br />'); // Заміна нових рядків на <br />
+  .replace(/\t/g, '&emsp;')
+  .replace(/\n/g, '<br />');
 
   return (
     <>

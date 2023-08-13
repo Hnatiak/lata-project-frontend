@@ -15,7 +15,7 @@ const PrintingServices = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 9;
-    const totalPages = Math.ceil(servicesData.length / itemsPerPage); // Updated the reference to the imported array
+    const totalPages = Math.ceil(servicesData.length / itemsPerPage);
 
     const goToNextPage = () => {
       setCurrentPage((prevPage) => prevPage + 1);

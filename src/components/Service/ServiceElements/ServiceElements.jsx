@@ -11,10 +11,9 @@ const ServiceElements = ({ services }) => {
     return <div>Error</div>;
   }
 
-//   const formattedDescription = article.description.replace(/\n/g, '<br />');
     const formattedDescription = serviceSelector.description
-  .replace(/\t/g, '&emsp;') // Заміна табуляцій на &emsp;
-  .replace(/\n/g, '<br />'); // Заміна нових рядків на <br />
+  .replace(/\t/g, '&emsp;')
+  .replace(/\n/g, '<br />');
 
   return (
     <>
