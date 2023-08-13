@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Nav, MenuItem, Ul, MenuLinkActive, Menu, Ab, MenuTelephoneContainer } from './ModalTelephone.styled';
+import { MenuItem, Ul, MenuLinkActive, Menu, Ab, MenuTelephoneContainer } from './ModalTelephone.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { setName } from '../../../redux/auth/authSelectors';
@@ -45,28 +45,27 @@ const ModalTelephone = ({ closeModalTelephone }) => {
       }}
     >
       <Menu>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#9AC43C', justifyContent: 'space-between', marginBottom: '40px' }}>
+        <div style={{ display: 'flex', gap: '15px', color: '#9AC43C', justifyContent: 'space-between', margin: '30px 0px 40px 0px' }}>
           <MenuTelephoneContainer>
+          {!isLoggedInUser && (
             <Ab to="/auth/register" onClick={handleMenuItemClick}>
               <FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20 }} />
-              {isLoggedInUser && <p style={{ marginBottom: 0 }}>{username}</p>}
             </Ab>
+          )}
+          {isLoggedInUser && (
+            <>
+              <FontAwesomeIcon icon={faUser} style={{ width: 20, height: 20, marginRight: '15px' }} />
+              {isLoggedInUser && <p style={{ marginBottom: 0 }}>{username}</p>}
+            </>
+          )}
           </MenuTelephoneContainer>
           <div style={{ display: 'flex', gap: '25px' }}>
           {isLoggedInUser && (
-            <FontAwesomeIcon
-              icon={faArrowRightFromBracket}
-              onClick={() => {
-                handleLogout();
-                handleMenuItemClick();
-              }}
-              style={{ width: 20, height: 20 }}
-            />
+            <FontAwesomeIcon icon={faArrowRightFromBracket} onClick={() => {handleLogout(); handleMenuItemClick();}} style={{ width: 20, height: 20 }} />
           )}
           <FontAwesomeIcon icon={faCircleXmark} style={{ width: 20, height: 20 }} onClick={closeModalTelephone} />
         </div>
         </div>
-        <Nav>
           <Ul>
             <MenuItem>
               <MenuLinkActive to="/" selected={selectedMenu === '/'} onClick={handleMenuItemClick}>
@@ -114,7 +113,6 @@ const ModalTelephone = ({ closeModalTelephone }) => {
               </MenuLinkActive>
             </MenuItem>
           </Ul>
-        </Nav>
       </Menu>
     </div>
   );

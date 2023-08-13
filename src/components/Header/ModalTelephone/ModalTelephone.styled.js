@@ -1,18 +1,6 @@
 import styled from '@emotion/styled';
 import { Link, NavLink } from 'react-router-dom'; // NavLink
 
-export const Nav = styled.nav`
-  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.6em;
-  color: #656565;
-  display: flex;
-  flex-direction: column-reverse;
-  @media screen and (max-width: 780px) {
-    max-width: 476px;
-  }
-`;
-
 export const Ul = styled.ul`
   padding: 0;
   display: grid;
@@ -39,9 +27,7 @@ export const MenuItem = styled.li`
 `;
 
 export const A = styled(NavLink)`
-  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
   padding-bottom: 10px;
-  // margin: 24px;
   margin: 28px 5px 0 0;
   padding-bottom: 10px;
   font-size: 14px;
@@ -57,17 +43,9 @@ export const A = styled(NavLink)`
 `;
 
 export const Ab = styled(NavLink)`
-  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
-  padding-bottom: 10px;
-  // margin: 24px;
-  margin: 28px 5px 0 0;
-  padding-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
   color: #9ac43c;
-  @media screen and (max-width: 780px) {
-    margin: 28px 0px;
-  }
   @media screen and (max-width: 480px) {
     gap: 15px;
     display: flex;
@@ -111,6 +89,4 @@ export const AboutA = styled(Link)`
 
 export const MenuTelephoneContainer = styled.div`
   display: flex;
-  gap: 15px;
-  align-items: center;
 `;

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { ErrorMessage } from 'formik';
+import { Field, ErrorMessage } from 'formik';
 
 export const Container = styled.div`
     padding: 0 20px 20px 25px;
@@ -19,17 +19,15 @@ export const Title = styled.h2`
 
 export const Form = styled.form`
   display: flex;
+  gap: 20px;
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-  // @media screen and (max-width: 480px) {
-  //   align-items: stretch;
-  // }
 `;
 
 export const InputWrapper = styled.div`
   display: flex;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   @media screen and (max-width: 480px) {
     flex-direction: column;
     width: 100%;
@@ -42,7 +40,7 @@ export const Label = styled.label`
   color: #000;
 `;
 
-export const Input = styled.input`
+export const Input = styled(Field)`
     max-width: 300px;
   padding: 8px;
   border-radius: 4px;
@@ -52,17 +50,7 @@ export const Input = styled.input`
   }
 `;
 
-// export const StyledField = styled(Field)`
-//   max-width: 300px;
-//   padding: 8px;
-//   border-radius: 4px;
-//   border: 1px solid #cccccc;
-//   @media screen and (min-width: 481px) {
-//     width: 300px;
-//   }
-// `;
-
-export const Textarea = styled.textarea`
+export const Textarea = styled(Field)`
     max-width: 300px;
   height: 150px;
   padding: 8px;

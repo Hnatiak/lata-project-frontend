@@ -23,47 +23,9 @@ export const LogOut = styled.button`
   font-size: 15px;
   padding: 4px 20px;
   border: none;
-  margin-bottom: 8px;
   @media screen and (max-width: 780px) {
     padding: 7px 20px 10px 20px;
     align-items: center;
-  }
-`;
-
-// export const Logo = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   @media screen and (max-width: 780px) {
-//     max-width: 228px
-//   }
-// `;
-
-// export const LogoImage = styled.img`
-//   margin-bottom: 10px;
-//   max-width: 219px;
-//   max-height: 94px;
-//   @media screen and (max-width: 480px) {
-//     max-width: 100%;
-//   }
-// `;
-
-// export const LogoText = styled.b`
-//   font-size: 14px;
-//   color: #000;
-//   @media screen and (max-width: 480px) {
-//     display: none;
-//   }
-// `;
-
-export const Nav = styled.nav`
-  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
-  font-weight: 300;
-  line-height: 1.6em;
-  color: #656565;
-  display: flex;
-  flex-direction: column-reverse;
-  @media screen and (max-width: 780px) {
-    max-width: 476px;
   }
 `;
 
@@ -78,9 +40,9 @@ export const Ul = styled.ul`
 
 export const Menu = styled.div`
   display: flex;
+  gap: 10px;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
 `;
 
 export const Question = styled.div`
@@ -96,36 +58,19 @@ export const MenuItem = styled.li`
 `;
 
 export const A = styled(NavLink)`
-  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
   padding-bottom: 10px;
-  margin: 28px 5px 0 0;
   font-size: 14px;
   font-weight: 700;
   color: #9ac43c;
   border-bottom: 1px dotted #e6e6e6;
-  @media screen and (max-width: 780px) {
-    margin: 28px 0 10px 0;
-  }
-  @media (max-width: 480px) {
+  @media (max-width: 780px) {
     border-bottom: none;
     margin: 0;
     padding-bottom: 0;
   }
 `;
 
-export const Ab = styled(NavLink)`
-  font: 14px/18px 'PT Sans Caption', Arial, sans-serif;
-  padding-bottom: 10px;
-  // margin: 24px;
-  margin: 28px 5px 0 0;
-  padding-bottom: 10px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #9ac43c;
-  @media screen and (max-width: 780px) {
-    margin: 28px 0 10px 0;
-  }
-`;
+export const Ab = styled(NavLink)``;
 
 export const MenuLinkActive = styled(Link)(({ selected }) => ({
   textTransform: 'uppercase',
@@ -164,4 +109,15 @@ export const AboutA = styled(Link)`
     cursor: pointer;
     background: #9ac43c;
   }
+`;
+
+export const MenuDiv = styled.div`
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  color: #9AC43C;
+  align-items: center;
+  // @media screen and (max-width: 780px) {
+  //   margin-top: 0px;
+  // }
 `;
