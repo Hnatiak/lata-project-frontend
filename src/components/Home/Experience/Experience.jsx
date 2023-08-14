@@ -16,7 +16,7 @@ const Experience = () => {
                     <ContainerTitle>
                         <ContainerA to="news/Stakan4yky">Спішимо порадувати усіх наших клієнтів.</ContainerA>
                     </ContainerTitle>
-                        <ContainerP>Дорогі клієнти! Приватне підприємство "Лата" почало випуск нового виду...</ContainerP>
+                        <ContainerP>Шановні клієнти! Приватне підприємство "Лата" почало випуск нового виду...</ContainerP>
                     <ContainerTitle>
                         <ContainerA to="news/Novivesil">Нові види подарункових "весільних" коробок з картону хром-ерзац.</ContainerA>
                     </ContainerTitle>

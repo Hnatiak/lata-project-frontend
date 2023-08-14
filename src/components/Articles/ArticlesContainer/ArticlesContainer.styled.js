@@ -30,6 +30,9 @@ export const LeftSideBar = styled.div`
 export const RightSideBar = styled.div`
     width: 370px;
     margin-left: 25px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
     @media screen and (max-width: 780px) {
         width: 100%;
         margin-left: 0;
