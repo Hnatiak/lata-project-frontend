@@ -25,16 +25,18 @@ const ArticlesContainer = () => {
             </LeftSideBar>
             <RightSideBar>
                 <ContainerDiv>
-                <News>Новини</News>
+                    <News>Новини</News>
                     <ContainerTitle>
                         <ContainerA to="/news/Stakan4yky">Спішимо порадувати усіх наших клієнтів.</ContainerA>
                     </ContainerTitle>
-                        <ContainerP>Дорогі клієнти! Приватне підприємство "Лата" почало випуск нового виду...</ContainerP>
+                        <ContainerP>Шановні клієнти! Приватне підприємство "Лата" почало випуск нового виду...</ContainerP>
                     <ContainerTitle>
                         <ContainerA to="/news/Novivesil">Нові види подарункових "весільних" коробок з картону хром-ерзац.</ContainerA>
                     </ContainerTitle>
                         <ContainerP>ПП "Лата" розробило новий дизайн подарункових, так званих "весіль...</ContainerP>
-                <News>Послуги</News>
+                </ContainerDiv>
+                <ContainerDiv>
+                    <News>Послуги</News>
                     <ContainerNew>
                         <Img src='https://lata.net.ua/upload/iblock/7fb/7fb1eeda1b11653ea40bc63029bcb3ea.jpg' alt="flexprint" style={{margin: '0 15px 15px 0'}}/>
                         <TextContainer>

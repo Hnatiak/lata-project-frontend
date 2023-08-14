@@ -15,7 +15,7 @@ import {
   Icon,
   SideContainer,
   SocialMedia,
-} from './Footer.styled'; //LeftSideBar, RightSideBar, ContainerH3, ContainerAButton, ContainerH5, ContainerDiv, News, ContainerA, ContainerTitle, ContainerP
+} from './Footer.styled';
 
 const Footer = () => {
   return (
@@ -70,10 +70,6 @@ const Footer = () => {
               <a href="mailto:lata.net.ua@gmail.com">lata.net.ua@gmail.com</a>
             </ContactsLi>
           </ul>
-          {/* <a href='tel:+380504301696' style={{ lineHeight: '1.6em' }}>+38 (050) 430-16-96</a>
-                    <a href='tel:+380673231734' style={{ lineHeight: '1.6em' }}>+38 (067) 323-17-34</a>
-                    <a href='tel:+380673231736' style={{ lineHeight: '1.6em' }}>+38 (067) 323-17-36</a>
-                    <a href='mailto:lata.net.ua@gmail.com'>lata.net.ua@gmail.com</a> */}
         </Contacts>
       </Container>
       <div>
@@ -87,7 +83,6 @@ const Footer = () => {
             © Розробка сайту Hnatiak Roman
           </A>
           <SocialMedia>
-            {/* <ul class="social-network"> */}
             <a href="https://www.instagram.com/goroscop76859/" target="_blank" rel="noopener noreferrer">
               <Icon icon={faInstagram} />
             </a>
@@ -100,7 +95,6 @@ const Footer = () => {
             <a href="https://www.facebook.com/romanhnatiak" target="_blank" rel="noopener noreferrer">
               <Icon icon={faFacebook} />
             </a>
-            {/* </ul> */}
           </SocialMedia>
         </SideContainer>
       </div>

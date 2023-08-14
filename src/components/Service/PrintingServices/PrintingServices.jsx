@@ -54,7 +54,7 @@ const PrintingServices = () => {
                     <ContainerTitle>
                         <ContainerA to="/news/Stakan4yky/">Спішимо порадувати усіх наших клієнтів.</ContainerA>
                     </ContainerTitle>
-                        <ContainerP>Дорогі клієнти! Приватне підприємство "Лата" почало випуск нового виду...</ContainerP>
+                        <ContainerP>Шановні клієнти! Приватне підприємство "Лата" почало випуск нового виду...</ContainerP>
                     <ContainerTitle>
                         <ContainerA to="/news/Novivesil/">Нові види подарункових "весільних" коробок з картону хром-ерзац.</ContainerA>
                     </ContainerTitle>
@@ -67,7 +67,7 @@ const PrintingServices = () => {
                     </ContainerTitle>
                         <ContainerP>Уявіть собі шматок ароматної італійської піци, приготованої щойно, буквально...</ContainerP>
                     <ContainerTitle>
-                        <ContainerA to="/articles/Proetyketu/">Про етикетку</ContainerA>
+                        <ContainerA to="/articles/Proetyketu/">Про етикету</ContainerA>
                     </ContainerTitle>
                         <ContainerP>Під етикеткою мається на увазі товарний ярлик, який за с...</ContainerP>
                     <ContainerTitle>

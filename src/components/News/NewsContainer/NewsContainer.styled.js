@@ -56,10 +56,16 @@ export const ContainerA = styled(Link)`
 `;
 
 export const Title = styled(Link)`
-    font-size: 34px;
+  font-size: 34px;
+  margin-bottom: 20px;
+  display: block;
   &:hover {
     color: #9AC43C;
-    }
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 export const ContainerP = styled.p`

@@ -15,7 +15,7 @@ const NewsContainer = () => {
         <LeftSideBar>
         {newsData.map((newsElement) => (
           <div key={newsElement.id} style={{ marginBottom: '60px' }}>
-            <Title to={`/news/${newsElement.url}`} style={{ fontSize: '34px' }}>{newsElement.title}</Title>
+            <Title to={`/news/${newsElement.url}`}>{newsElement.title}</Title>
             <img src={newsElement.img} alt="" style={{ marginBottom: '20px' }} />
             <p style={{ marginBottom: '20px' }}>{newsElement.description}</p>
           </div>
@@ -29,7 +29,7 @@ const NewsContainer = () => {
             </ContainerTitle>
             <ContainerP>Уявіть собі шматок ароматної італійської піци, приготованої щойно, буквально...</ContainerP>
             <ContainerTitle>
-              <ContainerA to="/articles/Proetyketu/">Про етикетку</ContainerA>
+              <ContainerA to="/articles/Proetyketu/">Про етикету</ContainerA>
             </ContainerTitle>
             <ContainerP>Під етикеткою мається на увазі товарний ярлик, який за с...</ContainerP>
             <ContainerTitle>
