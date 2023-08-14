@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Field, ErrorMessage } from 'formik';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Container = styled.div`
     padding: 0 20px 20px 25px;
@@ -105,4 +106,41 @@ export const BtnSend = styled.button`
     background: red;
     border-radius: 50px;
     color: white;
+`;
+
+export const StarInputWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+  color: gray;
+  &:hover {
+    color: gold; /* Hover color */
+  }
+`;
+
+export const StarIcon = styled(FontAwesomeIcon)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: gray; /* Icon color */
+  font-size: 24px; /* Adjust size as needed */
+  cursor: pointer;
+  z-index: 1; /* Ensure the icon is above the radio button */
+
+  &:hover {
+    color: gold; /* Hover color */
+  }
+`;
+
+export const HiddenRadio = styled.input`
+  position: relative;
+  opacity: 0; /* Hide the actual radio button */
+  width: 24px; /* Match the size of the icon */
+  height: 24px; /* Match the size of the icon */
+  z-index: 2; /* Place the input below the icon */
+`;
+
+export const InputStar = styled.input`
+  position: relative;
+  right: 14px;
+  top: 1px;
 `;

@@ -57,7 +57,7 @@ const BuyBoxs = () => {
         initialValues={{
           name: '',
           email: '',
-          phone: '',
+          phone: '+380 ',
           address: '',
           paymentMethod: '',
           message: '',
@@ -72,26 +72,39 @@ const BuyBoxs = () => {
                  <ErrorText name="name" component="div" />
                </FormDiv>
                <FormDiv>
-                 <StyledField name="email" type="email" placeholder="Емейл" />
+                 <StyledField name="email" type="email" placeholder="Email" />
                  <ErrorText name="email" component="div" />
                </FormDiv>
                <FormDiv>
-                 <StyledField name="phone" type="tel" placeholder="Номер телефону" />
+                 <StyledField name="phone" type="tel" maxLength="14" placeholder="Номер телефону" />
                  <ErrorText name="phone" component="div" />
                </FormDiv>
                <FormDiv>
-                 <StyledField name="address" type="text" placeholder="Адреса" />
+                 <StyledField name="address" type="text" placeholder="Адреса доставки" />
                  <ErrorText name="address" component="div" />
                </FormDiv>
+               {/* <FormDiv>
+                 <StyledField name="address" type="text" placeholder="Метод доставки" />
+                 <ErrorText name="address" component="div" />
+               </FormDiv> */}
+               {/* <FormDiv>
+                <StyledField name="postMethod" as="select" placeholder="Метод доставки">
+                  <option value="" disabled>Виберіть метод доставки</option>
+                  <option value="нова пошта">Нова пошта</option>
+                  <option value="Укр пошта">Укр пошта</option>
+                  {/* <option value="готівка">Готівка</option>
+                </StyledField>
+                </FormDiv> */}
 
               <FormDiv>
-                <Textarea name="message" as="textarea" placeholder="Добавте свої деталі" />
+                <Textarea name="message" as="textarea" placeholder="Добавте свої деталі (Не обов'язково)" />
                 <ErrorText name="message" component="div" />
               </FormDiv>
               <FormDiv>
                 <StyledField name="paymentMethod" as="select" placeholder="Метод розрахунку">
                   <option value="" disabled>Виберіть метод розрахунку</option>
                   <option value="карточка">Кредитна карта</option>
+                  <option value="отримати рахунок">Отримати рахунок</option>
                   <option value="готівка">Готівка</option>
                 </StyledField>
                 <ErrorText name="paymentMethod" component="div" />

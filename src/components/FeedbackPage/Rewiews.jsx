@@ -66,6 +66,17 @@ const Reviews = () => {
     }
   };
 
+  const StarRating = ({ rating }) => {
+    const filledStars = '★'.repeat(rating);
+    const emptyStars = '☆'.repeat(5 - rating);
+    const starStyles = {
+      fontSize: '24px', // Розмір зірок можна налаштувати
+      color: 'gold',   // Колір заповнених зірок
+    };
+
+    return <span style={starStyles}>{filledStars}{emptyStars}</span>;
+  };
+
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       await ReviewSchema.validate(values, { abortEarly: false });
@@ -85,10 +96,21 @@ const Reviews = () => {
         <div style={{ maxWidth: '100%', display: 'flex', justifyContent: 'center' }}>
           <Title>Залишити відгук</Title>
         </div>
-        <Formik initialValues={{ name: '', email: '', message: '' }} validationSchema={ReviewSchema} onSubmit={handleSubmit}>
-          {({  handleSubmit, isSubmitting }) => (
+        <Formik initialValues={{ name: '', email: '', message: '', rating: '' }} validationSchema={ReviewSchema} onSubmit={handleSubmit}>
+          {({ handleSubmit, handleChange, handleBlur, values, isSubmitting }) => (
             <Form onSubmit={handleSubmit}>
               <div>
+              <InputWrapper style={{ marginBottom: '15px' }}>
+                <Label>Рейтинг:</Label>
+                <select name="rating" onChange={handleChange} onBlur={handleBlur} value={values.rating}>
+                  <option value="1" label="1 зірка" />
+                  <option value="2" label="2 зірки" />
+                  <option value="3" label="3 зірки" />
+                  <option value="4" label="4 зірки" />
+                  <option value="5" label="5 зірок" />
+                </select>
+              </InputWrapper>
+              <ErrorText name="rating" component="div" className="error-message" />
                 <InputWrapper>
                   <Label>Ім'я:</Label>
                   <Input
@@ -133,6 +155,7 @@ const Reviews = () => {
           <Style>
             {reviews.map((review, index) => (
               <Review key={index}>
+                  <p style={{ margin: '0px' }}><StarRating rating={review.rating} /></p>
                   <h2 style={{ margin: '0px' }}>Ім'я: {review.name}</h2>
                   <p style={{ margin: '0px' }}>Коментар: {review.comment || review.message}</p>
                   {isLoggedInUser && (
