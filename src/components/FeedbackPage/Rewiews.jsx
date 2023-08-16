@@ -66,16 +66,16 @@ const Reviews = () => {
     }
   };
 
-  const StarRating = ({ rating }) => {
-    const filledStars = '★'.repeat(rating);
-    const emptyStars = '☆'.repeat(5 - rating);
-    const starStyles = {
-      fontSize: '24px', // Розмір зірок можна налаштувати
-      color: 'gold',   // Колір заповнених зірок
-    };
+  // const StarRating = ({ rating }) => {
+  //   const filledStars = '★'.repeat(rating);
+  //   const emptyStars = '☆'.repeat(5 - rating);
+  //   const starStyles = {
+  //     fontSize: '24px', // Розмір зірок можна налаштувати
+  //     color: 'gold',   // Колір заповнених зірок
+  //   };
 
-    return <span style={starStyles}>{filledStars}{emptyStars}</span>;
-  };
+  //   return <span style={starStyles}>{filledStars}{emptyStars}</span>;
+  // };
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
