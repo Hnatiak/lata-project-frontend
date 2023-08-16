@@ -13,9 +13,11 @@ export const Container = styled.div `
     background-repeat: no-repeat;
     background-size: cover;
 `
+
 export const Content = styled.div `
   text-align: center;
-  background: #111;
+  // background: #111;
+  border: 1px solid #9AC43C;
   border-radius: 20px;
   @media screen and (max-width: 768px) {
     ;
@@ -60,7 +62,7 @@ export const Inputs = styled.div`
     height: 49px;
     left: 40px;
     top: 107px;
-    color: white;
+    // color: white;
     background: var(--inputBgColor);
     opacity: 0.4;
     border: 1px solid white;
@@ -97,9 +99,8 @@ export const PasswordInputField = styled.input`
 export const PasswordToggle = styled.span`
     position: absolute;
     right: 18px;
-    top: 19px;
+    top: 15px;
     cursor: pointer;
-    color: var(--passwordColor);
 `;
 
 export const PasswordIcon = styled(FontAwesomeIcon)`
@@ -123,7 +124,7 @@ export const RegisterBtn = styled.button`
     margin-top: 24px;
     background: rgb(154, 196, 60);
     border-radius: 8px;
-    color: white;
+    // color: white;
     @media screen and (max-width: 768px) {
         width: 287px;
     }
@@ -131,5 +132,30 @@ export const RegisterBtn = styled.button`
 
 export const ErrorText = styled(ErrorMessage)`
   font-size: 15px;
-  color: white;
+  // color: white;
+`;
+
+export const GoogleButton = styled.a`
+  height: 45px;
+  border-radius: 6px;
+  background-color: #fafafa;
+  color: #23262a;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-top: 16px;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.12;
+
+  &:hover {
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+  }
 `;

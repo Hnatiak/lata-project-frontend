@@ -38,7 +38,6 @@ export const SharedLayout = () => {
         draggable
         pauseOnHover
       />
-      <ToastContainer />
       <Footer />
     </Container>
   );

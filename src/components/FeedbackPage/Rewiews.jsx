@@ -100,7 +100,7 @@ const Reviews = () => {
           {({ handleSubmit, handleChange, handleBlur, values, isSubmitting }) => (
             <Form onSubmit={handleSubmit}>
               <div>
-              <InputWrapper style={{ marginBottom: '15px' }}>
+              {/* <InputWrapper style={{ marginBottom: '15px' }}>
                 <Label>Рейтинг:</Label>
                 <select name="rating" onChange={handleChange} onBlur={handleBlur} value={values.rating}>
                   <option value="1" label="1 зірка" />
@@ -109,7 +109,7 @@ const Reviews = () => {
                   <option value="4" label="4 зірки" />
                   <option value="5" label="5 зірок" />
                 </select>
-              </InputWrapper>
+              </InputWrapper> */}
               <ErrorText name="rating" component="div" className="error-message" />
                 <InputWrapper>
                   <Label>Ім'я:</Label>
@@ -155,7 +155,7 @@ const Reviews = () => {
           <Style>
             {reviews.map((review, index) => (
               <Review key={index}>
-                  <p style={{ margin: '0px' }}><StarRating rating={review.rating} /></p>
+                  {/* <p style={{ margin: '0px' }}><StarRating rating={review.rating} /></p> */}
                   <h2 style={{ margin: '0px' }}>Ім'я: {review.name}</h2>
                   <p style={{ margin: '0px' }}>Коментар: {review.comment || review.message}</p>
                   {isLoggedInUser && (

@@ -5,7 +5,7 @@ const VacancciesThings = () => {
     return (
     <Container>
         <MenuContainer>
-            <h1 style={{ lineHeight: '1.6' }}>Надіслати резюме lata.net.ua@gmail.com</h1>
+            <h1 style={{ lineHeight: '1.6' }}>Надіслати резюме <a href="mailto:lata.net.ua@gmail.com">lata.net.ua@gmail.com</a></h1>
         </MenuContainer>
         <RightSideBar>
             <ContainerDiv>
