@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/lata-project-frontend/static/css/main.50a6c06c.css",
-    "main.js": "/lata-project-frontend/static/js/main.6977adf7.js",
+    "main.js": "/lata-project-frontend/static/js/main.9a054a12.js",
     "static/js/436.cd163c33.chunk.js": "/lata-project-frontend/static/js/436.cd163c33.chunk.js",
     "static/js/788.c4c064bc.chunk.js": "/lata-project-frontend/static/js/788.c4c064bc.chunk.js",
     "static/js/721.9bc6d16b.chunk.js": "/lata-project-frontend/static/js/721.9bc6d16b.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/511.9f0c06c5.chunk.js": "/lata-project-frontend/static/js/511.9f0c06c5.chunk.js",
     "static/js/357.ceaea9c0.chunk.js": "/lata-project-frontend/static/js/357.ceaea9c0.chunk.js",
     "static/js/809.3a4eb34c.chunk.js": "/lata-project-frontend/static/js/809.3a4eb34c.chunk.js",
-    "static/js/825.f0e45677.chunk.js": "/lata-project-frontend/static/js/825.f0e45677.chunk.js",
+    "static/js/825.f91409e5.chunk.js": "/lata-project-frontend/static/js/825.f91409e5.chunk.js",
     "static/js/861.8bd535ad.chunk.js": "/lata-project-frontend/static/js/861.8bd535ad.chunk.js",
     "static/js/785.012dd54a.chunk.js": "/lata-project-frontend/static/js/785.012dd54a.chunk.js",
     "static/js/12.338a86da.chunk.js": "/lata-project-frontend/static/js/12.338a86da.chunk.js",
@@ -31,7 +31,7 @@
     "static/media/googleLogo.svg": "/lata-project-frontend/static/media/googleLogo.efa560d32653a615a1db742bbf78c815.svg",
     "index.html": "/lata-project-frontend/index.html",
     "main.50a6c06c.css.map": "/lata-project-frontend/static/css/main.50a6c06c.css.map",
-    "main.6977adf7.js.map": "/lata-project-frontend/static/js/main.6977adf7.js.map",
+    "main.9a054a12.js.map": "/lata-project-frontend/static/js/main.9a054a12.js.map",
     "436.cd163c33.chunk.js.map": "/lata-project-frontend/static/js/436.cd163c33.chunk.js.map",
     "788.c4c064bc.chunk.js.map": "/lata-project-frontend/static/js/788.c4c064bc.chunk.js.map",
     "721.9bc6d16b.chunk.js.map": "/lata-project-frontend/static/js/721.9bc6d16b.chunk.js.map",
@@ -44,7 +44,7 @@
     "511.9f0c06c5.chunk.js.map": "/lata-project-frontend/static/js/511.9f0c06c5.chunk.js.map",
     "357.ceaea9c0.chunk.js.map": "/lata-project-frontend/static/js/357.ceaea9c0.chunk.js.map",
     "809.3a4eb34c.chunk.js.map": "/lata-project-frontend/static/js/809.3a4eb34c.chunk.js.map",
-    "825.f0e45677.chunk.js.map": "/lata-project-frontend/static/js/825.f0e45677.chunk.js.map",
+    "825.f91409e5.chunk.js.map": "/lata-project-frontend/static/js/825.f91409e5.chunk.js.map",
     "861.8bd535ad.chunk.js.map": "/lata-project-frontend/static/js/861.8bd535ad.chunk.js.map",
     "785.012dd54a.chunk.js.map": "/lata-project-frontend/static/js/785.012dd54a.chunk.js.map",
     "12.338a86da.chunk.js.map": "/lata-project-frontend/static/js/12.338a86da.chunk.js.map",
@@ -56,6 +56,6 @@
   },
   "entrypoints": [
     "static/css/main.50a6c06c.css",
-    "static/js/main.6977adf7.js"
+    "static/js/main.9a054a12.js"
   ]
 }
