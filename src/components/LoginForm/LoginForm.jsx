@@ -17,6 +17,7 @@ import { setToken } from '../../redux/auth/authSelectors';
 import { Formik, Field } from 'formik';
 import * as Yup from 'yup';
 import { toast } from 'react-toastify';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Емейл неправильний').required('Емейл обов\'язковий'),
@@ -40,6 +41,7 @@ function LoginPage() {
       toast.error();
     } else {
       navigate('/');
+      toast.success('Ви успішно залогінились')
     }
   };
 
@@ -85,6 +87,7 @@ function LoginPage() {
                 </PasswordToggle> */}
               </PasswordInput>
               <LoginBtn type="submit">Log In Now</LoginBtn>
+              <ErrorText name="submit" component="div" />
             </Inputs>
           </Content>
         </Formik>

@@ -80,7 +80,7 @@ const Header = () => {
       dispatch(logout());
       navigate('/');
     } catch (error) {
-      console.log('Logout failed:', error);
+      console.log('Сталася помилка під час виходу:', error);
     }
   };
 

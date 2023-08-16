@@ -16,6 +16,11 @@ export const MenuContainer = styled.div`
   min-width: 170px;
   gap: 5px;
   margin-bottom: 40px;
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   @media screen and (min-width: 781px) {
     width: 770px;
   }

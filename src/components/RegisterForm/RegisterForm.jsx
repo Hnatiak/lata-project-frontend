@@ -4,6 +4,8 @@ import { register } from '../../redux/auth/authOperations';
 import { Formik, Field } from 'formik';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
+import googleLogo from '../../images/googleLogo.svg';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import {
   ErrorText,
   Inputs,
@@ -14,7 +16,12 @@ import {
   RegisterBtn,
   StyledRegistrationLink,
   StyledLink,
+  PasswordToggle,
+  PasswordIcon,
+  GoogleButton
 } from './RegisterForm.styled';
+import { toast } from 'react-toastify';
+import { useState } from 'react';
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().required('Ім\'я обов\'язкове'),
@@ -25,6 +32,11 @@ const RegisterSchema = Yup.object().shape({
 function RegistrationPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -37,10 +49,10 @@ function RegistrationPage() {
     const response = await dispatch(register(newUser));
 
     if (response.error) {
-      console.log("Щось пішло не так")
+      toast.error("Щось пішло не так")
     } else {
       navigate('/');
-      console.log("Ви успішно зареєструвалися")
+      toast.success("Ви успішно зареєструвалися")
     }
   };
 
@@ -63,26 +75,23 @@ function RegistrationPage() {
               <Field name="email" type="email" placeholder="Email" />
               <ErrorText name="email" component="div" />
               <PasswordInput>
-              <Field name="password" type="password"
-                //   type={showPassword ? 'text' : 'password'} 
-                placeholder="Password" />
+              <Field name="password" type={showPassword ? 'text' : 'password'} placeholder="Password" />
               <ErrorText name="password" component="div" />
-                {/* <PasswordToggle
-                  className={`${PasswordToggle} ${PasswordIcon}`}
-                  onClick={togglePasswordVisibility}
-                >
+                <PasswordToggle className={`${PasswordToggle} ${PasswordIcon}`} onClick={togglePasswordVisibility}>
                   {showPassword ? (
                     <PasswordIcon icon={faEyeSlash} width="18px" />
                   ) : (
-                    <Svg>
-                      <use stroke="gray" 
-                    //   xlinkHref={`${sprite}#icon-eye`} 
-                      />
-                    </Svg>
+                    <PasswordIcon icon={faEye} width="18px" />
                   )}
-                </PasswordToggle> */}
+                </PasswordToggle>
               </PasswordInput>
               <RegisterBtn type="submit">Register Now</RegisterBtn>
+              <ErrorText name="submit" component="div" />
+
+              <GoogleButton href="https://lata-project-backend.onrender.com/api/auth/google">
+                <img style={{ marginLeft: 8 }} height={25} width={25} alt="googleLogo" src={googleLogo} />
+                Sign up with Google
+              </GoogleButton>
             </Inputs>
           </Content>
         </Formik>
