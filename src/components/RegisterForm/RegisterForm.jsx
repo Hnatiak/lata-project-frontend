@@ -29,7 +29,6 @@ const RegisterSchema = Yup.object().shape({
   password: Yup.string().min(8, 'Пароль мусить бути більше 8-ми цифр').required('Пароль обов\'язковий'),
 });
 
-
 function RegistrationPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -50,7 +49,6 @@ function RegistrationPage() {
     const response = await dispatch(register(newUser));
 
     if (response.error) {
-      
       toast.error("Щось пішло не так")
     } else {
       navigate('/');
@@ -91,7 +89,7 @@ function RegistrationPage() {
               <ErrorText name="submit" component="div" />
 
               <GoogleButton href="https://lata-project-backend.onrender.com/api/auth/google">
-                <img style={{ marginLeft: 8 }} height={25} width={25} alt="googleLogo" src={googleLogo} />
+                <img height={25} width={25} alt="googleLogo" src={googleLogo} />
                 Sign up with Google
               </GoogleButton>
             </Inputs>
