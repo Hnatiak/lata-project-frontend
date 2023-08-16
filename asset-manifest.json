@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/lata-project-frontend/static/css/main.50a6c06c.css",
-    "main.js": "/lata-project-frontend/static/js/main.9a054a12.js",
+    "main.js": "/lata-project-frontend/static/js/main.c05f3759.js",
     "static/js/436.cd163c33.chunk.js": "/lata-project-frontend/static/js/436.cd163c33.chunk.js",
     "static/js/788.c4c064bc.chunk.js": "/lata-project-frontend/static/js/788.c4c064bc.chunk.js",
-    "static/js/721.9bc6d16b.chunk.js": "/lata-project-frontend/static/js/721.9bc6d16b.chunk.js",
+    "static/js/721.53c0d2cf.chunk.js": "/lata-project-frontend/static/js/721.53c0d2cf.chunk.js",
     "static/js/574.43ba60a0.chunk.js": "/lata-project-frontend/static/js/574.43ba60a0.chunk.js",
     "static/js/878.ebb48cd1.chunk.js": "/lata-project-frontend/static/js/878.ebb48cd1.chunk.js",
     "static/js/92.ae5f3965.chunk.js": "/lata-project-frontend/static/js/92.ae5f3965.chunk.js",
@@ -31,10 +31,10 @@
     "static/media/googleLogo.svg": "/lata-project-frontend/static/media/googleLogo.efa560d32653a615a1db742bbf78c815.svg",
     "index.html": "/lata-project-frontend/index.html",
     "main.50a6c06c.css.map": "/lata-project-frontend/static/css/main.50a6c06c.css.map",
-    "main.9a054a12.js.map": "/lata-project-frontend/static/js/main.9a054a12.js.map",
+    "main.c05f3759.js.map": "/lata-project-frontend/static/js/main.c05f3759.js.map",
     "436.cd163c33.chunk.js.map": "/lata-project-frontend/static/js/436.cd163c33.chunk.js.map",
     "788.c4c064bc.chunk.js.map": "/lata-project-frontend/static/js/788.c4c064bc.chunk.js.map",
-    "721.9bc6d16b.chunk.js.map": "/lata-project-frontend/static/js/721.9bc6d16b.chunk.js.map",
+    "721.53c0d2cf.chunk.js.map": "/lata-project-frontend/static/js/721.53c0d2cf.chunk.js.map",
     "574.43ba60a0.chunk.js.map": "/lata-project-frontend/static/js/574.43ba60a0.chunk.js.map",
     "878.ebb48cd1.chunk.js.map": "/lata-project-frontend/static/js/878.ebb48cd1.chunk.js.map",
     "92.ae5f3965.chunk.js.map": "/lata-project-frontend/static/js/92.ae5f3965.chunk.js.map",
@@ -56,6 +56,6 @@
   },
   "entrypoints": [
     "static/css/main.50a6c06c.css",
-    "static/js/main.9a054a12.js"
+    "static/js/main.c05f3759.js"
   ]
 }
