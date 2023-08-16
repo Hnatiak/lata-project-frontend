@@ -1,30 +1,21 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// axios.defaults.baseURL = 'https://goit-task-manager.herokuapp.com/';
 axios.defaults.baseURL = 'https://lata-project-backend.onrender.com';
 
-// Utility to add JWT
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
-// Utility to remove JWT
 const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
 
-/*
- * POST @ /users/signup
- * body: { name, email, password }
- */
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
     try {
-      // const res = await axios.post('/users/signup', credentials);
       const res = await axios.post('api/auth/register', credentials);
-      // After successful registration, add the token to the HTTP header
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
@@ -33,17 +24,11 @@ export const register = createAsyncThunk(
   }
 );
 
-/*
- * POST @ /users/login
- * body: { email, password }
- */
 export const login = createAsyncThunk(
   'auth/login',
   async (credentials, thunkAPI) => {
     try {
-      // const res = await axios.post('/users/login', credentials);
       const res = await axios.post('api/auth/login', credentials);
-      // After successful login, add the token to the HTTP header
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
@@ -72,26 +57,14 @@ export const getUserData = createAsyncThunk(
   }
 );
 
-/*
- * POST @ /users/logout
- * headers: Authorization: Bearer token
- */
 export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
-    // await axios.post('/users/logout');
     await axios.post('api/auth/logout');
-    // After a successful logout, remove the token from the HTTP header
     clearAuthHeader();
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
-
-/*
- * GET @ /users/current
- * headers: Authorization: Bearer token
- */
-
 
 export const refreshUser = createAsyncThunk(
   'auth/refresh',
