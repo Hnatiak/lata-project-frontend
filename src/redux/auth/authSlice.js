@@ -13,8 +13,8 @@ export const authSlice = createSlice({
   name: 'auth',
   initialState: {
     user: {
-      name: '',
-      email: '',
+      name: null,
+      email: null,
     },
     token: '',
     isLoggedIn: false,

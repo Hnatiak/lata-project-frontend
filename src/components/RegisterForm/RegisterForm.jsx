@@ -29,6 +29,7 @@ const RegisterSchema = Yup.object().shape({
   password: Yup.string().min(8, 'Пароль мусить бути більше 8-ми цифр').required('Пароль обов\'язковий'),
 });
 
+
 function RegistrationPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -49,6 +50,7 @@ function RegistrationPage() {
     const response = await dispatch(register(newUser));
 
     if (response.error) {
+      
       toast.error("Щось пішло не так")
     } else {
       navigate('/');
