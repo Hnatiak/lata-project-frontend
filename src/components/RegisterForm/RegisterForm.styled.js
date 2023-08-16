@@ -92,7 +92,7 @@ export const PasswordInputField = styled.input`
   opacity: 0.4;
   border: 1px solid white;
   padding-left: 18px;
-  box-shadow: 0px 4px 16px rgba(22, 22, 22, 0.08);
+  box-shadow: 0px 4px 16px rgba(22, 22, 22, 0.3);
   border-radius: 8px;
 `;
 
@@ -140,13 +140,12 @@ export const GoogleButton = styled.a`
   border-radius: 6px;
   background-color: #fafafa;
   color: #23262a;
-  opacity: 0.7;
+  // opacity: 0.7;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding: 14px 15px;
   margin-top: 16px;
 
   font-size: 16px;
@@ -156,6 +155,7 @@ export const GoogleButton = styled.a`
 
   &:hover {
     opacity: 1;
+    scale: 1.05;
     transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
   }
 `;
