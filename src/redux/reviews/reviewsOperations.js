@@ -15,14 +15,14 @@ export const addReview = createAsyncThunk(
   }
 );
 
-export const fetchReviews = createAsyncThunk('reviews/fetchReviews', async (_, thunkAPI) => {
-  try {
-    const res = await axios.get('/api/reviews');
-    return res.data;
-  } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
-  }
-});
+// export const fetchReviews = createAsyncThunk('reviews/fetchReviews', async (_, thunkAPI) => {
+//   try {
+//     const res = await axios.get('/api/reviews');
+//     return res.data;
+//   } catch (error) {
+//     return thunkAPI.rejectWithValue(error.message);
+//   }
+// });
 
 export const deleteReview = createAsyncThunk('reviews/deleteReview', async (id, thunkAPI) => {
   try {
