@@ -31,10 +31,17 @@ const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 const BuyPage = lazy(() => import("../pages/BuyPage"))
 
 export const App = () => {
+  // const dispatch = useDispatch();
+
+  // useEffect(() => {
+  //   dispatch(refreshUser());
+  // }, [dispatch]);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(refreshUser());
+    const accessToken = localStorage.getItem('accessToken');
+    accessToken && dispatch(refreshUser());
   }, [dispatch]);
 
   return (

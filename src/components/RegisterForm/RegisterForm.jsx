@@ -4,7 +4,7 @@ import { register } from '../../redux/auth/authOperations';
 import { Formik, Field } from 'formik';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
-import googleLogo from '../../images/googleLogo.svg';
+// import googleLogo from '../../images/googleLogo.svg';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import {
   ErrorText,
@@ -18,7 +18,7 @@ import {
   StyledLink,
   PasswordToggle,
   PasswordIcon,
-  GoogleButton
+  // GoogleButton
 } from './RegisterForm.styled';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
@@ -88,10 +88,10 @@ function RegistrationPage() {
               <RegisterBtn type="submit">Register Now</RegisterBtn>
               <ErrorText name="submit" component="div" />
 
-              <GoogleButton href="https://lata-project-backend.onrender.com/api/auth/google">
+              {/* <GoogleButton href="https://lata-project-backend.onrender.com/api/auth/google">
                 <img height={25} width={25} alt="googleLogo" src={googleLogo} />
                 Sign up with Google
-              </GoogleButton>
+              </GoogleButton> */}
             </Inputs>
           </Content>
         </Formik>
