@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Section = styled.section`
     background: #252525;
-    position: relative;
+    // position: relative;
     margin: 0;
     padding: 0;
     color: #fefefe;
@@ -11,7 +11,7 @@ export const Section = styled.section`
 
 export const Container = styled.div`
     padding: 0 20px 20px 25px;
-    position: relative;
+    // position: relative;
     display: flex;
     align-items: center;
 `;

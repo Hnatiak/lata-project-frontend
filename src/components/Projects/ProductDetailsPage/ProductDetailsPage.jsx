@@ -1,17 +1,35 @@
 import TitleSection from 'components/TitleSection/TitleSection';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import { MenuContainer, Quantity, ContainerDiv, News, ContainerP, CartIcon, ButtonShop, Settings } from "./ProductDetailsPage.styled";
+import { faCartShopping, faCircleArrowLeft, faCircleArrowRight, faClose } from '@fortawesome/free-solid-svg-icons';
+import { MenuContainer, Quantity, ContainerDiv, News, ContainerP, CartIcon, ButtonShop, Settings, Gallery, GalleryContainer, PrevButton, NextButton, OpenModalContainer, CloseModalContainer } from "./ProductDetailsPage.styled";
 
 const ProductDetailsPage = ({ photos }) => {
   const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
   const [finalAmount, setFinalAmount] = useState(0);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalImage, setModalImage] = useState('');
+  const galleryRef = useRef(null);
+  const itemWidth = 175; // Ширина одного елементу галереї
+  const itemsPerScreen = 3; // Кількість елементів на одному екрані
+
+  const scrollGallery = (direction) => () => {
+    if (galleryRef.current) {
+      galleryRef.current.scrollLeft += direction * itemWidth * itemsPerScreen;
+    }
+  };
 
   const { photoId } = useParams();
 
   const selectedPhoto = photos.find((photo) => photo.id === parseInt(photoId));
+
+  const showArrows = selectedPhoto.url.length > itemsPerScreen;
+
+  const handleGalleryClick = (photoUrl) => {
+    setModalImage(photoUrl);
+    setModalIsOpen(true);
+  };
 
   useEffect(() => {
     if (selectedPhoto) {
@@ -56,9 +74,23 @@ const ProductDetailsPage = ({ photos }) => {
     <TitleSection title={selectedPhoto.title}></TitleSection>
     <MenuContainer>
       <Settings>
-      <img src={selectedPhoto.url} alt={`${selectedPhoto.id}`} />
+      <div>
+        <div>
+            <img src={selectedPhoto.url[0]} alt={`${selectedPhoto.id}`} />
+          </div>
+          <GalleryContainer>
+              {showArrows && <PrevButton icon={faCircleArrowLeft} onClick={scrollGallery(-1)} />}
+                <Gallery ref={galleryRef}>
+                  {selectedPhoto.url.map((photoUrl, index) => (
+                    <img key={index} src={photoUrl} alt={`${selectedPhoto.id}`} style={{ width: '165px', margin: '5px' }} onClick={() => handleGalleryClick(photoUrl)} />
+                  ))}
+                </Gallery>
+                {showArrows && <NextButton icon={faCircleArrowRight} onClick={scrollGallery(1)} />}
+          </GalleryContainer>
+        </div>
       <div>
         <Quantity quantityLength={quantity.toString().length}>
+          <div>Оберіть кількість:</div>
           <div>
             <span onClick={decrement}>-</span>
             <input type="text" value={quantity} maxLength={10} onChange={handleQuantityChange} />
@@ -84,7 +116,13 @@ const ProductDetailsPage = ({ photos }) => {
         </div>
         </ContainerDiv>
     </MenuContainer>
-    </>
+      <OpenModalContainer isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} ariaHideApp={false} contentLabel="Large Image">
+        <div style={{display: 'flex', flexDirection: 'row-reverse' }}>
+          <CloseModalContainer icon={faClose} onClick={() => setModalIsOpen(false)} />
+        </div>
+          <img src={modalImage} alt="Large" style={{ width: '100%', maxHeight: '80vh' }} />
+      </OpenModalContainer>
+        </>
   );
 };
 

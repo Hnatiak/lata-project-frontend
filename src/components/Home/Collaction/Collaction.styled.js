@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const CollactionContainer = styled.div`
     max-width: 1230px;
-    margin: 0 auto;
+    // margin: 0 auto;
     padding: 0;
     background: #f9f9f9;
     padding: 20px 0 0 0;
@@ -10,7 +10,6 @@ export const CollactionContainer = styled.div`
 
 export const CollactionСontents = styled.div`
     padding: 10px 25px;
-    position: relative;
     max-width: 1170px;
 `;
 

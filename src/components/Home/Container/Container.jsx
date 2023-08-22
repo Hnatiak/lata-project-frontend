@@ -24,7 +24,7 @@ const Container = () => {
               <ContainerA to="/company">Детальніше</ContainerA>
             </ContainerDiv>
             <ContainerDiv style={{ flex: 1 }}>
-                <Svg icon={faTruck} flip="horizontal"/>
+              <Svg icon={faTruck} />
               <ContainerH6><ContainerSpan>Доставка продукції до компанії замовника</ContainerSpan></ContainerH6>
               <ContainerP>Після виготовлення, ми з радістю доставимо продукцію до Вас нашим транспортом. Доставка Ваших замовлень по Львову відбувається щоденно.</ContainerP>
               <ContainerA to="/services/Perevezennya">Детальніше</ContainerA>
