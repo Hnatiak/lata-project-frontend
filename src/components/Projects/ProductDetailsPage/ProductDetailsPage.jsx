@@ -115,14 +115,14 @@ const ProductDetailsPage = ({ photos }) => {
           </div>
         </div>
         </ContainerDiv>
-    </MenuContainer>
-      <OpenModalContainer isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} ariaHideApp={false} contentLabel="Large Image">
+      </MenuContainer>
+      <OpenModalContainer isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} contentLabel="Large Image" appElement={document.getElementById('root')}>
         <div style={{display: 'flex', flexDirection: 'row-reverse' }}>
           <CloseModalContainer icon={faClose} onClick={() => setModalIsOpen(false)} />
         </div>
           <img src={modalImage} alt="Large" style={{ width: '100%', maxHeight: '80vh' }} />
       </OpenModalContainer>
-        </>
+    </>
   );
 };
 
