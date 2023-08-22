@@ -67,8 +67,7 @@ export const ContainerA = styled(Link)`
   margin-bottom: 10px;
   &:hover {
     border-bottom: 1px solid #9AC43C;
-    font-size: 24px;
-    }
+  }
 `;
 
 export const ContainerP = styled.p`

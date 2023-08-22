@@ -65,7 +65,7 @@ const Content = () => {
         {filteredPhotos.map((photo) => (
           <div key={photo.id}>
             <Project to={`/projects/${photo.id}`}>
-              <img src={photo.url} alt={`${photo.id}`} />
+              <img src={photo.url[0]} alt={`${photo.id}`} />
             </Project>
             <Background>
               <ButtonShop to={`/projects/${photo.id}`}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
