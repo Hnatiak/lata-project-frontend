@@ -5,20 +5,10 @@ const boxs = [
       "category": "",
       "link": "/box1",
       "price": 5,
-      "url": [ "https://lata.net.ua/upload/iblock/e30/e3004b9e853c5349de02cff019800a9d.jpg", "https://lata.net.ua/upload/iblock/e30/e3004b9e853c5349de02cff019800a9d.jpg", "https://lata.net.ua/upload/iblock/e30/e3004b9e853c5349de02cff019800a9d.jpg", "https://lata.net.ua/upload/iblock/e30/e3004b9e853c5349de02cff019800a9d.jpg" ], 
+      "url": [ "https://lata.net.ua/upload/iblock/e30/e3004b9e853c5349de02cff019800a9d.jpg", "https://lata.net.ua/upload/iblock/087/0876dc1fb8e50b9e213c56fc6f902a9d.jpg", "https://lata.net.ua/upload/iblock/e1b/e1bb5363ac4845835de0b05c606198f4.jpg", "https://lata.net.ua/upload/iblock/e30/e3004b9e853c5349de02cff019800a9d.jpg" ], 
       "description" : "ПРИЗНАЧЕННЯ: коробка підходить для фасування гамбургерів, чизбургерів, фішбургери і інших бутербродів, кришка-дно. Ця коробка зроблена з картону, покритого всередині  ламінацією. У неї можна класти жирні бургери з соусами, так як цей матеріал стійкий до харчових кислот і масел.",
       "details": "Довжина / Ширина / Висота: 125*125*110 мм"
     },
-    // {
-    //   "id": 2,
-    //   "title": "Паперовий пакет",
-    //   "category": "",
-    //   "link": "/box2",
-    //   "price": 2,
-    //   "url": ["https://lata.net.ua/upload/iblock/4f4/4f475122ed54c716e0118fc8405fdfe9.jpg",],
-    //   "description" : "",
-    //   "details": ""
-    // },
     {
       "id": 3,
       "title": "Нанесеня двохколірного флексодруку",
