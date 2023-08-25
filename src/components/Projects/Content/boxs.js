@@ -1,8 +1,8 @@
 import boxforpizza1 from '../../../images/boxes/boxesforPizza/DSC_0155.webp'
 import boxforpizza2 from '../../../images/boxes/boxesforPizza/DSC_0156.webp'
 import boxforpizza3 from '../../../images/boxes/boxesforPizza/DSC_0170.webp'
-import boxforpizza4 from '../../../images/boxes/boxesforPizza/DSC_0172.webp'
-import boxforpizza5 from '../../../images/boxes/boxesforPizza/DSC_0173.webp'
+import boxforpizza4 from '../../../images/boxes/boxesforPizza/DSC_0171.webp'
+import boxforpizza5 from '../../../images/boxes/boxesforPizza/DSC_0172.webp'
 
 import boxforcake1 from '../../../images/boxes/boxesforCake/DSC_0152.webp'
 import boxforcake2 from '../../../images/boxes/boxesforCake/DSC_0154.webp'
