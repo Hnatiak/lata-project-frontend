@@ -1,20 +1,20 @@
 import TitleSection from 'components/TitleSection/TitleSection';
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { faCartShopping, faCircleArrowLeft, faCircleArrowRight, faClose } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faCircleArrowLeft, faCircleArrowRight, faClose, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { MenuContainer, Quantity, ContainerDiv, News, ContainerP, CartIcon, ButtonShop, Settings, Gallery, GalleryContainer, PrevButton, NextButton, OpenModalContainer, CloseModalContainer } from "./EquipmentDetails.styled";
 
 const ProductDetailsPage = ({ machenics }) => {
   const navigate = useNavigate();
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, ] = useState(1);
   const [finalAmount, setFinalAmount] = useState(0);
-
+  const [modalPhotoIndex, setModalPhotoIndex] = useState(0);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
+  const [, setCurrentImageIndex] = useState(0);
   const galleryRef = useRef(null);
-  const itemWidth = 175; // Ширина одного елементу галереї
-  const itemsPerScreen = 3; // Кількість елементів на одному екрані
-  // const id = [3]
+  const itemWidth = 175;
+  const itemsPerScreen = 3;
 
   const { photoId } = useParams();
 
@@ -32,7 +32,18 @@ const ProductDetailsPage = ({ machenics }) => {
     }
   };
 
-  const handleGalleryClick = (photoUrl) => {
+  const handleNextPhoto = () => {
+    setModalPhotoIndex((modalPhotoIndex + 1) % selectedMachenic.url.length);
+    setModalImage(selectedMachenic.url[modalPhotoIndex]); // Оновити відображену фотографію
+  };
+  
+  const handlePrevPhoto = () => {
+    setModalPhotoIndex((modalPhotoIndex - 1 + selectedMachenic.url.length) % selectedMachenic.url.length);
+    setModalImage(selectedMachenic.url[modalPhotoIndex]); // Оновити відображену фотографію
+  };
+
+  const handleGalleryClick = (photoUrl, index) => {
+    setCurrentImageIndex(index);
     setModalImage(photoUrl);
     setModalIsOpen(true);
   };
@@ -41,22 +52,22 @@ const ProductDetailsPage = ({ machenics }) => {
 
   const showArrows = selectedPhoto.url.length > itemsPerScreen;
 
-  const increment = () => {
-    setQuantity(quantity + 1);
-  }
+  // const increment = () => {
+  //   setQuantity(quantity + 1);
+  // }
 
-  const decrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  }
+  // const decrement = () => {
+  //   if (quantity > 1) {
+  //     setQuantity(quantity - 1);
+  //   }
+  // }
 
-  const handleQuantityChange = (event) => {
-    const newQuantity = parseInt(event.target.value);
-    if (!isNaN(newQuantity)) {
-      setQuantity(newQuantity);
-    }
-  }
+  // const handleQuantityChange = (event) => {
+  //   const newQuantity = parseInt(event.target.value);
+  //   if (!isNaN(newQuantity)) {
+  //     setQuantity(newQuantity);
+  //   }
+  // }
 
   if (!selectedMachenic) {
     return <div>Photo not found</div>;
@@ -92,11 +103,11 @@ const ProductDetailsPage = ({ machenics }) => {
         </div>
       <div>
         <Quantity quantityLength={quantity.toString().length}>
-          <div>
+          {/* <div>
             <span onClick={decrement}>-</span>
             <input type="text" value={quantity} maxLength={10} onChange={handleQuantityChange} />
             <span onClick={increment}>+</span>
-          </div>
+          </div> */}
             <div>Загальна ціна: <span style={{fontWeight: 'bold', fontSize: '25px', color: 'black' }}>{finalAmount} грн</span></div>
           <div>
             <ButtonShop onClick={handleBuyClick}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
@@ -117,12 +128,14 @@ const ProductDetailsPage = ({ machenics }) => {
         </div>
         </ContainerDiv>
     </MenuContainer>
-    <OpenModalContainer isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} contentLabel="Large Image" appElement={document.getElementById('root')}>
-        {/* <div style={{display: 'flex', flexDirection: 'row-reverse' }}> */}
+      <OpenModalContainer isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} contentLabel="Large Image" appElement={document.getElementById('root')}>
+        <div style={{ display: 'flex', flexDirection: 'row-reverse' }}>
           <CloseModalContainer icon={faClose} onClick={() => setModalIsOpen(false)} />
-        {/* </div> */}
-        <div>
-          <img src={modalImage} alt="Large" style={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }} />
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '99%', gap: '15px'}}>
+          <NextButton icon={faArrowLeft} onClick={handlePrevPhoto} />
+          <img src={modalImage} alt="Large" style={{ width: '780px', maxHeight: '80vh' }} />
+          <NextButton icon={faArrowRight} onClick={handleNextPhoto} />
         </div>
       </OpenModalContainer>
     </>

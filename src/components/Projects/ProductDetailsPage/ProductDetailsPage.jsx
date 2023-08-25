@@ -1,7 +1,7 @@
 import TitleSection from 'components/TitleSection/TitleSection';
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { faCartShopping, faCircleArrowLeft, faCircleArrowRight, faClose } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faCircleArrowLeft, faCircleArrowRight, faClose, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { MenuContainer, Quantity, ContainerDiv, News, ContainerP, CartIcon, ButtonShop, Settings, Gallery, GalleryContainer, PrevButton, NextButton, OpenModalContainer, CloseModalContainer } from "./ProductDetailsPage.styled";
 
 const ProductDetailsPage = ({ photos }) => {
@@ -9,11 +9,20 @@ const ProductDetailsPage = ({ photos }) => {
   const [quantity, setQuantity] = useState(1);
   const [finalAmount, setFinalAmount] = useState(0);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [modalImage, setModalImage] = useState('');
+  const [, setModalImage] = useState('');
   const galleryRef = useRef(null);
-  const itemWidth = 175; // Ширина одного елементу галереї
-  const itemsPerScreen = 3; // Кількість елементів на одному екрані
+  const itemWidth = 175;
+  const itemsPerScreen = 3;
   const id = [3]
+
+  const [modalPhotoIndex, setModalPhotoIndex] = useState(0);
+
+  const handleNextPhoto = () => {
+    setModalPhotoIndex((modalPhotoIndex + 1) % selectedPhoto.url.length);
+  };
+  const handlePrevPhoto = () => {
+    setModalPhotoIndex((modalPhotoIndex - 1 + selectedPhoto.url.length) % selectedPhoto.url.length);
+  };
 
   const scrollGallery = (direction) => () => {
     if (galleryRef.current) {
@@ -27,9 +36,15 @@ const ProductDetailsPage = ({ photos }) => {
 
   const showArrows = selectedPhoto.url.length > itemsPerScreen;
 
-  const handleGalleryClick = (photoUrl) => {
-    setModalImage(photoUrl);
-    setModalIsOpen(true);
+  // const handleGalleryClick = (photoUrl) => {
+  //   setModalImage(photoUrl);
+  //   setModalIsOpen(true);
+  // };
+
+  const handleGalleryClick = (photoUrl, index) => {
+    setModalPhotoIndex(index); // Оновити індекс фотографії для модального вікна
+    setModalImage(photoUrl); // Оновити відображену фотографію
+    setModalIsOpen(true); // Відкрити модальне вікно
   };
 
   useEffect(() => {
@@ -83,7 +98,7 @@ const ProductDetailsPage = ({ photos }) => {
               {showArrows && <PrevButton icon={faCircleArrowLeft} onClick={scrollGallery(-1)} />}
                 <Gallery ref={galleryRef}>
                   {selectedPhoto.url.map((photoUrl, index) => (
-                    <img key={index} src={photoUrl} alt={`${selectedPhoto.id}`} style={{ width: '165px', margin: '5px' }} onClick={() => handleGalleryClick(photoUrl)} />
+                    <img key={index} src={photoUrl} alt={`${selectedPhoto.id}`} style={{ width: '165px', margin: '5px' }} onClick={() => handleGalleryClick(photoUrl, index)} />
                   ))}
                 </Gallery>
                 {showArrows && <NextButton icon={faCircleArrowRight} onClick={scrollGallery(1)} />}
@@ -92,7 +107,7 @@ const ProductDetailsPage = ({ photos }) => {
       <div>
         <Quantity quantityLength={quantity.toString().length}>
           {id.includes(selectedPhoto.id) ? (
-            <p>За деталями дзвоніть на номер: +380673231731</p>
+            <p>За деталями дзвоніть на номер: <br /><a href="tel:+380673231734">+38 (067) 323-17-34</a></p>
           ) : (
             <>
               <div>Оберіть кількість:</div>
@@ -122,10 +137,14 @@ const ProductDetailsPage = ({ photos }) => {
         </ContainerDiv>
       </MenuContainer>
       <OpenModalContainer isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} contentLabel="Large Image" appElement={document.getElementById('root')}>
-        <div style={{display: 'flex', flexDirection: 'row-reverse' }}>
+        <div style={{ display: 'flex', flexDirection: 'row-reverse' }}>
           <CloseModalContainer icon={faClose} onClick={() => setModalIsOpen(false)} />
         </div>
-          <img src={modalImage} alt="Large" style={{ width: '100%', maxHeight: '80vh' }} />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'}}>
+          <NextButton icon={faArrowLeft} onClick={handlePrevPhoto} />
+          <img src={selectedPhoto.url[modalPhotoIndex]} alt="Large" style={{ width: '100%', maxHeight: '80vh' }} />
+          <NextButton icon={faArrowRight} onClick={handleNextPhoto} />
+        </div>
       </OpenModalContainer>
     </>
   );

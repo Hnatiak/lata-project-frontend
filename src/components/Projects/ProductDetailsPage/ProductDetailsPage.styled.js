@@ -59,6 +59,7 @@ export const OpenModalContainer = styled(ReactModal)`
   flex-direction: column;
   align-items: flex-end; /* Center horizontally */
   justify-content: center; /* Center vertically */
+  user-select: none;
 `;
 
 export const CloseModalContainer = styled(FontAwesomeIcon)`

@@ -43,22 +43,24 @@ export const GalleryContainer = styled.div`
 // `;
 
 export const OpenModalContainer = styled(ReactModal)`
-  max-width: 900px; /* Set maximum width */
-  max-height: 600px; /* Set maximum height */
-  position: absolute;
-  inset: 40px;
-  border: 1px solid rgb(204, 204, 204);
-  background: rgb(255, 255, 255);
-  overflow: auto;
-  border-radius: 15px;
-  outline: none;
-  padding: 20px;
-  z-index: 5;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: space-evenly; /* Center vertically */
+ max-width: 900px; /* Set maximum width */
+ max-height: 700px; /* Set maximum height */
+ gap: 15px;
+ position: absolute;
+ inset: 40px;
+ border: 1px solid rgb(204, 204, 204);
+ background: rgb(255, 255, 255);
+ overflow: auto;
+ border-radius: 15px;
+ outline: none;
+ padding: 20px;
+ z-index: 5;
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end; /* Center horizontally */
+ justify-content: center; /* Center vertically */
+ user-select: none;
 `;
 
 export const CloseModalContainer = styled(FontAwesomeIcon)`
