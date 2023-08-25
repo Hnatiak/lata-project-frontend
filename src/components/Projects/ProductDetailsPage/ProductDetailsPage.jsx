@@ -142,7 +142,7 @@ const ProductDetailsPage = ({ photos }) => {
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'}}>
           <NextButton icon={faArrowLeft} onClick={handlePrevPhoto} />
-          <img src={selectedPhoto.url[modalPhotoIndex]} alt="Large" style={{ width: '100%', maxHeight: '80vh' }} />
+          <img src={selectedPhoto.url[modalPhotoIndex]} alt="Large" style={{ width: '720px', maxHeight: '750px' }} />
           <NextButton icon={faArrowRight} onClick={handleNextPhoto} />
         </div>
       </OpenModalContainer>

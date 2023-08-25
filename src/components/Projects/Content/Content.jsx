@@ -66,7 +66,7 @@ const Content = () => {
         {filteredPhotos.map((photo) => (
           <div key={photo.id}>
             <Project to={`/projects/${photo.id}`}>
-              <img src={photo.url[0]} alt={`${photo.id}`} />
+              <img src={photo.url[0]} alt={`${photo.id}`} style={{ width: '249px'}}/>
             </Project>
             <Background>
             {id.includes(photo.id) ? ( 

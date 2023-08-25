@@ -43,8 +43,8 @@ export const GalleryContainer = styled.div`
 // `;
 
 export const OpenModalContainer = styled(ReactModal)`
-  max-width: 900px; /* Set maximum width */
-  max-height: 700px; /* Set maximum height */
+  max-width: 1000px; /* Set maximum width */
+  max-height: 800px; /* Set maximum height */
   position: absolute;
   inset: 40px;
   border: 1px solid rgb(204, 204, 204);
@@ -87,7 +87,7 @@ export const Gallery = styled.div`
   display: flex;
   overflow-x: hidden;
   align-items: center;
-  height: 120px;
+  // height: 120px;
   img {
     cursor: pointer;
   }
