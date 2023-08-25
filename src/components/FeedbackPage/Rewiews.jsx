@@ -23,7 +23,6 @@ import { Formik } from 'formik';
 const ReviewSchema = Yup.object().shape({
   name: Yup.string().required('Ім\'я обов\'язкове'),
   email: Yup.string().min(6, 'Емейл мусить бути більше 6-ти символів').email('Емейл неправильний').required('Емейл обов\'язковий'),
-  message: Yup.string().required('Коментар обов\'язковий'),
 });
 
 const Reviews = () => {

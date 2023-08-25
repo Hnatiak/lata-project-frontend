@@ -1,4 +1,10 @@
-import img1 from '../../../images/IMG-4795.jpg'
+import img1 from '../../../images/mechanics/IMG-4795.jpg'
+import img2 from '../../../images/mechanics/IMG-4796.jpg'
+import img3 from '../../../images/mechanics/IMG-4797.jpg'
+import img4 from '../../../images/mechanics/IMG-4798.jpg'
+// import img5 from '../../../images/mechanics/IMG_0001.jpg'
+// import img6 from '../../../images/mechanics/IMG-4795.jpg'
+
 
 const mechanics = [
     {
@@ -7,7 +13,7 @@ const mechanics = [
       "category": "",
       "link": "/box1",
       "price": 370291,
-      "url": img1,
+      "url": [img1, img2, img3, img4],
       "description" : "ПРИЗНАЧЕННЯ: коробка підходить для фасування гамбургерів, чизбургерів, фішбургери і інших бутербродів, кришка-дно. Ця коробка зроблена з картону, покритого всередині  ламінацією. У неї можна класти жирні бургери з соусами, так як цей матеріал стійкий до харчових кислот і масел.",
       "details": "Довжина / Ширина / Висота: 125*125*110 мм"
     },

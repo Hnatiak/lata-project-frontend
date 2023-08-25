@@ -23,9 +23,28 @@ export const GalleryContainer = styled.div`
   gap: 5px;
 `;
 
+// export const OpenModalContainer = styled(ReactModal)`
+//   width: 935px;
+//   height: 535px;
+//   position: absolute;
+//   inset: 40px;
+//   border: 1px solid rgb(204, 204, 204);
+//   background: rgb(255, 255, 255);
+//   overflow: auto;
+//   border-radius: 15px;
+//   outline: none;
+//   padding: 20px;
+//   z-index: 5;
+//   margin: auto;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   justify-content: space-between;
+// `;
+
 export const OpenModalContainer = styled(ReactModal)`
-  width: 935px;
-  height: 535px;
+  max-width: 900px; /* Set maximum width */
+  max-height: 700px; /* Set maximum height */
   position: absolute;
   inset: 40px;
   border: 1px solid rgb(204, 204, 204);
@@ -38,8 +57,8 @@ export const OpenModalContainer = styled(ReactModal)`
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  justify-content: space-between;
+  align-items: flex-end; /* Center horizontally */
+  justify-content: center; /* Center vertically */
 `;
 
 export const CloseModalContainer = styled(FontAwesomeIcon)`

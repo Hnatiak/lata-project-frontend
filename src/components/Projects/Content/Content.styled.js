@@ -112,6 +112,13 @@ export const CartIcon = styled(FontAwesomeIcon)`
   margin-right: 8px; /* Відступ справа від тексту "КУПИТИ" */
 `;
 
+export const CantBuyButtonShop = styled(Link)`
+  background: #72854a;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 20px;
+`;
+
 export const ButtonShop = styled(Link)`
   background: #9AC43C;
   color: #fff;

@@ -13,6 +13,7 @@ const ProductDetailsPage = ({ photos }) => {
   const galleryRef = useRef(null);
   const itemWidth = 175; // Ширина одного елементу галереї
   const itemsPerScreen = 3; // Кількість елементів на одному екрані
+  const id = [3]
 
   const scrollGallery = (direction) => () => {
     if (galleryRef.current) {
@@ -90,16 +91,20 @@ const ProductDetailsPage = ({ photos }) => {
         </div>
       <div>
         <Quantity quantityLength={quantity.toString().length}>
-          <div>Оберіть кількість:</div>
-          <div>
-            <span onClick={decrement}>-</span>
-            <input type="text" value={quantity} maxLength={10} onChange={handleQuantityChange} />
-            <span onClick={increment}>+</span>
-          </div>
-            <div>Загальна ціна: <span style={{fontWeight: 'bold', fontSize: '25px', color: 'black' }}>{finalAmount} грн</span></div>
-          <div>
-            <ButtonShop onClick={handleBuyClick}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
-          </div>
+          {id.includes(selectedPhoto.id) ? (
+            <p>За деталями дзвоніть на номер: +380673231731</p>
+          ) : (
+            <>
+              <div>Оберіть кількість:</div>
+              <div>
+                <span onClick={decrement}>-</span>
+                <input type="text" value={quantity} maxLength={10} onChange={handleQuantityChange} />
+                <span onClick={increment}>+</span>
+              </div>
+                <div>Загальна ціна: <span style={{fontWeight: 'bold', fontSize: '25px', color: 'black' }}>{finalAmount} грн</span></div>
+                <ButtonShop onClick={handleBuyClick}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
+            </>
+          )}
         </Quantity>
         </div>
       </Settings>

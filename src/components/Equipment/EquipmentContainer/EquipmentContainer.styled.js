@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ReactModal from 'react-modal';
 
 export const MenuContainer = styled.div`
   max-width: 1170px;
@@ -136,4 +137,63 @@ export const ButtonShop = styled(Link)`
   font-size: 140%;
   width: 60px;
 }
+`;
+
+
+export const GalleryContainer = styled.div`
+  display: flex;
+  user-select: none;
+  align-items: center;
+  margin-bottom: 45px;
+  gap: 5px;
+`;
+
+export const OpenModalContainer = styled(ReactModal)`
+  width: 935px;
+  height: 535px;
+  position: absolute;
+  inset: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 15px;
+  outline: none;
+  padding: 20px;
+  z-index: 5;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+`;
+
+export const CloseModalContainer = styled(FontAwesomeIcon)`
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+`;
+
+
+export const PrevButton = styled(FontAwesomeIcon)`
+  height: 25px;
+  color: #9AC43C;
+  border-radius: 50%;
+  cursor: pointer;
+`;
+
+export const NextButton = styled(FontAwesomeIcon)`
+  height: 25px;
+  color: #9AC43C;
+  border-radius: 50%;
+  cursor: pointer;
+`;
+
+export const Gallery = styled.div`
+  display: flex;
+  overflow-x: hidden;
+  align-items: center;
+  height: 120px;
+  img {
+    cursor: pointer;
+  }
 `;
