@@ -1,3 +1,34 @@
+import boxforpizza1 from '../../../images/boxes/boxesforPizza/DSC_0155.jpg'
+import boxforpizza2 from '../../../images/boxes/boxesforPizza/DSC_0156.jpg'
+import boxforpizza3 from '../../../images/boxes/boxesforPizza/DSC_0170.jpg'
+import boxforpizza4 from '../../../images/boxes/boxesforPizza/DSC_0172.jpg'
+import boxforpizza5 from '../../../images/boxes/boxesforPizza/DSC_0173.jpg'
+
+import boxforcake1 from '../../../images/boxes/boxesforCake/DSC_0152.jpg'
+import boxforcake2 from '../../../images/boxes/boxesforCake/DSC_0154.jpg'
+import boxforcake3 from '../../../images/boxes/boxesforCake/DSC_0174.jpg'
+import boxforcake4 from '../../../images/boxes/boxesforCake/DSC_0175.jpg'
+import boxforcake5 from '../../../images/boxes/boxesforCake/DSC_0176.jpg'
+import boxforcake6 from '../../../images/boxes/boxesforCake/DSC_0177.jpg'
+import boxforcake7 from '../../../images/boxes/boxesforCake/DSC_0178.jpg'
+
+import boxforflowers1 from '../../../images/boxes/boxesforflowers/DSC_0148.jpg'
+import boxforflowers2 from '../../../images/boxes/boxesforflowers/DSC_0149.jpg'
+import boxforflowers3 from '../../../images/boxes/boxesforflowers/DSC_0150.jpg'
+
+import boxforweeding1 from '../../../images/boxes/wedding/КВ-136.jpg'
+import boxforweeding2 from '../../../images/boxes/wedding/КВ-137.jpg'
+import boxforweeding3 from '../../../images/boxes/wedding/КВ-138.jpg'
+import boxforweeding4 from '../../../images/boxes/wedding/КВ-139.jpg'
+import boxforweeding5 from '../../../images/boxes/wedding/КВ-141.jpg'
+import boxforweeding6 from '../../../images/boxes/wedding/КВ-142.jpg'
+import boxforweeding7 from '../../../images/boxes/wedding/КВ-143.jpg'
+import boxforweeding8 from '../../../images/boxes/wedding/КВ-144.jpg'
+import boxforweeding9 from '../../../images/boxes/wedding/КВ-146.jpg'
+import boxforweeding10 from '../../../images/boxes/wedding/КВ-148.jpg'
+import boxforweeding11 from '../../../images/boxes/wedding/КВ-154.jpg'
+import boxforweeding12 from '../../../images/boxes/wedding/КВ-165.jpg'
+
 const boxs = [
     {
       "id": 1,
@@ -5,7 +36,7 @@ const boxs = [
       "category": "",
       "link": "/box1",
       "price": 5,
-      "url": [ "https://lata.net.ua/upload/iblock/e30/e3004b9e853c5349de02cff019800a9d.jpg", "https://lata.net.ua/upload/iblock/087/0876dc1fb8e50b9e213c56fc6f902a9d.jpg", "https://lata.net.ua/upload/iblock/e1b/e1bb5363ac4845835de0b05c606198f4.jpg", "https://lata.net.ua/upload/iblock/e30/e3004b9e853c5349de02cff019800a9d.jpg" ], 
+      "url": [ "https://lata.net.ua/upload/iblock/e30/e3004b9e853c5349de02cff019800a9d.jpg" ], 
       "description" : "ПРИЗНАЧЕННЯ: коробка підходить для фасування гамбургерів, чизбургерів, фішбургери і інших бутербродів, кришка-дно. Ця коробка зроблена з картону, покритого всередині  ламінацією. У неї можна класти жирні бургери з соусами, так як цей матеріал стійкий до харчових кислот і масел.",
       "details": "Довжина / Ширина / Висота: 125*125*110 мм"
     },
@@ -35,7 +66,7 @@ const boxs = [
       "category": "FullColorPackaging",
       "link": "/example",
       "price": 1,
-      "url": ["https://lata.net.ua/upload/iblock/e1b/e1bb5363ac4845835de0b05c606198f4.jpg"],
+      "url": [ boxforcake1, boxforcake2, boxforcake3, boxforcake4, boxforcake5, boxforcake6, boxforcake7 ],
       "description" : "Картонна упаковка для тортів, як і будь-яка інша харчова упаковка, виготовляється з пакувальних картонів, з  відповідними вимогами ГОСТ-ів. Картонна харчова упаковка володіє вищими властивостями водо- і жиронепроникності.",
       "details": "Картонна упаковка для тортів, як і будь-яка інша харчова упаковка, виготовляється з пакувальних картонів, з  відповідними вимогами ГОСТ-ів. Картонна харчова упаковка володіє вищими властивостями водо- і жиронепроникності. При виготовленні картонної упаковки для тортів використовуються друк, що додає неповторний вид кожного виробу. Різноманітність конструкцій упаковки залежить від фантазії конструктора, який може на замовлення спроектувати коробку незвичайної форми, що приверне увагу споживача і підкреслить унікальність пропонованого продукту ."
     },
@@ -65,7 +96,7 @@ const boxs = [
       "category": "FullColorPackaging",
       "link": "/example",
       "price": 80,
-      "url": ["https://lata.net.ua/upload/iblock/abb/abbb05b2879c1c9247d51d3a91dd3ae7.jpg"],
+      "url": [ boxforflowers1, boxforflowers2, boxforflowers3 ],
       "description" : "Коробки для квітів",
       "details": ""
     },
@@ -115,7 +146,7 @@ const boxs = [
       "category": "FullColorPackaging",
       "link": "/example",
       "price": 3,
-      "url": ["https://lata.net.ua/upload/iblock/8cd/8cda98a7a69811aa9e459d5ce846b26d.JPG"],
+      "url": [ boxforpizza1, boxforpizza2, boxforpizza3, boxforpizza4, boxforpizza5 ],
       "description" : "Виготовлення під замовлення картонних коробок під піцу з нанесенням фірмового друку в 1-2 кольори,  або повно колірного друку, який допоможе виділити Вашу продукцію серед конкурентів за рахунок оригінальності і впізнаванності упаковки.",
       "details": "Різноманітні розміри, готові коробки зі складу, виготовлення на замовлення. Компанія \"Лата\" пропонує картонні коробки під піцу різних типів і розмірів з мікрогофрокартону, гофрокартону та картону хром-ерзац, з нанесенням друку логотипу замовника."
     },
@@ -138,6 +169,16 @@ const boxs = [
       "url": ["https://lata.net.ua/upload/iblock/683/683a0f03f26554fb562ca3f099df53a6.jpg"],
       "description" : "Паперові стакани мають меншу теплопровідність в порівнянні з пластиковим , його приємніше тримати в руках , крім того на нього можна нанести гарний малюнок або логотип. Паперовий стакан , зроблений з якісної сировини при використанні харчових фарб для друку дизайну , ніколи не змінить смак і запах напою.",
       "details": "Паперові стакани об’ємом: 110, 175, 185 мл. \n-   білі; \n- стандартний дизайн; \n- індивідуальний дизайн \nЦіна: \n110 мл  = 0,50 грн \n175 мл = 0,60 грн\n185 мл:\nвід 100 шт. = 0,80 грн.\nвід 1500 шт. = 0,78 грн.\nвід 7500 шт. = 0,76 грн.\nвід 15000 шт. = 0,74 грн. \nвід 50000 шт. = 0,72 грн.\nтел. 0673231736 Василь."
+    },
+    {
+      "id": 16,
+      "title": "Коробки для весілля",
+      "category": "CorrugatedCardboard",
+      "link": "/example",
+      "price": 6,
+      "url": [ boxforweeding1, boxforweeding2, boxforweeding3, boxforweeding4, boxforweeding5, boxforweeding6, boxforweeding7, boxforweeding8, boxforweeding9, boxforweeding10, boxforweeding11, boxforweeding12, ],
+      "description" : "",
+      "details": ""
     },
 ]
 
