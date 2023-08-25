@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer, Background, ButtonShop, CartIcon } from './Content.styled' // MenuLink 
+import { MenuItem, MenuLinkActive, Projects, Project, MenuUl, MenuContainer, Background, ButtonShop, CartIcon, CantBuyButtonShop } from './Content.styled' // MenuLink 
 import boxesData from './boxs';
 import { FiChevronRight, FiChevronDown } from 'react-icons/fi';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +10,7 @@ const Content = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAllSelected, setIsAllSelected] = useState(false);
   const [, setSelectedBox] = useState(null);
+  const id = [3]
 
   useEffect(() => {
     setPhotos(boxesData);
@@ -68,10 +69,16 @@ const Content = () => {
               <img src={photo.url[0]} alt={`${photo.id}`} />
             </Project>
             <Background>
-              <ButtonShop to={`/projects/${photo.id}`}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
-              <div onClick={() => handleBoxClick(photo)}>
-                <p style={{ color: "#fff" }}>{photo.price} грн</p>
-              </div>
+            {id.includes(photo.id) ? ( 
+              <CantBuyButtonShop><CartIcon icon={faCartShopping} />КУПИТИ</CantBuyButtonShop>
+            ) : (
+              <>
+                <ButtonShop to={`/projects/${photo.id}`}><CartIcon icon={faCartShopping} />КУПИТИ</ButtonShop>
+                <div onClick={() => handleBoxClick(photo)}>
+                  <p style={{ color: "#fff" }}>{photo.price} грн</p>
+                </div>
+              </>
+            )}
             </Background>
           </div>
         ))}
