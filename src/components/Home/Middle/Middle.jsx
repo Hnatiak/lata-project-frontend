@@ -79,7 +79,7 @@ import { useState, useEffect } from 'react';
 import slice1 from '../../source/slice1.jpg';
 import slice2 from '../../source/slice2.jpg';
 import slice3 from '../../source/slice3.jpg';
-import { MiddleContainer, Image, LeftDiv, Title, P, A, Arrow } from './Middle.styled';
+import { MiddleContainer, LeftDiv, Title, P, A, Arrow } from './Middle.styled';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Middle = () => {
