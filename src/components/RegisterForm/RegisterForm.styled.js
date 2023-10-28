@@ -19,9 +19,6 @@ export const Content = styled.div `
   // background: #111;
   border: 1px solid #9AC43C;
   border-radius: 20px;
-  @media screen and (max-width: 768px) {
-    ;
-  }
 `
 export const Menu = styled.div`
     background: #9AC43C;

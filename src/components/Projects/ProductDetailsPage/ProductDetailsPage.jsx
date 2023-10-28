@@ -140,7 +140,7 @@ const ProductDetailsPage = ({ photos }) => {
         <div style={{ display: 'flex', flexDirection: 'row-reverse' }}>
           <CloseModalContainer icon={faClose} onClick={() => setModalIsOpen(false)} />
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'}}>
+        <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', width: '100%'}}>
           <NextButton icon={faArrowLeft} onClick={handlePrevPhoto} />
           <img src={selectedPhoto.url[modalPhotoIndex]} alt="Large" style={{ width: '720px', maxHeight: '750px' }} />
           <NextButton icon={faArrowRight} onClick={handleNextPhoto} />

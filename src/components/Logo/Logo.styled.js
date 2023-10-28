@@ -21,7 +21,7 @@ export const LogoImg = styled.img`
 export const LogoText = styled.b`
   font-size: 14px;
   color: #000;
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 780px) {
     display: none;
   }
 `;
