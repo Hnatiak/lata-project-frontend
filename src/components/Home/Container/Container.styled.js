@@ -16,9 +16,27 @@ export const MiddleContainer = styled.div`
     }
 `;
 
+export const Svg = styled(FontAwesomeIcon)`
+    cursor: pointer;
+    width: 25px; 
+    height: 25px; 
+    padding: 20px; 
+    font-size: 30px; 
+    line-height: 40px; 
+    color: white; 
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    background: var(--bg-color, #9AC43C);
+`;
+
 export const ContainerDiv = styled.div`
     text-align: center;
     margin-bottom: 10px;
+
+    &:hover {
+        transform: scale(1.02);
+        --bg-color: rgba(0, 0, 0, 0.75);
+    }
 `;
 
 export const ContainerH6 = styled.h6`
@@ -48,20 +66,3 @@ export const ContainerSpan = styled.span`
 export const AnimatedContainer = styled.div`
     transition: opacity 300ms ease-in;
 `;
-
-export const Svg = styled(FontAwesomeIcon)`
-    cursor: pointer;
-    width: 25px; 
-    height: 25px; 
-    padding: 20px; 
-    font-size: 30px; 
-    line-height: 40px; 
-    background: #9AC43C; 
-    color: white; 
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-    &:hover {
-        background: #1c1e1f;
-    }
-`;
-

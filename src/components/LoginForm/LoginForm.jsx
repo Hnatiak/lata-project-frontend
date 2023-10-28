@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../redux/auth/authOperations';
 import { useDispatch } from 'react-redux';
@@ -12,12 +12,14 @@ import {
   LoginBtn,
   StyledRegistrationLink,
   StyledLink,
+  PasswordToggle,
+  PasswordIcon,
 } from './LoginForm.styled';
 import { setToken } from '../../redux/auth/authSelectors';
 import { Formik, Field } from 'formik';
 import * as Yup from 'yup';
 import { toast } from 'react-toastify';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const LoginSchema = Yup.object().shape({
   email: Yup.string().email('Емейл неправильний').required('Емейл обов\'язковий'),
@@ -27,6 +29,11 @@ const LoginSchema = Yup.object().shape({
 function LoginPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -51,41 +58,35 @@ function LoginPage() {
         <Formik initialValues={{ email: '', password: '' }} validationSchema={LoginSchema} >
           <Content>
             <Menu>
-                <StyledRegistrationLink href="register" underline="none">
-                  Registration
-                </StyledRegistrationLink>
-                <StyledLink href="login" underline="none">
-                  Log In
-                </StyledLink>
+                <StyledRegistrationLink href="register" underline="none">Registration</StyledRegistrationLink>
+                <StyledLink href="login" underline="none">Log In</StyledLink>
             </Menu>
             <Inputs>
               <Field autoFocus name="email" type="email" placeholder="Email" />
               <ErrorText name="email" component="div" />
-              <PasswordInput>
+              {/* <PasswordInput>
                 <Field type="password"
                   name="password"
-                //   type={showPassword ? 'text' : 'password'}
                   placeholder="Password"
                 />
                 <ErrorText name="password" component="div" />
+              </PasswordInput> */}
 
-                {/* <PasswordToggle
-                  className={`${PasswordToggle} ${PasswordIcon}`}
-                //   onClick={togglePasswordVisibility}
-                >
-                  {/* {showPassword ? (
+
+              <PasswordInput>
+                <Field name="password" type={showPassword ? 'text' : 'password'} placeholder="Password" />
+                <ErrorText name="password" component="div" />
+                <PasswordToggle className={`${PasswordToggle} ${PasswordIcon}`} onClick={togglePasswordVisibility}>
+                  {showPassword ? (
                     <PasswordIcon icon={faEyeSlash} width="18px" />
                   ) : (
-                    <Svg>
-                      <use
-                        stroke="gray"
-                        // xlinkHref={`${sprite}#icon-eye`}
-                        style={{ color: '#737373' }}
-                      />
-                    </Svg>
+                    <PasswordIcon icon={faEye} width="18px" />
                   )}
-                </PasswordToggle> */}
+                </PasswordToggle>
               </PasswordInput>
+
+
+
               <LoginBtn type="submit">Log In Now</LoginBtn>
               <ErrorText name="submit" component="div" />
             </Inputs>

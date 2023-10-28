@@ -62,12 +62,8 @@ function RegistrationPage() {
         <Formik initialValues={{ name: '', email: '', password: '' }} validationSchema={RegisterSchema}>
           <Content>
             <Menu>
-              <StyledRegistrationLink href="register" underline="none">
-                Registration
-              </StyledRegistrationLink>
-              <StyledLink href="login" underline="none">
-                Log In
-              </StyledLink>
+              <StyledRegistrationLink href="register" underline="none">Registration</StyledRegistrationLink>
+              <StyledLink href="login" underline="none">Log In</StyledLink>
             </Menu>
             <Inputs>
               <Field autoFocus name="name" type="text" placeholder="Name" />
@@ -75,8 +71,8 @@ function RegistrationPage() {
               <Field name="email" type="email" placeholder="Email" />
               <ErrorText name="email" component="div" />
               <PasswordInput>
-              <Field name="password" type={showPassword ? 'text' : 'password'} placeholder="Password" />
-              <ErrorText name="password" component="div" />
+                <Field name="password" type={showPassword ? 'text' : 'password'} placeholder="Password" />
+                <ErrorText name="password" component="div" />
                 <PasswordToggle className={`${PasswordToggle} ${PasswordIcon}`} onClick={togglePasswordVisibility}>
                   {showPassword ? (
                     <PasswordIcon icon={faEyeSlash} width="18px" />

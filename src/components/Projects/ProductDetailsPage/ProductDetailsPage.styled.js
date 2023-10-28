@@ -60,6 +60,10 @@ export const OpenModalContainer = styled(ReactModal)`
   align-items: flex-end; /* Center horizontally */
   justify-content: center; /* Center vertically */
   user-select: none;
+
+  @media screen and (max-width: 780px) {
+    max-height: 400px;
+  }
 `;
 
 export const CloseModalContainer = styled(FontAwesomeIcon)`
