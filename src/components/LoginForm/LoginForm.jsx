@@ -58,11 +58,11 @@ function LoginPage() {
         <Formik initialValues={{ email: '', password: '' }} validationSchema={LoginSchema} >
           <Content>
             <Menu>
-                <StyledRegistrationLink href="register" underline="none">Registration</StyledRegistrationLink>
-                <StyledLink href="login" underline="none">Log In</StyledLink>
+                <StyledRegistrationLink href="register" underline="none">Реєстрація</StyledRegistrationLink>
+                <StyledLink href="login" underline="none">Вхід</StyledLink>
             </Menu>
             <Inputs>
-              <Field autoFocus name="email" type="email" placeholder="Email" />
+              <Field autoFocus name="email" type="email" placeholder="Емейл" />
               <ErrorText name="email" component="div" />
               {/* <PasswordInput>
                 <Field type="password"
@@ -74,7 +74,7 @@ function LoginPage() {
 
 
               <PasswordInput>
-                <Field name="password" type={showPassword ? 'text' : 'password'} placeholder="Password" />
+                <Field name="password" type={showPassword ? 'text' : 'password'} placeholder="Пароль" />
                 <ErrorText name="password" component="div" />
                 <PasswordToggle className={`${PasswordToggle} ${PasswordIcon}`} onClick={togglePasswordVisibility}>
                   {showPassword ? (
@@ -87,7 +87,7 @@ function LoginPage() {
 
 
 
-              <LoginBtn type="submit">Log In Now</LoginBtn>
+              <LoginBtn type="submit">Увійти</LoginBtn>
               <ErrorText name="submit" component="div" />
             </Inputs>
           </Content>

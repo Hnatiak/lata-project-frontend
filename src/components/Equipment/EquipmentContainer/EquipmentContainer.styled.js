@@ -155,7 +155,7 @@ export const OpenModalContainer = styled(ReactModal)`
   inset: 40px;
   border: 1px solid rgb(204, 204, 204);
   background: rgb(255, 255, 255);
-  overflow: auto;
+  // overflow: auto;
   border-radius: 15px;
   outline: none;
   padding: 20px;
