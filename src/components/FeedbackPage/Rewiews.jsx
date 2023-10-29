@@ -21,8 +21,10 @@ import * as Yup from 'yup';
 import { Formik } from 'formik';
 
 const ReviewSchema = Yup.object().shape({
+  rating: Yup.string().required('Рейтинг обов\'язковий'),
   name: Yup.string().required('Ім\'я обов\'язкове'),
   email: Yup.string().min(6, 'Емейл мусить бути більше 6-ти символів').email('Емейл неправильний').required('Емейл обов\'язковий'),
+  message: Yup.string().required('Коментар обов\'язковий'),
 });
 
 const Reviews = () => {
@@ -59,7 +61,7 @@ const Reviews = () => {
   const handleDeleteReview = async (id) => {
     try {
       await axios.delete(`/api/reviews/${id}`);
-      fetchReviews(); // Refresh the reviews after deletion=
+      fetchReviews();
     } catch (error) {
       toast.error('Ви не можете видалити чужий відгук')
     }

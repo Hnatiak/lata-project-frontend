@@ -121,7 +121,7 @@ export const LoginBtn = styled.button`
     height: 49px;
     background: rgb(154, 196, 60);
     border-radius: 8px;
-    color: white;
+    color: #000;
     @media screen and (max-width: 768px) {
         width: 287px;
     }

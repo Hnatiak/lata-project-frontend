@@ -50,7 +50,7 @@ export const OpenModalContainer = styled(ReactModal)`
  inset: 40px;
  border: 1px solid rgb(204, 204, 204);
  background: rgb(255, 255, 255);
- overflow: auto;
+//  overflow: auto;
  border-radius: 15px;
  outline: none;
  padding: 20px;
@@ -61,6 +61,9 @@ export const OpenModalContainer = styled(ReactModal)`
  align-items: flex-end; /* Center horizontally */
  justify-content: center; /* Center vertically */
  user-select: none;
+ @media screen and (max-width: 780px) {
+  max-height: 400px;
+}
 `;
 
 export const CloseModalContainer = styled(FontAwesomeIcon)`

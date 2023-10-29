@@ -62,16 +62,16 @@ function RegistrationPage() {
         <Formik initialValues={{ name: '', email: '', password: '' }} validationSchema={RegisterSchema}>
           <Content>
             <Menu>
-              <StyledRegistrationLink href="register" underline="none">Registration</StyledRegistrationLink>
-              <StyledLink href="login" underline="none">Log In</StyledLink>
+              <StyledRegistrationLink href="register" underline="none">Реєстрація</StyledRegistrationLink>
+              <StyledLink href="login" underline="none">Вхід</StyledLink>
             </Menu>
             <Inputs>
-              <Field autoFocus name="name" type="text" placeholder="Name" />
+              <Field autoFocus name="name" type="text" placeholder="Ім'я" />
               <ErrorText name="name" component="div" />
-              <Field name="email" type="email" placeholder="Email" />
+              <Field name="email" type="email" placeholder="Емейл" />
               <ErrorText name="email" component="div" />
               <PasswordInput>
-                <Field name="password" type={showPassword ? 'text' : 'password'} placeholder="Password" />
+                <Field name="password" type={showPassword ? 'text' : 'password'} placeholder="Пароль" />
                 <ErrorText name="password" component="div" />
                 <PasswordToggle className={`${PasswordToggle} ${PasswordIcon}`} onClick={togglePasswordVisibility}>
                   {showPassword ? (
@@ -81,7 +81,7 @@ function RegistrationPage() {
                   )}
                 </PasswordToggle>
               </PasswordInput>
-              <RegisterBtn type="submit">Register Now</RegisterBtn>
+              <RegisterBtn type="submit">Зареєструватися</RegisterBtn>
               <ErrorText name="submit" component="div" />
 
               {/* <GoogleButton href="https://lata-project-backend.onrender.com/api/auth/google">

@@ -42,7 +42,7 @@ const ServiceElements = ({ services }) => {
                     </ContainerTitle>
                         <ContainerP>Уявіть собі шматок ароматної італійської піци, приготованої щойно, буквально...</ContainerP>
                     <ContainerTitle>
-                        <ContainerA to="/articles/Proetyketu/">Про етикету</ContainerA>
+                        <ContainerA to="/articles/Proetyketu/">Про етикетку</ContainerA>
                     </ContainerTitle>
                         <ContainerP>Під етикеткою мається на увазі товарний ярлик, який за с...</ContainerP>
                     <ContainerTitle>
