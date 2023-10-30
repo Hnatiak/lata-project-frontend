@@ -91,12 +91,11 @@ export const ContainerDivService = styled.div`
 `;
 
 export const ContainerImgService = styled.img`
-    max-width: 200px;
-    max-height: 158px;
-
-    width: 100%;
-
     margin: 0 15px 0 0;
+    @media screen and (min-width: 480px) {
+        max-width: 200px;
+        max-height: 158px;
+    }
     @media screen and (max-width: 480px) {
         margin: 0 0 15px 0;
     }
