@@ -4,6 +4,7 @@ import { styled } from 'styled-components';
 export const LogoNav = styled(NavLink)`
   display: flex;
   flex-direction: column;
+  align-items: center;
   @media screen and (max-width: 780px) {
     max-width: 228px;
   }

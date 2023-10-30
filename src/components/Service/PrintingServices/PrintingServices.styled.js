@@ -83,6 +83,7 @@ export const ContainerP = styled.p`
 export const ContainerDivService = styled.div`
     display: flex;
     margin-bottom: 10px;
+    justify-content: space-between;
     @media screen and (max-width: 480px) {
         flex-direction: column;
         margin-bottom: 20px;
@@ -90,6 +91,11 @@ export const ContainerDivService = styled.div`
 `;
 
 export const ContainerImgService = styled.img`
+    max-width: 200px;
+    max-height: 158px;
+
+    width: 100%;
+
     margin: 0 15px 0 0;
     @media screen and (max-width: 480px) {
         margin: 0 0 15px 0;

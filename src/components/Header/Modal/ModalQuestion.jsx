@@ -27,7 +27,7 @@ import { toast } from 'react-toastify';
 
 const CommentSchema = Yup.object().shape({
   name: Yup.string().required('Ім\'я обов\'язкове'),
-  email: Yup.string().email('Емейл неправильний').required('Емейл обов\'язковий'),
+  email: Yup.string().email('Е-пошта неправильний').required('Е-пошта обов\'язкова'),
   message: Yup.string()
     .required('Коментар обов\'язковий')
     .min(10, 'Будь ласка напишіть більше деталей'),

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { RightSideBar, ContainerDiv, News, ContainerTitle, ContainerA, ContainerP, Container, LeftSideBar, Title, ContainerNew, Img, TextContainer, Text, ContainerH5 } from './NewsContainer.styled';
 import newsData from './newsContent';
+import boxs from '../../../images/boxes/other/2..webp'
+import photo from '../../../images/boxes/other/12.webp'
 
 const NewsContainer = () => {
     const [, setService] = useState([]);
@@ -38,7 +40,7 @@ const NewsContainer = () => {
             <ContainerP>Картонна коробка - це досить універсальний пакувальний матеріал. Він...</ContainerP>
             <News>Послуги</News>
             <ContainerNew>
-                <Img src='https://lata.net.ua/upload/iblock/7fb/7fb1eeda1b11653ea40bc63029bcb3ea.jpg' alt="flexprint" style={{margin: '0 15px 15px 0'}}/>
+                <Img src={boxs} alt="flexprint" style={{margin: '0 15px 15px 0', width: '200px', height: '111px'}}/>
                 <TextContainer>
                     <Text><b>Флексодрук</b> є одним з видів високого друку, в якому замість жорстких друкованих пластин...</Text>
                     <ContainerA to='/services/Nanessenya_zobragennya/'>Читати далі</ContainerA>
@@ -46,7 +48,7 @@ const NewsContainer = () => {
             </ContainerNew>
             <ContainerH5>Підготовка до друку</ContainerH5>
             <ContainerNew>
-                <Img src='https://lata.net.ua/upload/iblock/ebe/ebea54b65681af54d90553a87719dee5.jpg' alt="flexprint" />
+                <Img src={photo} alt="flexprint" style={{ width: '200px', height: '138px'}} />
                 <TextContainer>
                     <Text>Крім простої верстки документів у форматі PDF, ПП "Лата" також здійснює...</Text>
                     <ContainerA to='/services/Pidgotovka_do_dryky/'>Читати далі</ContainerA>

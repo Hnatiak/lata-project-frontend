@@ -18,7 +18,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const CommentSchema = Yup.object().shape({
   name: Yup.string().required('Ім\'я обов\'язкове'),
-  email: Yup.string().email('Емейл неправильний').required('Емейл обов\'язковий'),
+  email: Yup.string().email('Е-пошта неправильний').required('Е-пошта обов\'язкова'),
   phone: Yup.string().required('Номер телефону обов\'язковий'),
   address: Yup.string().required('Адреса обов\'язкова'),
   paymentMethod: Yup.string().required('Метод розрахунку обов\'язковий'),
@@ -52,7 +52,7 @@ const BuyBoxs = () => {
   return (
     <>
     <Container>
-      <img src={photoItem} alt="Фото товару" />
+      <img src={photoItem[0]} alt="Фото товару" style={{ width: '255px' }} />
       <Formik
         initialValues={{
           name: '',
