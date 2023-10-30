@@ -32,7 +32,7 @@ const NewElements = ({ news }) => {
                     <ContainerTitle>
                         <ContainerA to="/articles/Proetyketu">Про етикетку</ContainerA>
                     </ContainerTitle>
-                        <ContainerP>&emsp;Під етикеткою мається на увазі товарний ярлик, який за с...</ContainerP>
+                        <ContainerP>&emsp;Етикетка - це ярлик, який за с...</ContainerP>
                 <News>Послуги</News>
                     <ContainerNew>
                         <Img src='https://lata.net.ua/upload/iblock/7fb/7fb1eeda1b11653ea40bc63029bcb3ea.jpg' alt="flexprint" style={{margin: '0 15px 15px 0'}}/>

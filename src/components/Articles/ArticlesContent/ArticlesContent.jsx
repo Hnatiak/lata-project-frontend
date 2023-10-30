@@ -32,7 +32,7 @@ const ArticlesContent = ({ articles }) => {
                     <ContainerTitle>
                         <ContainerA to="/news/Novivesil">Нові види подарункових "весільних" коробок з картону хром-ерзац.</ContainerA>
                     </ContainerTitle>
-                        <ContainerP>ПП "Лата" розробило новий дизайн подарункових, так званих "весіль...</ContainerP>
+                        <ContainerP>ПП "Лата" розробило новий дизайн подарункових, "весільних", і не тільки...</ContainerP>
                 </ContainerDiv>
                 <ContainerDiv>
                     <News>Послуги</News>

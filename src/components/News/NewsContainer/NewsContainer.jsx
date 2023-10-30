@@ -31,7 +31,7 @@ const NewsContainer = () => {
             <ContainerTitle>
               <ContainerA to="/articles/Proetyketu/">Про етикетку</ContainerA>
             </ContainerTitle>
-            <ContainerP>Під етикеткою мається на увазі товарний ярлик, який за с...</ContainerP>
+            <ContainerP>Етикетка - це ярлик, який за с...</ContainerP>
             <ContainerTitle>
               <ContainerA to="/articles/Kartonnakorobka/">Картонна коробка та її виробництво</ContainerA>
             </ContainerTitle>

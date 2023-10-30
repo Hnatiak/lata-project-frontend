@@ -58,7 +58,7 @@ const PrintingServices = () => {
                     <ContainerTitle>
                         <ContainerA to="/news/Novivesil/">Нові види подарункових "весільних" коробок з картону хром-ерзац.</ContainerA>
                     </ContainerTitle>
-                        <ContainerP>ПП "Лата" розробило новий дизайн подарункових, так званих "весіль...</ContainerP>
+                        <ContainerP>ПП "Лата" розробило новий дизайн подарункових, "весільних", і не тільки...</ContainerP>
                 </ContainerDiv>
                 <ContainerDiv>
                 <News>Статті</News>
@@ -69,7 +69,7 @@ const PrintingServices = () => {
                     <ContainerTitle>
                         <ContainerA to="/articles/Proetyketu/">Про етикетку</ContainerA>
                     </ContainerTitle>
-                        <ContainerP>Під етикеткою мається на увазі товарний ярлик, який за с...</ContainerP>
+                        <ContainerP>Етикетка - це ярлик, який за с...</ContainerP>
                     <ContainerTitle>
                         <ContainerA to="/articles/Kartonnakorobka/">Картонна коробка та її виробництво</ContainerA>
                     </ContainerTitle>

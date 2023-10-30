@@ -36,10 +36,6 @@ const ProductDetailsPage = ({ photos }) => {
 
   const showArrows = selectedPhoto.url.length > itemsPerScreen;
 
-  // const handleGalleryClick = (photoUrl) => {
-  //   setModalImage(photoUrl);
-  //   setModalIsOpen(true);
-  // };
 
   const handleGalleryClick = (photoUrl, index) => {
     setModalPhotoIndex(index); // Оновити індекс фотографії для модального вікна
