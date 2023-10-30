@@ -22,7 +22,7 @@ import { toast } from 'react-toastify';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const LoginSchema = Yup.object().shape({
-  email: Yup.string().email('Емейл неправильний').required('Емейл обов\'язковий'),
+  email: Yup.string().email('Е-пошта неправильний').required('Е-пошта обов\'язкова'),
   password: Yup.string().min(8, 'Пароль мусить бути більше 8 букв').required('Пароль обов\'язковий'),
 });
 
@@ -62,7 +62,7 @@ function LoginPage() {
                 <StyledLink href="login" underline="none">Вхід</StyledLink>
             </Menu>
             <Inputs>
-              <Field autoFocus name="email" type="email" placeholder="Емейл" />
+              <Field autoFocus name="email" type="email" placeholder="Е-пошта" />
               <ErrorText name="email" component="div" />
               {/* <PasswordInput>
                 <Field type="password"

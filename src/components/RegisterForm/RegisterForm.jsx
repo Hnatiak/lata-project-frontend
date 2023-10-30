@@ -25,7 +25,7 @@ import { useState } from 'react';
 
 const RegisterSchema = Yup.object().shape({
   name: Yup.string().required('Ім\'я обов\'язкове'),
-  email: Yup.string().min(6, 'Емейл мусить бути більше 6-ти символів').email('Емейл неправильний').required('Емейл обов\'язковий'),
+  email: Yup.string().min(6, 'Е-пошта мусить бути більше 6-ти символів').email('Е-пошта неправильний').required('Е-пошта обов\'язкова'),
   password: Yup.string().min(8, 'Пароль мусить бути більше 8-ми цифр').required('Пароль обов\'язковий'),
 });
 
@@ -68,7 +68,7 @@ function RegistrationPage() {
             <Inputs>
               <Field autoFocus name="name" type="text" placeholder="Ім'я" />
               <ErrorText name="name" component="div" />
-              <Field name="email" type="email" placeholder="Емейл" />
+              <Field name="email" type="email" placeholder="Е-пошта" />
               <ErrorText name="email" component="div" />
               <PasswordInput>
                 <Field name="password" type={showPassword ? 'text' : 'password'} placeholder="Пароль" />

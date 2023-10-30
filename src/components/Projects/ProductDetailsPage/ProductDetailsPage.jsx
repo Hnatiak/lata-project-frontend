@@ -36,6 +36,10 @@ const ProductDetailsPage = ({ photos }) => {
 
   const showArrows = selectedPhoto.url.length > itemsPerScreen;
 
+  // const handleGalleryClick = (photoUrl) => {
+  //   setModalImage(photoUrl);
+  //   setModalIsOpen(true);
+  // };
 
   const handleGalleryClick = (photoUrl, index) => {
     setModalPhotoIndex(index); // Оновити індекс фотографії для модального вікна
@@ -87,9 +91,7 @@ const ProductDetailsPage = ({ photos }) => {
     <MenuContainer>
       <Settings>
       <div>
-        <div>
-            <img src={selectedPhoto.url[0]} alt={`${selectedPhoto.id}`} />
-          </div>
+        <div><img src={selectedPhoto.url[0]} alt={`${selectedPhoto.id}`} /></div>
           <GalleryContainer>
               {showArrows && <PrevButton icon={faCircleArrowLeft} onClick={scrollGallery(-1)} />}
                 <Gallery ref={galleryRef}>

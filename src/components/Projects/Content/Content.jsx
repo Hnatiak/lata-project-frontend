@@ -54,7 +54,7 @@ const Content = () => {
                     <MenuLinkActive onClick={() => handleMenuChange('FullColorPackaging')} selected={selectedMenu === 'FullColorPackaging'}>Повноколірна упаковка</MenuLinkActive>
                   </li>
                   <li>
-                    <MenuLinkActive onClick={() => handleMenuChange('PaperCups')} selected={selectedMenu === 'PaperCups'}>Паперові стаканчики</MenuLinkActive>
+                    <MenuLinkActive onClick={() => handleMenuChange('PaperCups')} selected={selectedMenu === 'PaperCups'}>Паперові стакани</MenuLinkActive>
                   </li>
                 </ul>
               </div>

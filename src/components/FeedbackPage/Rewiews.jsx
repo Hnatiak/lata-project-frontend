@@ -23,7 +23,7 @@ import { Formik } from 'formik';
 const ReviewSchema = Yup.object().shape({
   rating: Yup.string().required('Рейтинг обов\'язковий'),
   name: Yup.string().required('Ім\'я обов\'язкове'),
-  email: Yup.string().min(6, 'Емейл мусить бути більше 6-ти символів').email('Емейл неправильний').required('Емейл обов\'язковий'),
+  email: Yup.string().min(6, 'Е-пошта мусить бути більше 6-ти символів').email('Е-пошта неправильний').required('Е-пошта обов\'язкова'),
   message: Yup.string().required('Коментар обов\'язковий'),
 });
 
@@ -124,11 +124,11 @@ const Reviews = () => {
               </div>
               <div>
                 <InputWrapper>
-                  <Label>Емейл:</Label>
+                  <Label>Е-пошта:</Label>
                   <Input
                     type="email"
                     name="email"
-                    placeholder="Емейл"
+                    placeholder="Е-пошта"
                   />
                 </InputWrapper>
                 <ErrorText name="email" component="div" className="error-message" />

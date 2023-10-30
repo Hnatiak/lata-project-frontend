@@ -82,14 +82,15 @@ import slice3 from '../../source/slice3.jpg';
 import { MiddleContainer, LeftDiv, Title, P, A, Arrow } from './Middle.styled';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
+
 const Middle = () => {
 
   const photoList = [
     {
       src: slice1,
       alt: 'Photo 1',
-      title: 'Паперові стаканчики',
-      description: 'Кава та інші напої смакуватимуть ще краще, якщо вони будуть налиті у наші стаканчики з паперу.',
+      title: 'Паперові стакани',
+      description: 'Кава та інші напої смакуватимуть ще краще, якщо вони будуть налиті у наші стакани з паперу.',
       link: 'Читати далі',
       id: 15,
     },
