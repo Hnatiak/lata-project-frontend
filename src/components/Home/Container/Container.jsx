@@ -14,7 +14,7 @@ const Container = () => {
             <ContainerDiv style={{ flex: 1 }}>
                 <Svg icon={faDroplet} />
                 <ContainerH6><ContainerSpan>Лакування ультрафіолетовим лаком форматом B1</ContainerSpan></ContainerH6>
-                <ContainerP>Відтепер лакування форматом 720х1020 мм не проблема для клієнтів приватного підприємства "Лата". Якість зображення стала ще краща.</ContainerP>
+                <ContainerP>Від тепер лакування форматом 720х1020 мм не проблема для клієнтів приватного підприємства "Лата". Якість зображення стала ще краща.</ContainerP>
                 <ContainerA to="/services/UFlak">Детальніше</ContainerA>
             </ContainerDiv>
             <ContainerDiv style={{ flex: 1 }}>
