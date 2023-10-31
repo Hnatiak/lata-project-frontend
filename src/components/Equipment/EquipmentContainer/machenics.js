@@ -2,8 +2,6 @@ import img1 from '../../../images/mechanics/IMG-4795.jpg'
 import img2 from '../../../images/mechanics/IMG-4796.jpg'
 import img3 from '../../../images/mechanics/IMG-4797.jpg'
 import img4 from '../../../images/mechanics/IMG-4798.jpg'
-// import img5 from '../../../images/mechanics/IMG_0001.jpg'
-// import img6 from '../../../images/mechanics/IMG-4795.jpg'
 
 
 const mechanics = [
