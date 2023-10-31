@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/lata-project-frontend-d3wkx6zwg-hnatiaks-projects.vercel.app">
+        <BrowserRouter basename="/lata-project-frontend">
           <App />
         </BrowserRouter>
       </PersistGate>
