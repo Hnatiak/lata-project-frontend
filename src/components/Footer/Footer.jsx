@@ -1,7 +1,4 @@
 import { NavLink } from 'react-router-dom';
-// import { faInstagram, faTwitter, faYoutube, faFacebook } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faYoutube, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import {
   Container,
